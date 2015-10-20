@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jsonToSql:Config xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jsonToSql="http://www.example.org/jsonToSql">
+  <conecction url="jdbc:postgresql://localhost:8080/test?" username="servio" password="servio"/>
+  <mergeFields tableName="table">
+    <attributeNames oldField="nombre" finalField="//@mergeFields.0/@fields.0"/>
+    <attributeNames oldField="name" finalField="//@mergeFields.0/@fields.0"/>
+    <attributeNames oldField="nombreCompleto" finalField="//@mergeFields.0/@fields.0"/>
+    <attributeNames oldField="fullName" finalField="//@mergeFields.0/@fields.1"/>
+    <fields name="nombre"/>
+    <fields name="direccion" type="Integer"/>
+    <fields name="profesion" type="Float"/>
+  </mergeFields>
+</jsonToSql:Config>
