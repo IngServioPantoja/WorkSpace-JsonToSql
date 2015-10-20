@@ -5669,3 +5669,24 @@ Caused by: java.io.IOException: El proceso no tiene acceso al archivo porque otr
 	at org.eclipse.jgit.api.CommitCommand.createTemporaryIndex(CommitCommand.java:379)
 	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:203)
 	... 7 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-10-19 21:00:33.052
+!MESSAGE An internal error occurred
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of commit command
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:281)
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:243)
+	at org.eclipse.egit.core.op.CommitOperation.access$5(CommitOperation.java:232)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:196)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:206)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:93)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso tiene bloqueada una parte del archivo
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:302)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
+	at org.eclipse.jgit.api.CommitCommand.createTemporaryIndex(CommitCommand.java:379)
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:203)
+	... 7 more
