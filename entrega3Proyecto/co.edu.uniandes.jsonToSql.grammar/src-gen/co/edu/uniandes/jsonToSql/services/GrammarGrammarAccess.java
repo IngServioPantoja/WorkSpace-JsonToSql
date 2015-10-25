@@ -39,11 +39,11 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Config:
-		//	"\'config\':" "{" "conecction:" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
+		//	"\'config\':" "{" "\'conecction:\'" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
 		//	mergeFields+=MergedField)* "]")? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"\'config\':" "{" "conecction:" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
+		//"\'config\':" "{" "\'conecction:\'" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
 		//mergeFields+=MergedField)* "]")? "}"
 		public Group getGroup() { return cGroup; }
 
@@ -53,7 +53,7 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//"conecction:"
+		//"\'conecction:\'"
 		public Keyword getConecctionKeyword_2() { return cConecctionKeyword_2; }
 
 		//conecction=Connection
@@ -177,33 +177,33 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTableNameKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cTableNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cTableNameEStringParserRuleCall_1_1_0 = (RuleCall)cTableNameAssignment_1_1.eContents().get(0);
-		private final Keyword cAttributeNamesKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAttributeNamesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAttributeNamesAttributeNameParserRuleCall_4_0 = (RuleCall)cAttributeNamesAssignment_4.eContents().get(0);
+		private final Keyword cFieldsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cFieldsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFieldsFieldParserRuleCall_4_0 = (RuleCall)cFieldsAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cAttributeNamesAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAttributeNamesAttributeNameParserRuleCall_5_1_0 = (RuleCall)cAttributeNamesAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cFieldsKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cFieldsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cFieldsFieldParserRuleCall_9_0 = (RuleCall)cFieldsAssignment_9.eContents().get(0);
+		private final Assignment cFieldsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cFieldsFieldParserRuleCall_5_1_0 = (RuleCall)cFieldsAssignment_5_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cAttributeNamesKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cLeftSquareBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cAttributeNamesAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cAttributeNamesAttributeNameParserRuleCall_9_0 = (RuleCall)cAttributeNamesAssignment_9.eContents().get(0);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cCommaKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cFieldsAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cFieldsFieldParserRuleCall_10_1_0 = (RuleCall)cFieldsAssignment_10_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cAttributeNamesAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cAttributeNamesAttributeNameParserRuleCall_10_1_0 = (RuleCall)cAttributeNamesAssignment_10_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//MergedField:
-		//	"{" ("\'tableName\':" tableName=EString)? "\'attributeNames\':" "{" attributeNames+=AttributeName (","
-		//	attributeNames+=AttributeName)* "}" "fields" "{" fields+=Field ("," fields+=Field)* "}" "}";
+		//	"{" ("\'tableName\':" tableName=EString)? "\'fields\':" "[" fields+=Field ("," fields+=Field)* "]"
+		//	"\'attributeNames\':" "[" attributeNames+=AttributeName ("," attributeNames+=AttributeName)* "]" "}";
 		public ParserRule getRule() { return rule; }
 
-		//"{" ("\'tableName\':" tableName=EString)? "\'attributeNames\':" "{" attributeNames+=AttributeName (","
-		//attributeNames+=AttributeName)* "}" "fields" "{" fields+=Field ("," fields+=Field)* "}" "}"
+		//"{" ("\'tableName\':" tableName=EString)? "\'fields\':" "[" fields+=Field ("," fields+=Field)* "]" "\'attributeNames\':"
+		//"[" attributeNames+=AttributeName ("," attributeNames+=AttributeName)* "]" "}"
 		public Group getGroup() { return cGroup; }
 
 		//"{"
@@ -221,59 +221,59 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getTableNameEStringParserRuleCall_1_1_0() { return cTableNameEStringParserRuleCall_1_1_0; }
 
-		//"\'attributeNames\':"
-		public Keyword getAttributeNamesKeyword_2() { return cAttributeNamesKeyword_2; }
+		//"\'fields\':"
+		public Keyword getFieldsKeyword_2() { return cFieldsKeyword_2; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		//"["
+		public Keyword getLeftSquareBracketKeyword_3() { return cLeftSquareBracketKeyword_3; }
 
-		//attributeNames+=AttributeName
-		public Assignment getAttributeNamesAssignment_4() { return cAttributeNamesAssignment_4; }
+		//fields+=Field
+		public Assignment getFieldsAssignment_4() { return cFieldsAssignment_4; }
 
-		//AttributeName
-		public RuleCall getAttributeNamesAttributeNameParserRuleCall_4_0() { return cAttributeNamesAttributeNameParserRuleCall_4_0; }
+		//Field
+		public RuleCall getFieldsFieldParserRuleCall_4_0() { return cFieldsFieldParserRuleCall_4_0; }
 
-		//("," attributeNames+=AttributeName)*
+		//("," fields+=Field)*
 		public Group getGroup_5() { return cGroup_5; }
 
 		//","
 		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
 
-		//attributeNames+=AttributeName
-		public Assignment getAttributeNamesAssignment_5_1() { return cAttributeNamesAssignment_5_1; }
-
-		//AttributeName
-		public RuleCall getAttributeNamesAttributeNameParserRuleCall_5_1_0() { return cAttributeNamesAttributeNameParserRuleCall_5_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-
-		//"fields"
-		public Keyword getFieldsKeyword_7() { return cFieldsKeyword_7; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_8() { return cLeftCurlyBracketKeyword_8; }
-
 		//fields+=Field
-		public Assignment getFieldsAssignment_9() { return cFieldsAssignment_9; }
+		public Assignment getFieldsAssignment_5_1() { return cFieldsAssignment_5_1; }
 
 		//Field
-		public RuleCall getFieldsFieldParserRuleCall_9_0() { return cFieldsFieldParserRuleCall_9_0; }
+		public RuleCall getFieldsFieldParserRuleCall_5_1_0() { return cFieldsFieldParserRuleCall_5_1_0; }
 
-		//("," fields+=Field)*
+		//"]"
+		public Keyword getRightSquareBracketKeyword_6() { return cRightSquareBracketKeyword_6; }
+
+		//"\'attributeNames\':"
+		public Keyword getAttributeNamesKeyword_7() { return cAttributeNamesKeyword_7; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_8() { return cLeftSquareBracketKeyword_8; }
+
+		//attributeNames+=AttributeName
+		public Assignment getAttributeNamesAssignment_9() { return cAttributeNamesAssignment_9; }
+
+		//AttributeName
+		public RuleCall getAttributeNamesAttributeNameParserRuleCall_9_0() { return cAttributeNamesAttributeNameParserRuleCall_9_0; }
+
+		//("," attributeNames+=AttributeName)*
 		public Group getGroup_10() { return cGroup_10; }
 
 		//","
 		public Keyword getCommaKeyword_10_0() { return cCommaKeyword_10_0; }
 
-		//fields+=Field
-		public Assignment getFieldsAssignment_10_1() { return cFieldsAssignment_10_1; }
+		//attributeNames+=AttributeName
+		public Assignment getAttributeNamesAssignment_10_1() { return cAttributeNamesAssignment_10_1; }
 
-		//Field
-		public RuleCall getFieldsFieldParserRuleCall_10_1_0() { return cFieldsFieldParserRuleCall_10_1_0; }
+		//AttributeName
+		public RuleCall getAttributeNamesAttributeNameParserRuleCall_10_1_0() { return cAttributeNamesAttributeNameParserRuleCall_10_1_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		//"]"
+		public Keyword getRightSquareBracketKeyword_11() { return cRightSquareBracketKeyword_11; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
@@ -303,40 +303,32 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AttributeName");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cOldFieldKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cOldFieldAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cOldFieldEStringParserRuleCall_1_1_0 = (RuleCall)cOldFieldAssignment_1_1.eContents().get(0);
-		private final Keyword cFinalFieldKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cOldFieldAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOldFieldEStringParserRuleCall_1_0 = (RuleCall)cOldFieldAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cFinalFieldAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cFinalFieldFieldCrossReference_3_0 = (CrossReference)cFinalFieldAssignment_3.eContents().get(0);
 		private final RuleCall cFinalFieldFieldEStringParserRuleCall_3_0_1 = (RuleCall)cFinalFieldFieldCrossReference_3_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//AttributeName:
-		//	"{" ("oldField" oldField=EString)? "finalField" finalField=[Field|EString] "}";
+		//	"{" oldField=EString? "," finalField=[Field|EString] "}";
 		public ParserRule getRule() { return rule; }
 
-		//"{" ("oldField" oldField=EString)? "finalField" finalField=[Field|EString] "}"
+		//"{" oldField=EString? "," finalField=[Field|EString] "}"
 		public Group getGroup() { return cGroup; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 
-		//("oldField" oldField=EString)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"oldField"
-		public Keyword getOldFieldKeyword_1_0() { return cOldFieldKeyword_1_0; }
-
-		//oldField=EString
-		public Assignment getOldFieldAssignment_1_1() { return cOldFieldAssignment_1_1; }
+		//oldField=EString?
+		public Assignment getOldFieldAssignment_1() { return cOldFieldAssignment_1; }
 
 		//EString
-		public RuleCall getOldFieldEStringParserRuleCall_1_1_0() { return cOldFieldEStringParserRuleCall_1_1_0; }
+		public RuleCall getOldFieldEStringParserRuleCall_1_0() { return cOldFieldEStringParserRuleCall_1_0; }
 
-		//"finalField"
-		public Keyword getFinalFieldKeyword_2() { return cFinalFieldKeyword_2; }
+		//","
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
 
 		//finalField=[Field|EString]
 		public Assignment getFinalFieldAssignment_3() { return cFinalFieldAssignment_3; }
@@ -358,17 +350,15 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cTypeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cTypeFieldTypeEnumRuleCall_3_1_0 = (RuleCall)cTypeAssignment_3_1.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeFieldTypeEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Field:
-		//	{Field} "{" name=EString ("type" type=FieldType)? "}";
+		//	{Field} "{" name=EString type=FieldType? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Field} "{" name=EString ("type" type=FieldType)? "}"
+		//{Field} "{" name=EString type=FieldType? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Field}
@@ -383,17 +373,11 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 
-		//("type" type=FieldType)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"type"
-		public Keyword getTypeKeyword_3_0() { return cTypeKeyword_3_0; }
-
-		//type=FieldType
-		public Assignment getTypeAssignment_3_1() { return cTypeAssignment_3_1; }
+		//type=FieldType?
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//FieldType
-		public RuleCall getTypeFieldTypeEnumRuleCall_3_1_0() { return cTypeFieldTypeEnumRuleCall_3_1_0; }
+		public RuleCall getTypeFieldTypeEnumRuleCall_3_0() { return cTypeFieldTypeEnumRuleCall_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -498,7 +482,7 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Config:
-	//	"\'config\':" "{" "conecction:" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
+	//	"\'config\':" "{" "\'conecction:\'" conecction=Connection ("\'mergeFields\':" "[" mergeFields+=MergedField (","
 	//	mergeFields+=MergedField)* "]")? "}";
 	public ConfigElements getConfigAccess() {
 		return pConfig;
@@ -520,8 +504,8 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MergedField:
-	//	"{" ("\'tableName\':" tableName=EString)? "\'attributeNames\':" "{" attributeNames+=AttributeName (","
-	//	attributeNames+=AttributeName)* "}" "fields" "{" fields+=Field ("," fields+=Field)* "}" "}";
+	//	"{" ("\'tableName\':" tableName=EString)? "\'fields\':" "[" fields+=Field ("," fields+=Field)* "]"
+	//	"\'attributeNames\':" "[" attributeNames+=AttributeName ("," attributeNames+=AttributeName)* "]" "}";
 	public MergedFieldElements getMergedFieldAccess() {
 		return pMergedField;
 	}
@@ -541,7 +525,7 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AttributeName:
-	//	"{" ("oldField" oldField=EString)? "finalField" finalField=[Field|EString] "}";
+	//	"{" oldField=EString? "," finalField=[Field|EString] "}";
 	public AttributeNameElements getAttributeNameAccess() {
 		return pAttributeName;
 	}
@@ -551,7 +535,7 @@ public class GrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Field:
-	//	{Field} "{" name=EString ("type" type=FieldType)? "}";
+	//	{Field} "{" name=EString type=FieldType? "}";
 	public FieldElements getFieldAccess() {
 		return pField;
 	}

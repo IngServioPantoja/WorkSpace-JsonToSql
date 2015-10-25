@@ -98,7 +98,7 @@ public abstract class AbstractGrammarSemanticSequencer extends AbstractDelegatin
 	
 	/**
 	 * Constraint:
-	 *     (tableName=EString? attributeNames+=AttributeName attributeNames+=AttributeName* fields+=Field fields+=Field*)
+	 *     (tableName=EString? fields+=Field fields+=Field* attributeNames+=AttributeName attributeNames+=AttributeName*)
 	 */
 	protected void sequence_MergedField(EObject context, MergedField semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

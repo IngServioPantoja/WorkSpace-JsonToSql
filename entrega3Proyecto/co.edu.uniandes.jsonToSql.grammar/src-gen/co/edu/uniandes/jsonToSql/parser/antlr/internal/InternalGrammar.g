@@ -86,7 +86,7 @@ ruleConfig returns [EObject current=null]
     {
     	newLeafNode(otherlv_1, grammarAccess.getConfigAccess().getLeftCurlyBracketKeyword_1());
     }
-	otherlv_2='conecction:' 
+	otherlv_2='\'conecction:\'' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getConfigAccess().getConecctionKeyword_2());
     }
@@ -312,28 +312,28 @@ ruleMergedField returns [EObject current=null]
 	    }
 
 )
-))?	otherlv_3='\'attributeNames\':' 
+))?	otherlv_3='\'fields\':' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getMergedFieldAccess().getAttributeNamesKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getMergedFieldAccess().getFieldsKeyword_2());
     }
-	otherlv_4='{' 
+	otherlv_4='[' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getMergedFieldAccess().getLeftSquareBracketKeyword_3());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_4_0()); 
 	    }
-		lv_attributeNames_5_0=ruleAttributeName		{
+		lv_fields_5_0=ruleField		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergedFieldRule());
 	        }
        		add(
        			$current, 
-       			"attributeNames",
-        		lv_attributeNames_5_0, 
-        		"AttributeName");
+       			"fields",
+        		lv_fields_5_0, 
+        		"Field");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -345,47 +345,47 @@ ruleMergedField returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_5_1_0()); 
 	    }
-		lv_attributeNames_7_0=ruleAttributeName		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getMergedFieldRule());
-	        }
-       		add(
-       			$current, 
-       			"attributeNames",
-        		lv_attributeNames_7_0, 
-        		"AttributeName");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_8='}' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_6());
-    }
-	otherlv_9='fields' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getMergedFieldAccess().getFieldsKeyword_7());
-    }
-	otherlv_10='{' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_8());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_9_0()); 
-	    }
-		lv_fields_11_0=ruleField		{
+		lv_fields_7_0=ruleField		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergedFieldRule());
 	        }
        		add(
        			$current, 
        			"fields",
-        		lv_fields_11_0, 
+        		lv_fields_7_0, 
         		"Field");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_8=']' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getMergedFieldAccess().getRightSquareBracketKeyword_6());
+    }
+	otherlv_9='\'attributeNames\':' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getMergedFieldAccess().getAttributeNamesKeyword_7());
+    }
+	otherlv_10='[' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getMergedFieldAccess().getLeftSquareBracketKeyword_8());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_9_0()); 
+	    }
+		lv_attributeNames_11_0=ruleAttributeName		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMergedFieldRule());
+	        }
+       		add(
+       			$current, 
+       			"attributeNames",
+        		lv_attributeNames_11_0, 
+        		"AttributeName");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -397,24 +397,24 @@ ruleMergedField returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_10_1_0()); 
+	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_10_1_0()); 
 	    }
-		lv_fields_13_0=ruleField		{
+		lv_attributeNames_13_0=ruleAttributeName		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergedFieldRule());
 	        }
        		add(
        			$current, 
-       			"fields",
-        		lv_fields_13_0, 
-        		"Field");
+       			"attributeNames",
+        		lv_attributeNames_13_0, 
+        		"AttributeName");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_14='}' 
+))*	otherlv_14=']' 
     {
-    	newLeafNode(otherlv_14, grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_11());
+    	newLeafNode(otherlv_14, grammarAccess.getMergedFieldAccess().getRightSquareBracketKeyword_11());
     }
 	otherlv_15='}' 
     {
@@ -481,31 +481,27 @@ ruleAttributeName returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getAttributeNameAccess().getLeftCurlyBracketKeyword_0());
     }
-(	otherlv_1='oldField' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getAttributeNameAccess().getOldFieldKeyword_1_0());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_0()); 
 	    }
-		lv_oldField_2_0=ruleEString		{
+		lv_oldField_1_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAttributeNameRule());
 	        }
        		set(
        			$current, 
        			"oldField",
-        		lv_oldField_2_0, 
+        		lv_oldField_1_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_3='finalField' 
+)?	otherlv_2=',' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getAttributeNameAccess().getFinalFieldKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getAttributeNameAccess().getCommaKeyword_2());
     }
 (
 (
@@ -522,9 +518,9 @@ ruleAttributeName returns [EObject current=null]
 	    }
 
 )
-)	otherlv_5='}' 
+)	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getAttributeNameAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getAttributeNameAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
@@ -575,31 +571,27 @@ ruleField returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_3='type' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getFieldAccess().getTypeKeyword_3_0());
-    }
-(
+)(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_0()); 
 	    }
-		lv_type_4_0=ruleFieldType		{
+		lv_type_3_0=ruleFieldType		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFieldRule());
 	        }
        		set(
        			$current, 
        			"type",
-        		lv_type_4_0, 
+        		lv_type_3_0, 
         		"FieldType");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_5='}' 
+)?	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getFieldAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getFieldAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
