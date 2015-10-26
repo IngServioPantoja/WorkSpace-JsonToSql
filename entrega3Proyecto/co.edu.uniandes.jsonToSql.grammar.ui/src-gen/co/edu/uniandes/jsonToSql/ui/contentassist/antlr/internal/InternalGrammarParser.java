@@ -22,37 +22,36 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'String'", "'Integer'", "'Float'", "'Boolean'", "'\\'config\\':'", "'{'", "'conecction:'", "'}'", "'\\'mergeFields\\':'", "'['", "']'", "','", "'\\'url\\':'", "'\\'username\\':'", "'\\'password\\':'", "'\\'attributeNames\\':'", "'fields'", "'\\'tableName\\':'", "'finalField'", "'oldField'", "'type'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_LITERACONFIG", "RULE_COLON", "RULE_LEFTPARENTESIS", "RULE_LITERACONNECTION", "RULE_RIGHTPARENTESIS", "RULE_LITERALMERGEDFIELDS", "RULE_LEFTBRACKET", "RULE_RIGHTBRACKET", "RULE_COMA", "RULE_LITERALURL", "RULE_LITERALUSERNAME", "RULE_LITERALPASSWORD", "RULE_LITERALFIELDS", "RULE_LITERALATTRIBUTENAMES", "RULE_LITERALTABLENAME", "RULE_SINGLEQUOTE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\'String\\''", "'\\'Integer\\''", "'\\'Float\\''", "'\\'Boolean\\''"
     };
+    public static final int RULE_LITERALMERGEDFIELDS=11;
+    public static final int RULE_COMA=14;
+    public static final int RULE_LITERALUSERNAME=16;
     public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__11=11;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
+    public static final int RULE_LITERACONFIG=6;
+    public static final int RULE_LITERALFIELDS=18;
+    public static final int RULE_SL_COMMENT=24;
+    public static final int RULE_RIGHTBRACKET=13;
+    public static final int RULE_SINGLEQUOTE=21;
+    public static final int RULE_LITERACONNECTION=9;
+    public static final int RULE_LITERALATTRIBUTENAMES=19;
     public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int T__31=31;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__26=26;
+    public static final int RULE_WS=25;
+    public static final int RULE_RIGHTPARENTESIS=10;
+    public static final int RULE_LITERALTABLENAME=20;
+    public static final int RULE_COLON=7;
+    public static final int RULE_ANY_OTHER=26;
+    public static final int RULE_LITERALPASSWORD=17;
+    public static final int RULE_LEFTBRACKET=12;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=22;
     public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=7;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
+    public static final int RULE_ML_COMMENT=23;
+    public static final int RULE_LITERALURL=15;
+    public static final int RULE_LEFTPARENTESIS=8;
 
     // delegates
     // delegators
@@ -672,31 +671,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldType__Alternatives"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:269:1: rule__FieldType__Alternatives : ( ( ( 'String' ) ) | ( ( 'Integer' ) ) | ( ( 'Float' ) ) | ( ( 'Boolean' ) ) );
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:269:1: rule__FieldType__Alternatives : ( ( ( '\\'String\\'' ) ) | ( ( '\\'Integer\\'' ) ) | ( ( '\\'Float\\'' ) ) | ( ( '\\'Boolean\\'' ) ) );
     public final void rule__FieldType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:273:1: ( ( ( 'String' ) ) | ( ( 'Integer' ) ) | ( ( 'Float' ) ) | ( ( 'Boolean' ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:273:1: ( ( ( '\\'String\\'' ) ) | ( ( '\\'Integer\\'' ) ) | ( ( '\\'Float\\'' ) ) | ( ( '\\'Boolean\\'' ) ) )
             int alt2=4;
             switch ( input.LA(1) ) {
-            case 11:
+            case 27:
                 {
                 alt2=1;
                 }
                 break;
-            case 12:
+            case 28:
                 {
                 alt2=2;
                 }
                 break;
-            case 13:
+            case 29:
                 {
                 alt2=3;
                 }
                 break;
-            case 14:
+            case 30:
                 {
                 alt2=4;
                 }
@@ -710,16 +709,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:274:1: ( ( 'String' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:274:1: ( ( '\\'String\\'' ) )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:274:1: ( ( 'String' ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:275:1: ( 'String' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:274:1: ( ( '\\'String\\'' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:275:1: ( '\\'String\\'' )
                     {
                      before(grammarAccess.getFieldTypeAccess().getStringEnumLiteralDeclaration_0()); 
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:276:1: ( 'String' )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:276:3: 'String'
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:276:1: ( '\\'String\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:276:3: '\\'String\\''
                     {
-                    match(input,11,FollowSets000.FOLLOW_11_in_rule__FieldType__Alternatives516); 
+                    match(input,27,FollowSets000.FOLLOW_27_in_rule__FieldType__Alternatives516); 
 
                     }
 
@@ -731,16 +730,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:281:6: ( ( 'Integer' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:281:6: ( ( '\\'Integer\\'' ) )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:281:6: ( ( 'Integer' ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:282:1: ( 'Integer' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:281:6: ( ( '\\'Integer\\'' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:282:1: ( '\\'Integer\\'' )
                     {
                      before(grammarAccess.getFieldTypeAccess().getIntegerEnumLiteralDeclaration_1()); 
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:283:1: ( 'Integer' )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:283:3: 'Integer'
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:283:1: ( '\\'Integer\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:283:3: '\\'Integer\\''
                     {
-                    match(input,12,FollowSets000.FOLLOW_12_in_rule__FieldType__Alternatives537); 
+                    match(input,28,FollowSets000.FOLLOW_28_in_rule__FieldType__Alternatives537); 
 
                     }
 
@@ -752,16 +751,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:288:6: ( ( 'Float' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:288:6: ( ( '\\'Float\\'' ) )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:288:6: ( ( 'Float' ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:289:1: ( 'Float' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:288:6: ( ( '\\'Float\\'' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:289:1: ( '\\'Float\\'' )
                     {
                      before(grammarAccess.getFieldTypeAccess().getFloatEnumLiteralDeclaration_2()); 
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:290:1: ( 'Float' )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:290:3: 'Float'
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:290:1: ( '\\'Float\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:290:3: '\\'Float\\''
                     {
-                    match(input,13,FollowSets000.FOLLOW_13_in_rule__FieldType__Alternatives558); 
+                    match(input,29,FollowSets000.FOLLOW_29_in_rule__FieldType__Alternatives558); 
 
                     }
 
@@ -773,16 +772,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:295:6: ( ( 'Boolean' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:295:6: ( ( '\\'Boolean\\'' ) )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:295:6: ( ( 'Boolean' ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:296:1: ( 'Boolean' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:295:6: ( ( '\\'Boolean\\'' ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:296:1: ( '\\'Boolean\\'' )
                     {
                      before(grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); 
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:297:1: ( 'Boolean' )
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:297:3: 'Boolean'
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:297:1: ( '\\'Boolean\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:297:3: '\\'Boolean\\''
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_rule__FieldType__Alternatives579); 
+                    match(input,30,FollowSets000.FOLLOW_30_in_rule__FieldType__Alternatives579); 
 
                     }
 
@@ -849,21 +848,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:321:1: rule__Config__Group__0__Impl : ( '\\'config\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:321:1: rule__Config__Group__0__Impl : ( RULE_LITERACONFIG ) ;
     public final void rule__Config__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:325:1: ( ( '\\'config\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:326:1: ( '\\'config\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:325:1: ( ( RULE_LITERACONFIG ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:326:1: ( RULE_LITERACONFIG )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:326:1: ( '\\'config\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:327:1: '\\'config\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:326:1: ( RULE_LITERACONFIG )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:327:1: RULE_LITERACONFIG
             {
-             before(grammarAccess.getConfigAccess().getConfigKeyword_0()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Config__Group__0__Impl643); 
-             after(grammarAccess.getConfigAccess().getConfigKeyword_0()); 
+             before(grammarAccess.getConfigAccess().getLITERACONFIGTerminalRuleCall_0()); 
+            match(input,RULE_LITERACONFIG,FollowSets000.FOLLOW_RULE_LITERACONFIG_in_rule__Config__Group__0__Impl642); 
+             after(grammarAccess.getConfigAccess().getLITERACONFIGTerminalRuleCall_0()); 
 
             }
 
@@ -886,21 +885,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:340:1: rule__Config__Group__1 : rule__Config__Group__1__Impl rule__Config__Group__2 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:338:1: rule__Config__Group__1 : rule__Config__Group__1__Impl rule__Config__Group__2 ;
     public final void rule__Config__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:344:1: ( rule__Config__Group__1__Impl rule__Config__Group__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:345:2: rule__Config__Group__1__Impl rule__Config__Group__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:342:1: ( rule__Config__Group__1__Impl rule__Config__Group__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:343:2: rule__Config__Group__1__Impl rule__Config__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__1__Impl_in_rule__Config__Group__1674);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__1__Impl_in_rule__Config__Group__1671);
             rule__Config__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__2_in_rule__Config__Group__1677);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__2_in_rule__Config__Group__1674);
             rule__Config__Group__2();
 
             state._fsp--;
@@ -924,21 +923,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:352:1: rule__Config__Group__1__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:350:1: rule__Config__Group__1__Impl : ( RULE_COLON ) ;
     public final void rule__Config__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:356:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:357:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:354:1: ( ( RULE_COLON ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:355:1: ( RULE_COLON )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:357:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:358:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:355:1: ( RULE_COLON )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:356:1: RULE_COLON
             {
-             before(grammarAccess.getConfigAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Config__Group__1__Impl705); 
-             after(grammarAccess.getConfigAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_1()); 
+            match(input,RULE_COLON,FollowSets000.FOLLOW_RULE_COLON_in_rule__Config__Group__1__Impl701); 
+             after(grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_1()); 
 
             }
 
@@ -961,21 +960,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:371:1: rule__Config__Group__2 : rule__Config__Group__2__Impl rule__Config__Group__3 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:367:1: rule__Config__Group__2 : rule__Config__Group__2__Impl rule__Config__Group__3 ;
     public final void rule__Config__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:375:1: ( rule__Config__Group__2__Impl rule__Config__Group__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:376:2: rule__Config__Group__2__Impl rule__Config__Group__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:371:1: ( rule__Config__Group__2__Impl rule__Config__Group__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:372:2: rule__Config__Group__2__Impl rule__Config__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__2__Impl_in_rule__Config__Group__2736);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__2__Impl_in_rule__Config__Group__2730);
             rule__Config__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__3_in_rule__Config__Group__2739);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__3_in_rule__Config__Group__2733);
             rule__Config__Group__3();
 
             state._fsp--;
@@ -999,21 +998,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:383:1: rule__Config__Group__2__Impl : ( 'conecction:' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:379:1: rule__Config__Group__2__Impl : ( RULE_LEFTPARENTESIS ) ;
     public final void rule__Config__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:387:1: ( ( 'conecction:' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:388:1: ( 'conecction:' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:383:1: ( ( RULE_LEFTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:384:1: ( RULE_LEFTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:388:1: ( 'conecction:' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:389:1: 'conecction:'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:384:1: ( RULE_LEFTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:385:1: RULE_LEFTPARENTESIS
             {
-             before(grammarAccess.getConfigAccess().getConecctionKeyword_2()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Config__Group__2__Impl767); 
-             after(grammarAccess.getConfigAccess().getConecctionKeyword_2()); 
+             before(grammarAccess.getConfigAccess().getLEFTPARENTESISTerminalRuleCall_2()); 
+            match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_rule__Config__Group__2__Impl760); 
+             after(grammarAccess.getConfigAccess().getLEFTPARENTESISTerminalRuleCall_2()); 
 
             }
 
@@ -1036,21 +1035,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:402:1: rule__Config__Group__3 : rule__Config__Group__3__Impl rule__Config__Group__4 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:396:1: rule__Config__Group__3 : rule__Config__Group__3__Impl rule__Config__Group__4 ;
     public final void rule__Config__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:406:1: ( rule__Config__Group__3__Impl rule__Config__Group__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:407:2: rule__Config__Group__3__Impl rule__Config__Group__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:400:1: ( rule__Config__Group__3__Impl rule__Config__Group__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:401:2: rule__Config__Group__3__Impl rule__Config__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__3__Impl_in_rule__Config__Group__3798);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__3__Impl_in_rule__Config__Group__3789);
             rule__Config__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__4_in_rule__Config__Group__3801);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__4_in_rule__Config__Group__3792);
             rule__Config__Group__4();
 
             state._fsp--;
@@ -1074,31 +1073,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:414:1: rule__Config__Group__3__Impl : ( ( rule__Config__ConecctionAssignment_3 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:408:1: rule__Config__Group__3__Impl : ( RULE_LITERACONNECTION ) ;
     public final void rule__Config__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:418:1: ( ( ( rule__Config__ConecctionAssignment_3 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:419:1: ( ( rule__Config__ConecctionAssignment_3 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:412:1: ( ( RULE_LITERACONNECTION ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:413:1: ( RULE_LITERACONNECTION )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:419:1: ( ( rule__Config__ConecctionAssignment_3 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:420:1: ( rule__Config__ConecctionAssignment_3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:413:1: ( RULE_LITERACONNECTION )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:414:1: RULE_LITERACONNECTION
             {
-             before(grammarAccess.getConfigAccess().getConecctionAssignment_3()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:421:1: ( rule__Config__ConecctionAssignment_3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:421:2: rule__Config__ConecctionAssignment_3
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__ConecctionAssignment_3_in_rule__Config__Group__3__Impl828);
-            rule__Config__ConecctionAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getConfigAccess().getConecctionAssignment_3()); 
+             before(grammarAccess.getConfigAccess().getLITERACONNECTIONTerminalRuleCall_3()); 
+            match(input,RULE_LITERACONNECTION,FollowSets000.FOLLOW_RULE_LITERACONNECTION_in_rule__Config__Group__3__Impl819); 
+             after(grammarAccess.getConfigAccess().getLITERACONNECTIONTerminalRuleCall_3()); 
 
             }
 
@@ -1121,21 +1110,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:431:1: rule__Config__Group__4 : rule__Config__Group__4__Impl rule__Config__Group__5 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:425:1: rule__Config__Group__4 : rule__Config__Group__4__Impl rule__Config__Group__5 ;
     public final void rule__Config__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:435:1: ( rule__Config__Group__4__Impl rule__Config__Group__5 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:436:2: rule__Config__Group__4__Impl rule__Config__Group__5
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:429:1: ( rule__Config__Group__4__Impl rule__Config__Group__5 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:430:2: rule__Config__Group__4__Impl rule__Config__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__4__Impl_in_rule__Config__Group__4858);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__4__Impl_in_rule__Config__Group__4848);
             rule__Config__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__5_in_rule__Config__Group__4861);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__5_in_rule__Config__Group__4851);
             rule__Config__Group__5();
 
             state._fsp--;
@@ -1159,42 +1148,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:443:1: rule__Config__Group__4__Impl : ( ( rule__Config__Group_4__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:437:1: rule__Config__Group__4__Impl : ( RULE_COLON ) ;
     public final void rule__Config__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:447:1: ( ( ( rule__Config__Group_4__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:448:1: ( ( rule__Config__Group_4__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:441:1: ( ( RULE_COLON ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:442:1: ( RULE_COLON )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:448:1: ( ( rule__Config__Group_4__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:449:1: ( rule__Config__Group_4__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:442:1: ( RULE_COLON )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:443:1: RULE_COLON
             {
-             before(grammarAccess.getConfigAccess().getGroup_4()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:450:1: ( rule__Config__Group_4__0 )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==19) ) {
-                alt3=1;
-            }
-            switch (alt3) {
-                case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:450:2: rule__Config__Group_4__0
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__0_in_rule__Config__Group__4__Impl888);
-                    rule__Config__Group_4__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getConfigAccess().getGroup_4()); 
+             before(grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_4()); 
+            match(input,RULE_COLON,FollowSets000.FOLLOW_RULE_COLON_in_rule__Config__Group__4__Impl878); 
+             after(grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_4()); 
 
             }
 
@@ -1217,17 +1185,22 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__5"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:460:1: rule__Config__Group__5 : rule__Config__Group__5__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:454:1: rule__Config__Group__5 : rule__Config__Group__5__Impl rule__Config__Group__6 ;
     public final void rule__Config__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:464:1: ( rule__Config__Group__5__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:465:2: rule__Config__Group__5__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:458:1: ( rule__Config__Group__5__Impl rule__Config__Group__6 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:459:2: rule__Config__Group__5__Impl rule__Config__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__5__Impl_in_rule__Config__Group__5919);
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__5__Impl_in_rule__Config__Group__5907);
             rule__Config__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__6_in_rule__Config__Group__5910);
+            rule__Config__Group__6();
 
             state._fsp--;
 
@@ -1250,21 +1223,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__5__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:471:1: rule__Config__Group__5__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:466:1: rule__Config__Group__5__Impl : ( ( rule__Config__ConecctionAssignment_5 ) ) ;
     public final void rule__Config__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:475:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:476:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:470:1: ( ( ( rule__Config__ConecctionAssignment_5 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:471:1: ( ( rule__Config__ConecctionAssignment_5 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:476:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:477:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:471:1: ( ( rule__Config__ConecctionAssignment_5 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:472:1: ( rule__Config__ConecctionAssignment_5 )
             {
-             before(grammarAccess.getConfigAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Config__Group__5__Impl947); 
-             after(grammarAccess.getConfigAccess().getRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getConfigAccess().getConecctionAssignment_5()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:473:1: ( rule__Config__ConecctionAssignment_5 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:473:2: rule__Config__ConecctionAssignment_5
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__ConecctionAssignment_5_in_rule__Config__Group__5__Impl937);
+            rule__Config__ConecctionAssignment_5();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getConfigAccess().getConecctionAssignment_5()); 
 
             }
 
@@ -1286,23 +1269,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Config__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:502:1: rule__Config__Group_4__0 : rule__Config__Group_4__0__Impl rule__Config__Group_4__1 ;
-    public final void rule__Config__Group_4__0() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group__6"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:483:1: rule__Config__Group__6 : rule__Config__Group__6__Impl rule__Config__Group__7 ;
+    public final void rule__Config__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:506:1: ( rule__Config__Group_4__0__Impl rule__Config__Group_4__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:507:2: rule__Config__Group_4__0__Impl rule__Config__Group_4__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:487:1: ( rule__Config__Group__6__Impl rule__Config__Group__7 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:488:2: rule__Config__Group__6__Impl rule__Config__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__0__Impl_in_rule__Config__Group_4__0990);
-            rule__Config__Group_4__0__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__6__Impl_in_rule__Config__Group__6967);
+            rule__Config__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__1_in_rule__Config__Group_4__0993);
-            rule__Config__Group_4__1();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__7_in_rule__Config__Group__6970);
+            rule__Config__Group__7();
 
             state._fsp--;
 
@@ -1321,25 +1304,46 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__0"
+    // $ANTLR end "rule__Config__Group__6"
 
 
-    // $ANTLR start "rule__Config__Group_4__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:514:1: rule__Config__Group_4__0__Impl : ( '\\'mergeFields\\':' ) ;
-    public final void rule__Config__Group_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group__6__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:495:1: rule__Config__Group__6__Impl : ( ( rule__Config__Group_6__0 )? ) ;
+    public final void rule__Config__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:518:1: ( ( '\\'mergeFields\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:519:1: ( '\\'mergeFields\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:499:1: ( ( ( rule__Config__Group_6__0 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:500:1: ( ( rule__Config__Group_6__0 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:519:1: ( '\\'mergeFields\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:520:1: '\\'mergeFields\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:500:1: ( ( rule__Config__Group_6__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:501:1: ( rule__Config__Group_6__0 )?
             {
-             before(grammarAccess.getConfigAccess().getMergeFieldsKeyword_4_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Config__Group_4__0__Impl1021); 
-             after(grammarAccess.getConfigAccess().getMergeFieldsKeyword_4_0()); 
+             before(grammarAccess.getConfigAccess().getGroup_6()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:502:1: ( rule__Config__Group_6__0 )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==RULE_LITERALMERGEDFIELDS) ) {
+                alt3=1;
+            }
+            switch (alt3) {
+                case 1 :
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:502:2: rule__Config__Group_6__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__0_in_rule__Config__Group__6__Impl997);
+                    rule__Config__Group_6__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getConfigAccess().getGroup_6()); 
 
             }
 
@@ -1358,26 +1362,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__0__Impl"
+    // $ANTLR end "rule__Config__Group__6__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:533:1: rule__Config__Group_4__1 : rule__Config__Group_4__1__Impl rule__Config__Group_4__2 ;
-    public final void rule__Config__Group_4__1() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group__7"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:512:1: rule__Config__Group__7 : rule__Config__Group__7__Impl ;
+    public final void rule__Config__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:537:1: ( rule__Config__Group_4__1__Impl rule__Config__Group_4__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:538:2: rule__Config__Group_4__1__Impl rule__Config__Group_4__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:516:1: ( rule__Config__Group__7__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:517:2: rule__Config__Group__7__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__1__Impl_in_rule__Config__Group_4__11052);
-            rule__Config__Group_4__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__2_in_rule__Config__Group_4__11055);
-            rule__Config__Group_4__2();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group__7__Impl_in_rule__Config__Group__71028);
+            rule__Config__Group__7__Impl();
 
             state._fsp--;
 
@@ -1396,25 +1395,25 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__1"
+    // $ANTLR end "rule__Config__Group__7"
 
 
-    // $ANTLR start "rule__Config__Group_4__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:545:1: rule__Config__Group_4__1__Impl : ( '[' ) ;
-    public final void rule__Config__Group_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group__7__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:523:1: rule__Config__Group__7__Impl : ( RULE_RIGHTPARENTESIS ) ;
+    public final void rule__Config__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:549:1: ( ( '[' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:550:1: ( '[' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:527:1: ( ( RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:528:1: ( RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:550:1: ( '[' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:551:1: '['
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:528:1: ( RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:529:1: RULE_RIGHTPARENTESIS
             {
-             before(grammarAccess.getConfigAccess().getLeftSquareBracketKeyword_4_1()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__Config__Group_4__1__Impl1083); 
-             after(grammarAccess.getConfigAccess().getLeftSquareBracketKeyword_4_1()); 
+             before(grammarAccess.getConfigAccess().getRIGHTPARENTESISTerminalRuleCall_7()); 
+            match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Config__Group__7__Impl1055); 
+             after(grammarAccess.getConfigAccess().getRIGHTPARENTESISTerminalRuleCall_7()); 
 
             }
 
@@ -1433,26 +1432,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__1__Impl"
+    // $ANTLR end "rule__Config__Group__7__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:564:1: rule__Config__Group_4__2 : rule__Config__Group_4__2__Impl rule__Config__Group_4__3 ;
-    public final void rule__Config__Group_4__2() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__0"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:556:1: rule__Config__Group_6__0 : rule__Config__Group_6__0__Impl rule__Config__Group_6__1 ;
+    public final void rule__Config__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:568:1: ( rule__Config__Group_4__2__Impl rule__Config__Group_4__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:569:2: rule__Config__Group_4__2__Impl rule__Config__Group_4__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:560:1: ( rule__Config__Group_6__0__Impl rule__Config__Group_6__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:561:2: rule__Config__Group_6__0__Impl rule__Config__Group_6__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__2__Impl_in_rule__Config__Group_4__21114);
-            rule__Config__Group_4__2__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__0__Impl_in_rule__Config__Group_6__01100);
+            rule__Config__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__3_in_rule__Config__Group_4__21117);
-            rule__Config__Group_4__3();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__1_in_rule__Config__Group_6__01103);
+            rule__Config__Group_6__1();
 
             state._fsp--;
 
@@ -1471,35 +1470,25 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__2"
+    // $ANTLR end "rule__Config__Group_6__0"
 
 
-    // $ANTLR start "rule__Config__Group_4__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:576:1: rule__Config__Group_4__2__Impl : ( ( rule__Config__MergeFieldsAssignment_4_2 ) ) ;
-    public final void rule__Config__Group_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__0__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:568:1: rule__Config__Group_6__0__Impl : ( RULE_LITERALMERGEDFIELDS ) ;
+    public final void rule__Config__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:580:1: ( ( ( rule__Config__MergeFieldsAssignment_4_2 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:581:1: ( ( rule__Config__MergeFieldsAssignment_4_2 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:572:1: ( ( RULE_LITERALMERGEDFIELDS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:573:1: ( RULE_LITERALMERGEDFIELDS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:581:1: ( ( rule__Config__MergeFieldsAssignment_4_2 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:582:1: ( rule__Config__MergeFieldsAssignment_4_2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:573:1: ( RULE_LITERALMERGEDFIELDS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:574:1: RULE_LITERALMERGEDFIELDS
             {
-             before(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_2()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:583:1: ( rule__Config__MergeFieldsAssignment_4_2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:583:2: rule__Config__MergeFieldsAssignment_4_2
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__MergeFieldsAssignment_4_2_in_rule__Config__Group_4__2__Impl1144);
-            rule__Config__MergeFieldsAssignment_4_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_2()); 
+             before(grammarAccess.getConfigAccess().getLITERALMERGEDFIELDSTerminalRuleCall_6_0()); 
+            match(input,RULE_LITERALMERGEDFIELDS,FollowSets000.FOLLOW_RULE_LITERALMERGEDFIELDS_in_rule__Config__Group_6__0__Impl1130); 
+             after(grammarAccess.getConfigAccess().getLITERALMERGEDFIELDSTerminalRuleCall_6_0()); 
 
             }
 
@@ -1518,26 +1507,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__2__Impl"
+    // $ANTLR end "rule__Config__Group_6__0__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:593:1: rule__Config__Group_4__3 : rule__Config__Group_4__3__Impl rule__Config__Group_4__4 ;
-    public final void rule__Config__Group_4__3() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:585:1: rule__Config__Group_6__1 : rule__Config__Group_6__1__Impl rule__Config__Group_6__2 ;
+    public final void rule__Config__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:597:1: ( rule__Config__Group_4__3__Impl rule__Config__Group_4__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:598:2: rule__Config__Group_4__3__Impl rule__Config__Group_4__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:589:1: ( rule__Config__Group_6__1__Impl rule__Config__Group_6__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:590:2: rule__Config__Group_6__1__Impl rule__Config__Group_6__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__3__Impl_in_rule__Config__Group_4__31174);
-            rule__Config__Group_4__3__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__1__Impl_in_rule__Config__Group_6__11159);
+            rule__Config__Group_6__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__4_in_rule__Config__Group_4__31177);
-            rule__Config__Group_4__4();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__2_in_rule__Config__Group_6__11162);
+            rule__Config__Group_6__2();
 
             state._fsp--;
 
@@ -1556,40 +1545,200 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__3"
+    // $ANTLR end "rule__Config__Group_6__1"
 
 
-    // $ANTLR start "rule__Config__Group_4__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:605:1: rule__Config__Group_4__3__Impl : ( ( rule__Config__Group_4_3__0 )* ) ;
-    public final void rule__Config__Group_4__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__1__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:597:1: rule__Config__Group_6__1__Impl : ( RULE_LEFTBRACKET ) ;
+    public final void rule__Config__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:609:1: ( ( ( rule__Config__Group_4_3__0 )* ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:610:1: ( ( rule__Config__Group_4_3__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:601:1: ( ( RULE_LEFTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:602:1: ( RULE_LEFTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:610:1: ( ( rule__Config__Group_4_3__0 )* )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:611:1: ( rule__Config__Group_4_3__0 )*
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:602:1: ( RULE_LEFTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:603:1: RULE_LEFTBRACKET
             {
-             before(grammarAccess.getConfigAccess().getGroup_4_3()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:612:1: ( rule__Config__Group_4_3__0 )*
+             before(grammarAccess.getConfigAccess().getLEFTBRACKETTerminalRuleCall_6_1()); 
+            match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_rule__Config__Group_6__1__Impl1189); 
+             after(grammarAccess.getConfigAccess().getLEFTBRACKETTerminalRuleCall_6_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6__1__Impl"
+
+
+    // $ANTLR start "rule__Config__Group_6__2"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:614:1: rule__Config__Group_6__2 : rule__Config__Group_6__2__Impl rule__Config__Group_6__3 ;
+    public final void rule__Config__Group_6__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:618:1: ( rule__Config__Group_6__2__Impl rule__Config__Group_6__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:619:2: rule__Config__Group_6__2__Impl rule__Config__Group_6__3
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__2__Impl_in_rule__Config__Group_6__21218);
+            rule__Config__Group_6__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__3_in_rule__Config__Group_6__21221);
+            rule__Config__Group_6__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6__2"
+
+
+    // $ANTLR start "rule__Config__Group_6__2__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:626:1: rule__Config__Group_6__2__Impl : ( ( rule__Config__MergeFieldsAssignment_6_2 ) ) ;
+    public final void rule__Config__Group_6__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:630:1: ( ( ( rule__Config__MergeFieldsAssignment_6_2 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:631:1: ( ( rule__Config__MergeFieldsAssignment_6_2 ) )
+            {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:631:1: ( ( rule__Config__MergeFieldsAssignment_6_2 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:632:1: ( rule__Config__MergeFieldsAssignment_6_2 )
+            {
+             before(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_2()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:633:1: ( rule__Config__MergeFieldsAssignment_6_2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:633:2: rule__Config__MergeFieldsAssignment_6_2
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__MergeFieldsAssignment_6_2_in_rule__Config__Group_6__2__Impl1248);
+            rule__Config__MergeFieldsAssignment_6_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6__2__Impl"
+
+
+    // $ANTLR start "rule__Config__Group_6__3"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:643:1: rule__Config__Group_6__3 : rule__Config__Group_6__3__Impl rule__Config__Group_6__4 ;
+    public final void rule__Config__Group_6__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:647:1: ( rule__Config__Group_6__3__Impl rule__Config__Group_6__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:648:2: rule__Config__Group_6__3__Impl rule__Config__Group_6__4
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__3__Impl_in_rule__Config__Group_6__31278);
+            rule__Config__Group_6__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__4_in_rule__Config__Group_6__31281);
+            rule__Config__Group_6__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6__3"
+
+
+    // $ANTLR start "rule__Config__Group_6__3__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:655:1: rule__Config__Group_6__3__Impl : ( ( rule__Config__Group_6_3__0 )* ) ;
+    public final void rule__Config__Group_6__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:659:1: ( ( ( rule__Config__Group_6_3__0 )* ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:660:1: ( ( rule__Config__Group_6_3__0 )* )
+            {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:660:1: ( ( rule__Config__Group_6_3__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:661:1: ( rule__Config__Group_6_3__0 )*
+            {
+             before(grammarAccess.getConfigAccess().getGroup_6_3()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:662:1: ( rule__Config__Group_6_3__0 )*
             loop4:
             do {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==22) ) {
+                if ( (LA4_0==RULE_COMA) ) {
                     alt4=1;
                 }
 
 
                 switch (alt4) {
             	case 1 :
-            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:612:2: rule__Config__Group_4_3__0
+            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:662:2: rule__Config__Group_6_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4_3__0_in_rule__Config__Group_4__3__Impl1204);
-            	    rule__Config__Group_4_3__0();
+            	    pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6_3__0_in_rule__Config__Group_6__3__Impl1308);
+            	    rule__Config__Group_6_3__0();
 
             	    state._fsp--;
 
@@ -1602,7 +1751,7 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getConfigAccess().getGroup_4_3()); 
+             after(grammarAccess.getConfigAccess().getGroup_6_3()); 
 
             }
 
@@ -1621,21 +1770,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__3__Impl"
+    // $ANTLR end "rule__Config__Group_6__3__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:622:1: rule__Config__Group_4__4 : rule__Config__Group_4__4__Impl ;
-    public final void rule__Config__Group_4__4() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__4"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:672:1: rule__Config__Group_6__4 : rule__Config__Group_6__4__Impl ;
+    public final void rule__Config__Group_6__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:626:1: ( rule__Config__Group_4__4__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:627:2: rule__Config__Group_4__4__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:676:1: ( rule__Config__Group_6__4__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:677:2: rule__Config__Group_6__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4__4__Impl_in_rule__Config__Group_4__41235);
-            rule__Config__Group_4__4__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6__4__Impl_in_rule__Config__Group_6__41339);
+            rule__Config__Group_6__4__Impl();
 
             state._fsp--;
 
@@ -1654,25 +1803,25 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__4"
+    // $ANTLR end "rule__Config__Group_6__4"
 
 
-    // $ANTLR start "rule__Config__Group_4__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:633:1: rule__Config__Group_4__4__Impl : ( ']' ) ;
-    public final void rule__Config__Group_4__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6__4__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:683:1: rule__Config__Group_6__4__Impl : ( RULE_RIGHTBRACKET ) ;
+    public final void rule__Config__Group_6__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:637:1: ( ( ']' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:638:1: ( ']' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:687:1: ( ( RULE_RIGHTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:688:1: ( RULE_RIGHTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:638:1: ( ']' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:639:1: ']'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:688:1: ( RULE_RIGHTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:689:1: RULE_RIGHTBRACKET
             {
-             before(grammarAccess.getConfigAccess().getRightSquareBracketKeyword_4_4()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__Config__Group_4__4__Impl1263); 
-             after(grammarAccess.getConfigAccess().getRightSquareBracketKeyword_4_4()); 
+             before(grammarAccess.getConfigAccess().getRIGHTBRACKETTerminalRuleCall_6_4()); 
+            match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_rule__Config__Group_6__4__Impl1366); 
+             after(grammarAccess.getConfigAccess().getRIGHTBRACKETTerminalRuleCall_6_4()); 
 
             }
 
@@ -1691,96 +1840,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4__4__Impl"
+    // $ANTLR end "rule__Config__Group_6__4__Impl"
 
 
-    // $ANTLR start "rule__Config__Group_4_3__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:662:1: rule__Config__Group_4_3__0 : rule__Config__Group_4_3__0__Impl rule__Config__Group_4_3__1 ;
-    public final void rule__Config__Group_4_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6_3__0"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:710:1: rule__Config__Group_6_3__0 : rule__Config__Group_6_3__0__Impl rule__Config__Group_6_3__1 ;
+    public final void rule__Config__Group_6_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:666:1: ( rule__Config__Group_4_3__0__Impl rule__Config__Group_4_3__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:667:2: rule__Config__Group_4_3__0__Impl rule__Config__Group_4_3__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:714:1: ( rule__Config__Group_6_3__0__Impl rule__Config__Group_6_3__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:715:2: rule__Config__Group_6_3__0__Impl rule__Config__Group_6_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4_3__0__Impl_in_rule__Config__Group_4_3__01304);
-            rule__Config__Group_4_3__0__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6_3__0__Impl_in_rule__Config__Group_6_3__01405);
+            rule__Config__Group_6_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4_3__1_in_rule__Config__Group_4_3__01307);
-            rule__Config__Group_4_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Config__Group_4_3__0"
-
-
-    // $ANTLR start "rule__Config__Group_4_3__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:674:1: rule__Config__Group_4_3__0__Impl : ( ',' ) ;
-    public final void rule__Config__Group_4_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:678:1: ( ( ',' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:679:1: ( ',' )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:679:1: ( ',' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:680:1: ','
-            {
-             before(grammarAccess.getConfigAccess().getCommaKeyword_4_3_0()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__Config__Group_4_3__0__Impl1335); 
-             after(grammarAccess.getConfigAccess().getCommaKeyword_4_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Config__Group_4_3__0__Impl"
-
-
-    // $ANTLR start "rule__Config__Group_4_3__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:693:1: rule__Config__Group_4_3__1 : rule__Config__Group_4_3__1__Impl ;
-    public final void rule__Config__Group_4_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:697:1: ( rule__Config__Group_4_3__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:698:2: rule__Config__Group_4_3__1__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_4_3__1__Impl_in_rule__Config__Group_4_3__11366);
-            rule__Config__Group_4_3__1__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6_3__1_in_rule__Config__Group_6_3__01408);
+            rule__Config__Group_6_3__1();
 
             state._fsp--;
 
@@ -1799,35 +1878,25 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4_3__1"
+    // $ANTLR end "rule__Config__Group_6_3__0"
 
 
-    // $ANTLR start "rule__Config__Group_4_3__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:704:1: rule__Config__Group_4_3__1__Impl : ( ( rule__Config__MergeFieldsAssignment_4_3_1 ) ) ;
-    public final void rule__Config__Group_4_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Config__Group_6_3__0__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:722:1: rule__Config__Group_6_3__0__Impl : ( RULE_COMA ) ;
+    public final void rule__Config__Group_6_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:708:1: ( ( ( rule__Config__MergeFieldsAssignment_4_3_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:709:1: ( ( rule__Config__MergeFieldsAssignment_4_3_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:726:1: ( ( RULE_COMA ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:727:1: ( RULE_COMA )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:709:1: ( ( rule__Config__MergeFieldsAssignment_4_3_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:710:1: ( rule__Config__MergeFieldsAssignment_4_3_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:727:1: ( RULE_COMA )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:728:1: RULE_COMA
             {
-             before(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_3_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:711:1: ( rule__Config__MergeFieldsAssignment_4_3_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:711:2: rule__Config__MergeFieldsAssignment_4_3_1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Config__MergeFieldsAssignment_4_3_1_in_rule__Config__Group_4_3__1__Impl1393);
-            rule__Config__MergeFieldsAssignment_4_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_3_1()); 
+             before(grammarAccess.getConfigAccess().getCOMATerminalRuleCall_6_3_0()); 
+            match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_rule__Config__Group_6_3__0__Impl1435); 
+             after(grammarAccess.getConfigAccess().getCOMATerminalRuleCall_6_3_0()); 
 
             }
 
@@ -1846,25 +1915,105 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__Group_4_3__1__Impl"
+    // $ANTLR end "rule__Config__Group_6_3__0__Impl"
+
+
+    // $ANTLR start "rule__Config__Group_6_3__1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:739:1: rule__Config__Group_6_3__1 : rule__Config__Group_6_3__1__Impl ;
+    public final void rule__Config__Group_6_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:743:1: ( rule__Config__Group_6_3__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:744:2: rule__Config__Group_6_3__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__Group_6_3__1__Impl_in_rule__Config__Group_6_3__11464);
+            rule__Config__Group_6_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6_3__1"
+
+
+    // $ANTLR start "rule__Config__Group_6_3__1__Impl"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:750:1: rule__Config__Group_6_3__1__Impl : ( ( rule__Config__MergeFieldsAssignment_6_3_1 ) ) ;
+    public final void rule__Config__Group_6_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:754:1: ( ( ( rule__Config__MergeFieldsAssignment_6_3_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:755:1: ( ( rule__Config__MergeFieldsAssignment_6_3_1 ) )
+            {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:755:1: ( ( rule__Config__MergeFieldsAssignment_6_3_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:756:1: ( rule__Config__MergeFieldsAssignment_6_3_1 )
+            {
+             before(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_3_1()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:757:1: ( rule__Config__MergeFieldsAssignment_6_3_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:757:2: rule__Config__MergeFieldsAssignment_6_3_1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Config__MergeFieldsAssignment_6_3_1_in_rule__Config__Group_6_3__1__Impl1491);
+            rule__Config__MergeFieldsAssignment_6_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Config__Group_6_3__1__Impl"
 
 
     // $ANTLR start "rule__Connection__Group__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:725:1: rule__Connection__Group__0 : rule__Connection__Group__0__Impl rule__Connection__Group__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:771:1: rule__Connection__Group__0 : rule__Connection__Group__0__Impl rule__Connection__Group__1 ;
     public final void rule__Connection__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:729:1: ( rule__Connection__Group__0__Impl rule__Connection__Group__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:730:2: rule__Connection__Group__0__Impl rule__Connection__Group__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:775:1: ( rule__Connection__Group__0__Impl rule__Connection__Group__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:776:2: rule__Connection__Group__0__Impl rule__Connection__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__0__Impl_in_rule__Connection__Group__01427);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__0__Impl_in_rule__Connection__Group__01525);
             rule__Connection__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__1_in_rule__Connection__Group__01430);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__1_in_rule__Connection__Group__01528);
             rule__Connection__Group__1();
 
             state._fsp--;
@@ -1888,21 +2037,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:737:1: rule__Connection__Group__0__Impl : ( () ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:783:1: rule__Connection__Group__0__Impl : ( () ) ;
     public final void rule__Connection__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:741:1: ( ( () ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:742:1: ( () )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:787:1: ( ( () ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:788:1: ( () )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:742:1: ( () )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:743:1: ()
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:788:1: ( () )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:789:1: ()
             {
              before(grammarAccess.getConnectionAccess().getConnectionAction_0()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:744:1: ()
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:746:1: 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:790:1: ()
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:792:1: 
             {
             }
 
@@ -1925,21 +2074,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:756:1: rule__Connection__Group__1 : rule__Connection__Group__1__Impl rule__Connection__Group__2 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:802:1: rule__Connection__Group__1 : rule__Connection__Group__1__Impl rule__Connection__Group__2 ;
     public final void rule__Connection__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:760:1: ( rule__Connection__Group__1__Impl rule__Connection__Group__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:761:2: rule__Connection__Group__1__Impl rule__Connection__Group__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:806:1: ( rule__Connection__Group__1__Impl rule__Connection__Group__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:807:2: rule__Connection__Group__1__Impl rule__Connection__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__1__Impl_in_rule__Connection__Group__11488);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__1__Impl_in_rule__Connection__Group__11586);
             rule__Connection__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__2_in_rule__Connection__Group__11491);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__2_in_rule__Connection__Group__11589);
             rule__Connection__Group__2();
 
             state._fsp--;
@@ -1963,21 +2112,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:768:1: rule__Connection__Group__1__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:814:1: rule__Connection__Group__1__Impl : ( RULE_LEFTPARENTESIS ) ;
     public final void rule__Connection__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:772:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:773:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:818:1: ( ( RULE_LEFTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:819:1: ( RULE_LEFTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:773:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:774:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:819:1: ( RULE_LEFTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:820:1: RULE_LEFTPARENTESIS
             {
-             before(grammarAccess.getConnectionAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Connection__Group__1__Impl1519); 
-             after(grammarAccess.getConnectionAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getConnectionAccess().getLEFTPARENTESISTerminalRuleCall_1()); 
+            match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_rule__Connection__Group__1__Impl1616); 
+             after(grammarAccess.getConnectionAccess().getLEFTPARENTESISTerminalRuleCall_1()); 
 
             }
 
@@ -2000,21 +2149,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:787:1: rule__Connection__Group__2 : rule__Connection__Group__2__Impl rule__Connection__Group__3 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:831:1: rule__Connection__Group__2 : rule__Connection__Group__2__Impl rule__Connection__Group__3 ;
     public final void rule__Connection__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:791:1: ( rule__Connection__Group__2__Impl rule__Connection__Group__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:792:2: rule__Connection__Group__2__Impl rule__Connection__Group__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:835:1: ( rule__Connection__Group__2__Impl rule__Connection__Group__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:836:2: rule__Connection__Group__2__Impl rule__Connection__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__2__Impl_in_rule__Connection__Group__21550);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__2__Impl_in_rule__Connection__Group__21645);
             rule__Connection__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__3_in_rule__Connection__Group__21553);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__3_in_rule__Connection__Group__21648);
             rule__Connection__Group__3();
 
             state._fsp--;
@@ -2038,31 +2187,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:799:1: rule__Connection__Group__2__Impl : ( ( rule__Connection__Group_2__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:843:1: rule__Connection__Group__2__Impl : ( ( rule__Connection__Group_2__0 )? ) ;
     public final void rule__Connection__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:803:1: ( ( ( rule__Connection__Group_2__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:804:1: ( ( rule__Connection__Group_2__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:847:1: ( ( ( rule__Connection__Group_2__0 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:848:1: ( ( rule__Connection__Group_2__0 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:804:1: ( ( rule__Connection__Group_2__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:805:1: ( rule__Connection__Group_2__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:848:1: ( ( rule__Connection__Group_2__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:849:1: ( rule__Connection__Group_2__0 )?
             {
              before(grammarAccess.getConnectionAccess().getGroup_2()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:806:1: ( rule__Connection__Group_2__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:850:1: ( rule__Connection__Group_2__0 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==23) ) {
+            if ( (LA5_0==RULE_LITERALURL) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:806:2: rule__Connection__Group_2__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:850:2: rule__Connection__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__0_in_rule__Connection__Group__2__Impl1580);
+                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__0_in_rule__Connection__Group__2__Impl1675);
                     rule__Connection__Group_2__0();
 
                     state._fsp--;
@@ -2096,21 +2245,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:816:1: rule__Connection__Group__3 : rule__Connection__Group__3__Impl rule__Connection__Group__4 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:860:1: rule__Connection__Group__3 : rule__Connection__Group__3__Impl rule__Connection__Group__4 ;
     public final void rule__Connection__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:820:1: ( rule__Connection__Group__3__Impl rule__Connection__Group__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:821:2: rule__Connection__Group__3__Impl rule__Connection__Group__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:864:1: ( rule__Connection__Group__3__Impl rule__Connection__Group__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:865:2: rule__Connection__Group__3__Impl rule__Connection__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__3__Impl_in_rule__Connection__Group__31611);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__3__Impl_in_rule__Connection__Group__31706);
             rule__Connection__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__4_in_rule__Connection__Group__31614);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__4_in_rule__Connection__Group__31709);
             rule__Connection__Group__4();
 
             state._fsp--;
@@ -2134,31 +2283,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:828:1: rule__Connection__Group__3__Impl : ( ( rule__Connection__Group_3__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:872:1: rule__Connection__Group__3__Impl : ( ( rule__Connection__Group_3__0 )? ) ;
     public final void rule__Connection__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:832:1: ( ( ( rule__Connection__Group_3__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:833:1: ( ( rule__Connection__Group_3__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:876:1: ( ( ( rule__Connection__Group_3__0 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:877:1: ( ( rule__Connection__Group_3__0 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:833:1: ( ( rule__Connection__Group_3__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:834:1: ( rule__Connection__Group_3__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:877:1: ( ( rule__Connection__Group_3__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:878:1: ( rule__Connection__Group_3__0 )?
             {
              before(grammarAccess.getConnectionAccess().getGroup_3()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:835:1: ( rule__Connection__Group_3__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:879:1: ( rule__Connection__Group_3__0 )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==24) ) {
+            if ( (LA6_0==RULE_LITERALUSERNAME) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:835:2: rule__Connection__Group_3__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:879:2: rule__Connection__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__0_in_rule__Connection__Group__3__Impl1641);
+                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__0_in_rule__Connection__Group__3__Impl1736);
                     rule__Connection__Group_3__0();
 
                     state._fsp--;
@@ -2192,21 +2341,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:845:1: rule__Connection__Group__4 : rule__Connection__Group__4__Impl rule__Connection__Group__5 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:889:1: rule__Connection__Group__4 : rule__Connection__Group__4__Impl rule__Connection__Group__5 ;
     public final void rule__Connection__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:849:1: ( rule__Connection__Group__4__Impl rule__Connection__Group__5 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:850:2: rule__Connection__Group__4__Impl rule__Connection__Group__5
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:893:1: ( rule__Connection__Group__4__Impl rule__Connection__Group__5 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:894:2: rule__Connection__Group__4__Impl rule__Connection__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__4__Impl_in_rule__Connection__Group__41672);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__4__Impl_in_rule__Connection__Group__41767);
             rule__Connection__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__5_in_rule__Connection__Group__41675);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__5_in_rule__Connection__Group__41770);
             rule__Connection__Group__5();
 
             state._fsp--;
@@ -2230,31 +2379,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:857:1: rule__Connection__Group__4__Impl : ( ( rule__Connection__Group_4__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:901:1: rule__Connection__Group__4__Impl : ( ( rule__Connection__Group_4__0 )? ) ;
     public final void rule__Connection__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:861:1: ( ( ( rule__Connection__Group_4__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:862:1: ( ( rule__Connection__Group_4__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:905:1: ( ( ( rule__Connection__Group_4__0 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:906:1: ( ( rule__Connection__Group_4__0 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:862:1: ( ( rule__Connection__Group_4__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:863:1: ( rule__Connection__Group_4__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:906:1: ( ( rule__Connection__Group_4__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:907:1: ( rule__Connection__Group_4__0 )?
             {
              before(grammarAccess.getConnectionAccess().getGroup_4()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:864:1: ( rule__Connection__Group_4__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:908:1: ( rule__Connection__Group_4__0 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==25) ) {
+            if ( (LA7_0==RULE_LITERALPASSWORD) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:864:2: rule__Connection__Group_4__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:908:2: rule__Connection__Group_4__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__0_in_rule__Connection__Group__4__Impl1702);
+                    pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__0_in_rule__Connection__Group__4__Impl1797);
                     rule__Connection__Group_4__0();
 
                     state._fsp--;
@@ -2288,16 +2437,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__5"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:874:1: rule__Connection__Group__5 : rule__Connection__Group__5__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:918:1: rule__Connection__Group__5 : rule__Connection__Group__5__Impl ;
     public final void rule__Connection__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:878:1: ( rule__Connection__Group__5__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:879:2: rule__Connection__Group__5__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:922:1: ( rule__Connection__Group__5__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:923:2: rule__Connection__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__5__Impl_in_rule__Connection__Group__51733);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group__5__Impl_in_rule__Connection__Group__51828);
             rule__Connection__Group__5__Impl();
 
             state._fsp--;
@@ -2321,21 +2470,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group__5__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:885:1: rule__Connection__Group__5__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:929:1: rule__Connection__Group__5__Impl : ( RULE_RIGHTPARENTESIS ) ;
     public final void rule__Connection__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:889:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:890:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:933:1: ( ( RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:934:1: ( RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:890:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:891:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:934:1: ( RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:935:1: RULE_RIGHTPARENTESIS
             {
-             before(grammarAccess.getConnectionAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Connection__Group__5__Impl1761); 
-             after(grammarAccess.getConnectionAccess().getRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getConnectionAccess().getRIGHTPARENTESISTerminalRuleCall_5()); 
+            match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Connection__Group__5__Impl1855); 
+             after(grammarAccess.getConnectionAccess().getRIGHTPARENTESISTerminalRuleCall_5()); 
 
             }
 
@@ -2358,21 +2507,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_2__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:916:1: rule__Connection__Group_2__0 : rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:958:1: rule__Connection__Group_2__0 : rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1 ;
     public final void rule__Connection__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:920:1: ( rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:921:2: rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:962:1: ( rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:963:2: rule__Connection__Group_2__0__Impl rule__Connection__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__0__Impl_in_rule__Connection__Group_2__01804);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__0__Impl_in_rule__Connection__Group_2__01896);
             rule__Connection__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__1_in_rule__Connection__Group_2__01807);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__1_in_rule__Connection__Group_2__01899);
             rule__Connection__Group_2__1();
 
             state._fsp--;
@@ -2396,21 +2545,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_2__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:928:1: rule__Connection__Group_2__0__Impl : ( '\\'url\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:970:1: rule__Connection__Group_2__0__Impl : ( RULE_LITERALURL ) ;
     public final void rule__Connection__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:932:1: ( ( '\\'url\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:933:1: ( '\\'url\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:974:1: ( ( RULE_LITERALURL ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:975:1: ( RULE_LITERALURL )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:933:1: ( '\\'url\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:934:1: '\\'url\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:975:1: ( RULE_LITERALURL )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:976:1: RULE_LITERALURL
             {
-             before(grammarAccess.getConnectionAccess().getUrlKeyword_2_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Connection__Group_2__0__Impl1835); 
-             after(grammarAccess.getConnectionAccess().getUrlKeyword_2_0()); 
+             before(grammarAccess.getConnectionAccess().getLITERALURLTerminalRuleCall_2_0()); 
+            match(input,RULE_LITERALURL,FollowSets000.FOLLOW_RULE_LITERALURL_in_rule__Connection__Group_2__0__Impl1926); 
+             after(grammarAccess.getConnectionAccess().getLITERALURLTerminalRuleCall_2_0()); 
 
             }
 
@@ -2433,16 +2582,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_2__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:947:1: rule__Connection__Group_2__1 : rule__Connection__Group_2__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:987:1: rule__Connection__Group_2__1 : rule__Connection__Group_2__1__Impl ;
     public final void rule__Connection__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:951:1: ( rule__Connection__Group_2__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:952:2: rule__Connection__Group_2__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:991:1: ( rule__Connection__Group_2__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:992:2: rule__Connection__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__1__Impl_in_rule__Connection__Group_2__11866);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_2__1__Impl_in_rule__Connection__Group_2__11955);
             rule__Connection__Group_2__1__Impl();
 
             state._fsp--;
@@ -2466,23 +2615,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_2__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:958:1: rule__Connection__Group_2__1__Impl : ( ( rule__Connection__UrlAssignment_2_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:998:1: rule__Connection__Group_2__1__Impl : ( ( rule__Connection__UrlAssignment_2_1 ) ) ;
     public final void rule__Connection__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:962:1: ( ( ( rule__Connection__UrlAssignment_2_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:963:1: ( ( rule__Connection__UrlAssignment_2_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1002:1: ( ( ( rule__Connection__UrlAssignment_2_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1003:1: ( ( rule__Connection__UrlAssignment_2_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:963:1: ( ( rule__Connection__UrlAssignment_2_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:964:1: ( rule__Connection__UrlAssignment_2_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1003:1: ( ( rule__Connection__UrlAssignment_2_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1004:1: ( rule__Connection__UrlAssignment_2_1 )
             {
              before(grammarAccess.getConnectionAccess().getUrlAssignment_2_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:965:1: ( rule__Connection__UrlAssignment_2_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:965:2: rule__Connection__UrlAssignment_2_1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1005:1: ( rule__Connection__UrlAssignment_2_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1005:2: rule__Connection__UrlAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__UrlAssignment_2_1_in_rule__Connection__Group_2__1__Impl1893);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__UrlAssignment_2_1_in_rule__Connection__Group_2__1__Impl1982);
             rule__Connection__UrlAssignment_2_1();
 
             state._fsp--;
@@ -2513,21 +2662,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_3__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:979:1: rule__Connection__Group_3__0 : rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1019:1: rule__Connection__Group_3__0 : rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1 ;
     public final void rule__Connection__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:983:1: ( rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:984:2: rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1023:1: ( rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1024:2: rule__Connection__Group_3__0__Impl rule__Connection__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__0__Impl_in_rule__Connection__Group_3__01927);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__0__Impl_in_rule__Connection__Group_3__02016);
             rule__Connection__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__1_in_rule__Connection__Group_3__01930);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__1_in_rule__Connection__Group_3__02019);
             rule__Connection__Group_3__1();
 
             state._fsp--;
@@ -2551,21 +2700,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_3__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:991:1: rule__Connection__Group_3__0__Impl : ( '\\'username\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1031:1: rule__Connection__Group_3__0__Impl : ( RULE_LITERALUSERNAME ) ;
     public final void rule__Connection__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:995:1: ( ( '\\'username\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:996:1: ( '\\'username\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1035:1: ( ( RULE_LITERALUSERNAME ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1036:1: ( RULE_LITERALUSERNAME )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:996:1: ( '\\'username\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:997:1: '\\'username\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1036:1: ( RULE_LITERALUSERNAME )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1037:1: RULE_LITERALUSERNAME
             {
-             before(grammarAccess.getConnectionAccess().getUsernameKeyword_3_0()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__Connection__Group_3__0__Impl1958); 
-             after(grammarAccess.getConnectionAccess().getUsernameKeyword_3_0()); 
+             before(grammarAccess.getConnectionAccess().getLITERALUSERNAMETerminalRuleCall_3_0()); 
+            match(input,RULE_LITERALUSERNAME,FollowSets000.FOLLOW_RULE_LITERALUSERNAME_in_rule__Connection__Group_3__0__Impl2046); 
+             after(grammarAccess.getConnectionAccess().getLITERALUSERNAMETerminalRuleCall_3_0()); 
 
             }
 
@@ -2588,16 +2737,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_3__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1010:1: rule__Connection__Group_3__1 : rule__Connection__Group_3__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1048:1: rule__Connection__Group_3__1 : rule__Connection__Group_3__1__Impl ;
     public final void rule__Connection__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1014:1: ( rule__Connection__Group_3__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1015:2: rule__Connection__Group_3__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1052:1: ( rule__Connection__Group_3__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1053:2: rule__Connection__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__1__Impl_in_rule__Connection__Group_3__11989);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_3__1__Impl_in_rule__Connection__Group_3__12075);
             rule__Connection__Group_3__1__Impl();
 
             state._fsp--;
@@ -2621,23 +2770,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_3__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1021:1: rule__Connection__Group_3__1__Impl : ( ( rule__Connection__UsernameAssignment_3_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1059:1: rule__Connection__Group_3__1__Impl : ( ( rule__Connection__UsernameAssignment_3_1 ) ) ;
     public final void rule__Connection__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1025:1: ( ( ( rule__Connection__UsernameAssignment_3_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1026:1: ( ( rule__Connection__UsernameAssignment_3_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1063:1: ( ( ( rule__Connection__UsernameAssignment_3_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1064:1: ( ( rule__Connection__UsernameAssignment_3_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1026:1: ( ( rule__Connection__UsernameAssignment_3_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1027:1: ( rule__Connection__UsernameAssignment_3_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1064:1: ( ( rule__Connection__UsernameAssignment_3_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1065:1: ( rule__Connection__UsernameAssignment_3_1 )
             {
              before(grammarAccess.getConnectionAccess().getUsernameAssignment_3_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1028:1: ( rule__Connection__UsernameAssignment_3_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1028:2: rule__Connection__UsernameAssignment_3_1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1066:1: ( rule__Connection__UsernameAssignment_3_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1066:2: rule__Connection__UsernameAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__UsernameAssignment_3_1_in_rule__Connection__Group_3__1__Impl2016);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__UsernameAssignment_3_1_in_rule__Connection__Group_3__1__Impl2102);
             rule__Connection__UsernameAssignment_3_1();
 
             state._fsp--;
@@ -2668,21 +2817,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_4__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1042:1: rule__Connection__Group_4__0 : rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1080:1: rule__Connection__Group_4__0 : rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1 ;
     public final void rule__Connection__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1046:1: ( rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1047:2: rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1084:1: ( rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1085:2: rule__Connection__Group_4__0__Impl rule__Connection__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__0__Impl_in_rule__Connection__Group_4__02050);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__0__Impl_in_rule__Connection__Group_4__02136);
             rule__Connection__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__1_in_rule__Connection__Group_4__02053);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__1_in_rule__Connection__Group_4__02139);
             rule__Connection__Group_4__1();
 
             state._fsp--;
@@ -2706,21 +2855,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_4__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1054:1: rule__Connection__Group_4__0__Impl : ( '\\'password\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1092:1: rule__Connection__Group_4__0__Impl : ( RULE_LITERALPASSWORD ) ;
     public final void rule__Connection__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1058:1: ( ( '\\'password\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1059:1: ( '\\'password\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1096:1: ( ( RULE_LITERALPASSWORD ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1097:1: ( RULE_LITERALPASSWORD )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1059:1: ( '\\'password\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1060:1: '\\'password\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1097:1: ( RULE_LITERALPASSWORD )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1098:1: RULE_LITERALPASSWORD
             {
-             before(grammarAccess.getConnectionAccess().getPasswordKeyword_4_0()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__Connection__Group_4__0__Impl2081); 
-             after(grammarAccess.getConnectionAccess().getPasswordKeyword_4_0()); 
+             before(grammarAccess.getConnectionAccess().getLITERALPASSWORDTerminalRuleCall_4_0()); 
+            match(input,RULE_LITERALPASSWORD,FollowSets000.FOLLOW_RULE_LITERALPASSWORD_in_rule__Connection__Group_4__0__Impl2166); 
+             after(grammarAccess.getConnectionAccess().getLITERALPASSWORDTerminalRuleCall_4_0()); 
 
             }
 
@@ -2743,16 +2892,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_4__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1073:1: rule__Connection__Group_4__1 : rule__Connection__Group_4__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1109:1: rule__Connection__Group_4__1 : rule__Connection__Group_4__1__Impl ;
     public final void rule__Connection__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1077:1: ( rule__Connection__Group_4__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1078:2: rule__Connection__Group_4__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1113:1: ( rule__Connection__Group_4__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1114:2: rule__Connection__Group_4__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__1__Impl_in_rule__Connection__Group_4__12112);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__Group_4__1__Impl_in_rule__Connection__Group_4__12195);
             rule__Connection__Group_4__1__Impl();
 
             state._fsp--;
@@ -2776,23 +2925,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__Group_4__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1084:1: rule__Connection__Group_4__1__Impl : ( ( rule__Connection__PasswordAssignment_4_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1120:1: rule__Connection__Group_4__1__Impl : ( ( rule__Connection__PasswordAssignment_4_1 ) ) ;
     public final void rule__Connection__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1088:1: ( ( ( rule__Connection__PasswordAssignment_4_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1089:1: ( ( rule__Connection__PasswordAssignment_4_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1124:1: ( ( ( rule__Connection__PasswordAssignment_4_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1125:1: ( ( rule__Connection__PasswordAssignment_4_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1089:1: ( ( rule__Connection__PasswordAssignment_4_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1090:1: ( rule__Connection__PasswordAssignment_4_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1125:1: ( ( rule__Connection__PasswordAssignment_4_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1126:1: ( rule__Connection__PasswordAssignment_4_1 )
             {
              before(grammarAccess.getConnectionAccess().getPasswordAssignment_4_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1091:1: ( rule__Connection__PasswordAssignment_4_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1091:2: rule__Connection__PasswordAssignment_4_1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1127:1: ( rule__Connection__PasswordAssignment_4_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1127:2: rule__Connection__PasswordAssignment_4_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Connection__PasswordAssignment_4_1_in_rule__Connection__Group_4__1__Impl2139);
+            pushFollow(FollowSets000.FOLLOW_rule__Connection__PasswordAssignment_4_1_in_rule__Connection__Group_4__1__Impl2222);
             rule__Connection__PasswordAssignment_4_1();
 
             state._fsp--;
@@ -2823,21 +2972,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1105:1: rule__MergedField__Group__0 : rule__MergedField__Group__0__Impl rule__MergedField__Group__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1141:1: rule__MergedField__Group__0 : rule__MergedField__Group__0__Impl rule__MergedField__Group__1 ;
     public final void rule__MergedField__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1109:1: ( rule__MergedField__Group__0__Impl rule__MergedField__Group__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1110:2: rule__MergedField__Group__0__Impl rule__MergedField__Group__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1145:1: ( rule__MergedField__Group__0__Impl rule__MergedField__Group__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1146:2: rule__MergedField__Group__0__Impl rule__MergedField__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__0__Impl_in_rule__MergedField__Group__02173);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__0__Impl_in_rule__MergedField__Group__02256);
             rule__MergedField__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__1_in_rule__MergedField__Group__02176);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__1_in_rule__MergedField__Group__02259);
             rule__MergedField__Group__1();
 
             state._fsp--;
@@ -2861,21 +3010,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1117:1: rule__MergedField__Group__0__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1153:1: rule__MergedField__Group__0__Impl : ( RULE_LEFTPARENTESIS ) ;
     public final void rule__MergedField__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1121:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1122:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1157:1: ( ( RULE_LEFTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1158:1: ( RULE_LEFTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1122:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1123:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1158:1: ( RULE_LEFTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1159:1: RULE_LEFTPARENTESIS
             {
-             before(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__MergedField__Group__0__Impl2204); 
-             after(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_0()); 
+             before(grammarAccess.getMergedFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
+            match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_rule__MergedField__Group__0__Impl2286); 
+             after(grammarAccess.getMergedFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
 
             }
 
@@ -2898,21 +3047,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1136:1: rule__MergedField__Group__1 : rule__MergedField__Group__1__Impl rule__MergedField__Group__2 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1170:1: rule__MergedField__Group__1 : rule__MergedField__Group__1__Impl rule__MergedField__Group__2 ;
     public final void rule__MergedField__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1140:1: ( rule__MergedField__Group__1__Impl rule__MergedField__Group__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1141:2: rule__MergedField__Group__1__Impl rule__MergedField__Group__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1174:1: ( rule__MergedField__Group__1__Impl rule__MergedField__Group__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1175:2: rule__MergedField__Group__1__Impl rule__MergedField__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__1__Impl_in_rule__MergedField__Group__12235);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__1__Impl_in_rule__MergedField__Group__12315);
             rule__MergedField__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__2_in_rule__MergedField__Group__12238);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__2_in_rule__MergedField__Group__12318);
             rule__MergedField__Group__2();
 
             state._fsp--;
@@ -2936,31 +3085,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1148:1: rule__MergedField__Group__1__Impl : ( ( rule__MergedField__Group_1__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1182:1: rule__MergedField__Group__1__Impl : ( ( rule__MergedField__Group_1__0 )? ) ;
     public final void rule__MergedField__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1152:1: ( ( ( rule__MergedField__Group_1__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1153:1: ( ( rule__MergedField__Group_1__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1186:1: ( ( ( rule__MergedField__Group_1__0 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1187:1: ( ( rule__MergedField__Group_1__0 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1153:1: ( ( rule__MergedField__Group_1__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1154:1: ( rule__MergedField__Group_1__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1187:1: ( ( rule__MergedField__Group_1__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1188:1: ( rule__MergedField__Group_1__0 )?
             {
              before(grammarAccess.getMergedFieldAccess().getGroup_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1155:1: ( rule__MergedField__Group_1__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1189:1: ( rule__MergedField__Group_1__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==28) ) {
+            if ( (LA8_0==RULE_LITERALTABLENAME) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1155:2: rule__MergedField__Group_1__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1189:2: rule__MergedField__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__0_in_rule__MergedField__Group__1__Impl2265);
+                    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__0_in_rule__MergedField__Group__1__Impl2345);
                     rule__MergedField__Group_1__0();
 
                     state._fsp--;
@@ -2994,21 +3143,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1165:1: rule__MergedField__Group__2 : rule__MergedField__Group__2__Impl rule__MergedField__Group__3 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1199:1: rule__MergedField__Group__2 : rule__MergedField__Group__2__Impl rule__MergedField__Group__3 ;
     public final void rule__MergedField__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1169:1: ( rule__MergedField__Group__2__Impl rule__MergedField__Group__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1170:2: rule__MergedField__Group__2__Impl rule__MergedField__Group__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1203:1: ( rule__MergedField__Group__2__Impl rule__MergedField__Group__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1204:2: rule__MergedField__Group__2__Impl rule__MergedField__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__2__Impl_in_rule__MergedField__Group__22296);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__2__Impl_in_rule__MergedField__Group__22376);
             rule__MergedField__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__3_in_rule__MergedField__Group__22299);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__3_in_rule__MergedField__Group__22379);
             rule__MergedField__Group__3();
 
             state._fsp--;
@@ -3032,21 +3181,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1177:1: rule__MergedField__Group__2__Impl : ( '\\'attributeNames\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1211:1: rule__MergedField__Group__2__Impl : ( RULE_LITERALFIELDS ) ;
     public final void rule__MergedField__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1181:1: ( ( '\\'attributeNames\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1182:1: ( '\\'attributeNames\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1215:1: ( ( RULE_LITERALFIELDS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1216:1: ( RULE_LITERALFIELDS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1182:1: ( '\\'attributeNames\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1183:1: '\\'attributeNames\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1216:1: ( RULE_LITERALFIELDS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1217:1: RULE_LITERALFIELDS
             {
-             before(grammarAccess.getMergedFieldAccess().getAttributeNamesKeyword_2()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__MergedField__Group__2__Impl2327); 
-             after(grammarAccess.getMergedFieldAccess().getAttributeNamesKeyword_2()); 
+             before(grammarAccess.getMergedFieldAccess().getLITERALFIELDSTerminalRuleCall_2()); 
+            match(input,RULE_LITERALFIELDS,FollowSets000.FOLLOW_RULE_LITERALFIELDS_in_rule__MergedField__Group__2__Impl2406); 
+             after(grammarAccess.getMergedFieldAccess().getLITERALFIELDSTerminalRuleCall_2()); 
 
             }
 
@@ -3069,21 +3218,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1196:1: rule__MergedField__Group__3 : rule__MergedField__Group__3__Impl rule__MergedField__Group__4 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1228:1: rule__MergedField__Group__3 : rule__MergedField__Group__3__Impl rule__MergedField__Group__4 ;
     public final void rule__MergedField__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1200:1: ( rule__MergedField__Group__3__Impl rule__MergedField__Group__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1201:2: rule__MergedField__Group__3__Impl rule__MergedField__Group__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1232:1: ( rule__MergedField__Group__3__Impl rule__MergedField__Group__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1233:2: rule__MergedField__Group__3__Impl rule__MergedField__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__3__Impl_in_rule__MergedField__Group__32358);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__3__Impl_in_rule__MergedField__Group__32435);
             rule__MergedField__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__4_in_rule__MergedField__Group__32361);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__4_in_rule__MergedField__Group__32438);
             rule__MergedField__Group__4();
 
             state._fsp--;
@@ -3107,21 +3256,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1208:1: rule__MergedField__Group__3__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1240:1: rule__MergedField__Group__3__Impl : ( RULE_LEFTBRACKET ) ;
     public final void rule__MergedField__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1212:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1213:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1244:1: ( ( RULE_LEFTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1245:1: ( RULE_LEFTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1213:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1214:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1245:1: ( RULE_LEFTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1246:1: RULE_LEFTBRACKET
             {
-             before(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__MergedField__Group__3__Impl2389); 
-             after(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_3()); 
+             before(grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_3()); 
+            match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_rule__MergedField__Group__3__Impl2465); 
+             after(grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_3()); 
 
             }
 
@@ -3144,21 +3293,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1227:1: rule__MergedField__Group__4 : rule__MergedField__Group__4__Impl rule__MergedField__Group__5 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1257:1: rule__MergedField__Group__4 : rule__MergedField__Group__4__Impl rule__MergedField__Group__5 ;
     public final void rule__MergedField__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1231:1: ( rule__MergedField__Group__4__Impl rule__MergedField__Group__5 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1232:2: rule__MergedField__Group__4__Impl rule__MergedField__Group__5
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1261:1: ( rule__MergedField__Group__4__Impl rule__MergedField__Group__5 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1262:2: rule__MergedField__Group__4__Impl rule__MergedField__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__4__Impl_in_rule__MergedField__Group__42420);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__4__Impl_in_rule__MergedField__Group__42494);
             rule__MergedField__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__5_in_rule__MergedField__Group__42423);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__5_in_rule__MergedField__Group__42497);
             rule__MergedField__Group__5();
 
             state._fsp--;
@@ -3182,31 +3331,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1239:1: rule__MergedField__Group__4__Impl : ( ( rule__MergedField__AttributeNamesAssignment_4 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1269:1: rule__MergedField__Group__4__Impl : ( ( rule__MergedField__FieldsAssignment_4 ) ) ;
     public final void rule__MergedField__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1243:1: ( ( ( rule__MergedField__AttributeNamesAssignment_4 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1244:1: ( ( rule__MergedField__AttributeNamesAssignment_4 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1273:1: ( ( ( rule__MergedField__FieldsAssignment_4 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1274:1: ( ( rule__MergedField__FieldsAssignment_4 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1244:1: ( ( rule__MergedField__AttributeNamesAssignment_4 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1245:1: ( rule__MergedField__AttributeNamesAssignment_4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1274:1: ( ( rule__MergedField__FieldsAssignment_4 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1275:1: ( rule__MergedField__FieldsAssignment_4 )
             {
-             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_4()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1246:1: ( rule__MergedField__AttributeNamesAssignment_4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1246:2: rule__MergedField__AttributeNamesAssignment_4
+             before(grammarAccess.getMergedFieldAccess().getFieldsAssignment_4()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1276:1: ( rule__MergedField__FieldsAssignment_4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1276:2: rule__MergedField__FieldsAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__AttributeNamesAssignment_4_in_rule__MergedField__Group__4__Impl2450);
-            rule__MergedField__AttributeNamesAssignment_4();
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__FieldsAssignment_4_in_rule__MergedField__Group__4__Impl2524);
+            rule__MergedField__FieldsAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_4()); 
+             after(grammarAccess.getMergedFieldAccess().getFieldsAssignment_4()); 
 
             }
 
@@ -3229,21 +3378,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__5"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1256:1: rule__MergedField__Group__5 : rule__MergedField__Group__5__Impl rule__MergedField__Group__6 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1286:1: rule__MergedField__Group__5 : rule__MergedField__Group__5__Impl rule__MergedField__Group__6 ;
     public final void rule__MergedField__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1260:1: ( rule__MergedField__Group__5__Impl rule__MergedField__Group__6 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1261:2: rule__MergedField__Group__5__Impl rule__MergedField__Group__6
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1290:1: ( rule__MergedField__Group__5__Impl rule__MergedField__Group__6 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1291:2: rule__MergedField__Group__5__Impl rule__MergedField__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__5__Impl_in_rule__MergedField__Group__52480);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__5__Impl_in_rule__MergedField__Group__52554);
             rule__MergedField__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__6_in_rule__MergedField__Group__52483);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__6_in_rule__MergedField__Group__52557);
             rule__MergedField__Group__6();
 
             state._fsp--;
@@ -3267,35 +3416,35 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__5__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1268:1: rule__MergedField__Group__5__Impl : ( ( rule__MergedField__Group_5__0 )* ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1298:1: rule__MergedField__Group__5__Impl : ( ( rule__MergedField__Group_5__0 )* ) ;
     public final void rule__MergedField__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1272:1: ( ( ( rule__MergedField__Group_5__0 )* ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1273:1: ( ( rule__MergedField__Group_5__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1302:1: ( ( ( rule__MergedField__Group_5__0 )* ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1303:1: ( ( rule__MergedField__Group_5__0 )* )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1273:1: ( ( rule__MergedField__Group_5__0 )* )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1274:1: ( rule__MergedField__Group_5__0 )*
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1303:1: ( ( rule__MergedField__Group_5__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1304:1: ( rule__MergedField__Group_5__0 )*
             {
              before(grammarAccess.getMergedFieldAccess().getGroup_5()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1275:1: ( rule__MergedField__Group_5__0 )*
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1305:1: ( rule__MergedField__Group_5__0 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==22) ) {
+                if ( (LA9_0==RULE_COMA) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1275:2: rule__MergedField__Group_5__0
+            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1305:2: rule__MergedField__Group_5__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__0_in_rule__MergedField__Group__5__Impl2510);
+            	    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__0_in_rule__MergedField__Group__5__Impl2584);
             	    rule__MergedField__Group_5__0();
 
             	    state._fsp--;
@@ -3332,21 +3481,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__6"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1285:1: rule__MergedField__Group__6 : rule__MergedField__Group__6__Impl rule__MergedField__Group__7 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1315:1: rule__MergedField__Group__6 : rule__MergedField__Group__6__Impl rule__MergedField__Group__7 ;
     public final void rule__MergedField__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1289:1: ( rule__MergedField__Group__6__Impl rule__MergedField__Group__7 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1290:2: rule__MergedField__Group__6__Impl rule__MergedField__Group__7
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1319:1: ( rule__MergedField__Group__6__Impl rule__MergedField__Group__7 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1320:2: rule__MergedField__Group__6__Impl rule__MergedField__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__6__Impl_in_rule__MergedField__Group__62541);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__6__Impl_in_rule__MergedField__Group__62615);
             rule__MergedField__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__7_in_rule__MergedField__Group__62544);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__7_in_rule__MergedField__Group__62618);
             rule__MergedField__Group__7();
 
             state._fsp--;
@@ -3370,21 +3519,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__6__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1297:1: rule__MergedField__Group__6__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1327:1: rule__MergedField__Group__6__Impl : ( RULE_RIGHTBRACKET ) ;
     public final void rule__MergedField__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1301:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1302:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1331:1: ( ( RULE_RIGHTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1332:1: ( RULE_RIGHTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1302:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1303:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1332:1: ( RULE_RIGHTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1333:1: RULE_RIGHTBRACKET
             {
-             before(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__MergedField__Group__6__Impl2572); 
-             after(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_6()); 
+            match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_rule__MergedField__Group__6__Impl2645); 
+             after(grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_6()); 
 
             }
 
@@ -3407,21 +3556,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__7"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1316:1: rule__MergedField__Group__7 : rule__MergedField__Group__7__Impl rule__MergedField__Group__8 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1344:1: rule__MergedField__Group__7 : rule__MergedField__Group__7__Impl rule__MergedField__Group__8 ;
     public final void rule__MergedField__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1320:1: ( rule__MergedField__Group__7__Impl rule__MergedField__Group__8 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1321:2: rule__MergedField__Group__7__Impl rule__MergedField__Group__8
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1348:1: ( rule__MergedField__Group__7__Impl rule__MergedField__Group__8 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1349:2: rule__MergedField__Group__7__Impl rule__MergedField__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__7__Impl_in_rule__MergedField__Group__72603);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__7__Impl_in_rule__MergedField__Group__72674);
             rule__MergedField__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__8_in_rule__MergedField__Group__72606);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__8_in_rule__MergedField__Group__72677);
             rule__MergedField__Group__8();
 
             state._fsp--;
@@ -3445,21 +3594,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__7__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1328:1: rule__MergedField__Group__7__Impl : ( 'fields' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1356:1: rule__MergedField__Group__7__Impl : ( RULE_LITERALATTRIBUTENAMES ) ;
     public final void rule__MergedField__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1332:1: ( ( 'fields' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1333:1: ( 'fields' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1360:1: ( ( RULE_LITERALATTRIBUTENAMES ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1361:1: ( RULE_LITERALATTRIBUTENAMES )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1333:1: ( 'fields' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1334:1: 'fields'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1361:1: ( RULE_LITERALATTRIBUTENAMES )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1362:1: RULE_LITERALATTRIBUTENAMES
             {
-             before(grammarAccess.getMergedFieldAccess().getFieldsKeyword_7()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__MergedField__Group__7__Impl2634); 
-             after(grammarAccess.getMergedFieldAccess().getFieldsKeyword_7()); 
+             before(grammarAccess.getMergedFieldAccess().getLITERALATTRIBUTENAMESTerminalRuleCall_7()); 
+            match(input,RULE_LITERALATTRIBUTENAMES,FollowSets000.FOLLOW_RULE_LITERALATTRIBUTENAMES_in_rule__MergedField__Group__7__Impl2704); 
+             after(grammarAccess.getMergedFieldAccess().getLITERALATTRIBUTENAMESTerminalRuleCall_7()); 
 
             }
 
@@ -3482,21 +3631,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__8"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1347:1: rule__MergedField__Group__8 : rule__MergedField__Group__8__Impl rule__MergedField__Group__9 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1373:1: rule__MergedField__Group__8 : rule__MergedField__Group__8__Impl rule__MergedField__Group__9 ;
     public final void rule__MergedField__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1351:1: ( rule__MergedField__Group__8__Impl rule__MergedField__Group__9 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1352:2: rule__MergedField__Group__8__Impl rule__MergedField__Group__9
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1377:1: ( rule__MergedField__Group__8__Impl rule__MergedField__Group__9 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1378:2: rule__MergedField__Group__8__Impl rule__MergedField__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__8__Impl_in_rule__MergedField__Group__82665);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__8__Impl_in_rule__MergedField__Group__82733);
             rule__MergedField__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__9_in_rule__MergedField__Group__82668);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__9_in_rule__MergedField__Group__82736);
             rule__MergedField__Group__9();
 
             state._fsp--;
@@ -3520,21 +3669,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__8__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1359:1: rule__MergedField__Group__8__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1385:1: rule__MergedField__Group__8__Impl : ( RULE_LEFTBRACKET ) ;
     public final void rule__MergedField__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1363:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1364:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1389:1: ( ( RULE_LEFTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1390:1: ( RULE_LEFTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1364:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1365:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1390:1: ( RULE_LEFTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1391:1: RULE_LEFTBRACKET
             {
-             before(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_8()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__MergedField__Group__8__Impl2696); 
-             after(grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_8()); 
+             before(grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_8()); 
+            match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_rule__MergedField__Group__8__Impl2763); 
+             after(grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_8()); 
 
             }
 
@@ -3557,21 +3706,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__9"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1378:1: rule__MergedField__Group__9 : rule__MergedField__Group__9__Impl rule__MergedField__Group__10 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1402:1: rule__MergedField__Group__9 : rule__MergedField__Group__9__Impl rule__MergedField__Group__10 ;
     public final void rule__MergedField__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1382:1: ( rule__MergedField__Group__9__Impl rule__MergedField__Group__10 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1383:2: rule__MergedField__Group__9__Impl rule__MergedField__Group__10
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1406:1: ( rule__MergedField__Group__9__Impl rule__MergedField__Group__10 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1407:2: rule__MergedField__Group__9__Impl rule__MergedField__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__9__Impl_in_rule__MergedField__Group__92727);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__9__Impl_in_rule__MergedField__Group__92792);
             rule__MergedField__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__10_in_rule__MergedField__Group__92730);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__10_in_rule__MergedField__Group__92795);
             rule__MergedField__Group__10();
 
             state._fsp--;
@@ -3595,31 +3744,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__9__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1390:1: rule__MergedField__Group__9__Impl : ( ( rule__MergedField__FieldsAssignment_9 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1414:1: rule__MergedField__Group__9__Impl : ( ( rule__MergedField__AttributeNamesAssignment_9 ) ) ;
     public final void rule__MergedField__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1394:1: ( ( ( rule__MergedField__FieldsAssignment_9 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1395:1: ( ( rule__MergedField__FieldsAssignment_9 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1418:1: ( ( ( rule__MergedField__AttributeNamesAssignment_9 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1419:1: ( ( rule__MergedField__AttributeNamesAssignment_9 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1395:1: ( ( rule__MergedField__FieldsAssignment_9 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1396:1: ( rule__MergedField__FieldsAssignment_9 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1419:1: ( ( rule__MergedField__AttributeNamesAssignment_9 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1420:1: ( rule__MergedField__AttributeNamesAssignment_9 )
             {
-             before(grammarAccess.getMergedFieldAccess().getFieldsAssignment_9()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1397:1: ( rule__MergedField__FieldsAssignment_9 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1397:2: rule__MergedField__FieldsAssignment_9
+             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_9()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1421:1: ( rule__MergedField__AttributeNamesAssignment_9 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1421:2: rule__MergedField__AttributeNamesAssignment_9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__FieldsAssignment_9_in_rule__MergedField__Group__9__Impl2757);
-            rule__MergedField__FieldsAssignment_9();
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__AttributeNamesAssignment_9_in_rule__MergedField__Group__9__Impl2822);
+            rule__MergedField__AttributeNamesAssignment_9();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMergedFieldAccess().getFieldsAssignment_9()); 
+             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_9()); 
 
             }
 
@@ -3642,21 +3791,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__10"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1407:1: rule__MergedField__Group__10 : rule__MergedField__Group__10__Impl rule__MergedField__Group__11 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1431:1: rule__MergedField__Group__10 : rule__MergedField__Group__10__Impl rule__MergedField__Group__11 ;
     public final void rule__MergedField__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1411:1: ( rule__MergedField__Group__10__Impl rule__MergedField__Group__11 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1412:2: rule__MergedField__Group__10__Impl rule__MergedField__Group__11
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1435:1: ( rule__MergedField__Group__10__Impl rule__MergedField__Group__11 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1436:2: rule__MergedField__Group__10__Impl rule__MergedField__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__10__Impl_in_rule__MergedField__Group__102787);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__10__Impl_in_rule__MergedField__Group__102852);
             rule__MergedField__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__11_in_rule__MergedField__Group__102790);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__11_in_rule__MergedField__Group__102855);
             rule__MergedField__Group__11();
 
             state._fsp--;
@@ -3680,35 +3829,35 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__10__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1419:1: rule__MergedField__Group__10__Impl : ( ( rule__MergedField__Group_10__0 )* ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1443:1: rule__MergedField__Group__10__Impl : ( ( rule__MergedField__Group_10__0 )* ) ;
     public final void rule__MergedField__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1423:1: ( ( ( rule__MergedField__Group_10__0 )* ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1424:1: ( ( rule__MergedField__Group_10__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1447:1: ( ( ( rule__MergedField__Group_10__0 )* ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1448:1: ( ( rule__MergedField__Group_10__0 )* )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1424:1: ( ( rule__MergedField__Group_10__0 )* )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1425:1: ( rule__MergedField__Group_10__0 )*
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1448:1: ( ( rule__MergedField__Group_10__0 )* )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1449:1: ( rule__MergedField__Group_10__0 )*
             {
              before(grammarAccess.getMergedFieldAccess().getGroup_10()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1426:1: ( rule__MergedField__Group_10__0 )*
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1450:1: ( rule__MergedField__Group_10__0 )*
             loop10:
             do {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( (LA10_0==22) ) {
+                if ( (LA10_0==RULE_COMA) ) {
                     alt10=1;
                 }
 
 
                 switch (alt10) {
             	case 1 :
-            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1426:2: rule__MergedField__Group_10__0
+            	    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1450:2: rule__MergedField__Group_10__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__0_in_rule__MergedField__Group__10__Impl2817);
+            	    pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__0_in_rule__MergedField__Group__10__Impl2882);
             	    rule__MergedField__Group_10__0();
 
             	    state._fsp--;
@@ -3745,21 +3894,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__11"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1436:1: rule__MergedField__Group__11 : rule__MergedField__Group__11__Impl rule__MergedField__Group__12 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1460:1: rule__MergedField__Group__11 : rule__MergedField__Group__11__Impl rule__MergedField__Group__12 ;
     public final void rule__MergedField__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1440:1: ( rule__MergedField__Group__11__Impl rule__MergedField__Group__12 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1441:2: rule__MergedField__Group__11__Impl rule__MergedField__Group__12
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1464:1: ( rule__MergedField__Group__11__Impl rule__MergedField__Group__12 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1465:2: rule__MergedField__Group__11__Impl rule__MergedField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__11__Impl_in_rule__MergedField__Group__112848);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__11__Impl_in_rule__MergedField__Group__112913);
             rule__MergedField__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__12_in_rule__MergedField__Group__112851);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__12_in_rule__MergedField__Group__112916);
             rule__MergedField__Group__12();
 
             state._fsp--;
@@ -3783,21 +3932,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__11__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1448:1: rule__MergedField__Group__11__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1472:1: rule__MergedField__Group__11__Impl : ( RULE_RIGHTBRACKET ) ;
     public final void rule__MergedField__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1452:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1453:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1476:1: ( ( RULE_RIGHTBRACKET ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1477:1: ( RULE_RIGHTBRACKET )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1453:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1454:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1477:1: ( RULE_RIGHTBRACKET )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1478:1: RULE_RIGHTBRACKET
             {
-             before(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_11()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__MergedField__Group__11__Impl2879); 
-             after(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_11()); 
+             before(grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_11()); 
+            match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_rule__MergedField__Group__11__Impl2943); 
+             after(grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_11()); 
 
             }
 
@@ -3820,16 +3969,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__12"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1467:1: rule__MergedField__Group__12 : rule__MergedField__Group__12__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1489:1: rule__MergedField__Group__12 : rule__MergedField__Group__12__Impl ;
     public final void rule__MergedField__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1471:1: ( rule__MergedField__Group__12__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1472:2: rule__MergedField__Group__12__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1493:1: ( rule__MergedField__Group__12__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1494:2: rule__MergedField__Group__12__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__12__Impl_in_rule__MergedField__Group__122910);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group__12__Impl_in_rule__MergedField__Group__122972);
             rule__MergedField__Group__12__Impl();
 
             state._fsp--;
@@ -3853,21 +4002,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group__12__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1478:1: rule__MergedField__Group__12__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1500:1: rule__MergedField__Group__12__Impl : ( RULE_RIGHTPARENTESIS ) ;
     public final void rule__MergedField__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1482:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1483:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1504:1: ( ( RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1505:1: ( RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1483:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1484:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1505:1: ( RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1506:1: RULE_RIGHTPARENTESIS
             {
-             before(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_12()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__MergedField__Group__12__Impl2938); 
-             after(grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_12()); 
+             before(grammarAccess.getMergedFieldAccess().getRIGHTPARENTESISTerminalRuleCall_12()); 
+            match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_rule__MergedField__Group__12__Impl2999); 
+             after(grammarAccess.getMergedFieldAccess().getRIGHTPARENTESISTerminalRuleCall_12()); 
 
             }
 
@@ -3890,21 +4039,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_1__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1523:1: rule__MergedField__Group_1__0 : rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1543:1: rule__MergedField__Group_1__0 : rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1 ;
     public final void rule__MergedField__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1527:1: ( rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1528:2: rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1547:1: ( rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1548:2: rule__MergedField__Group_1__0__Impl rule__MergedField__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__0__Impl_in_rule__MergedField__Group_1__02995);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__0__Impl_in_rule__MergedField__Group_1__03054);
             rule__MergedField__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__1_in_rule__MergedField__Group_1__02998);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__1_in_rule__MergedField__Group_1__03057);
             rule__MergedField__Group_1__1();
 
             state._fsp--;
@@ -3928,21 +4077,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_1__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1535:1: rule__MergedField__Group_1__0__Impl : ( '\\'tableName\\':' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1555:1: rule__MergedField__Group_1__0__Impl : ( RULE_LITERALTABLENAME ) ;
     public final void rule__MergedField__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1539:1: ( ( '\\'tableName\\':' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1540:1: ( '\\'tableName\\':' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1559:1: ( ( RULE_LITERALTABLENAME ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1560:1: ( RULE_LITERALTABLENAME )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1540:1: ( '\\'tableName\\':' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1541:1: '\\'tableName\\':'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1560:1: ( RULE_LITERALTABLENAME )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1561:1: RULE_LITERALTABLENAME
             {
-             before(grammarAccess.getMergedFieldAccess().getTableNameKeyword_1_0()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__MergedField__Group_1__0__Impl3026); 
-             after(grammarAccess.getMergedFieldAccess().getTableNameKeyword_1_0()); 
+             before(grammarAccess.getMergedFieldAccess().getLITERALTABLENAMETerminalRuleCall_1_0()); 
+            match(input,RULE_LITERALTABLENAME,FollowSets000.FOLLOW_RULE_LITERALTABLENAME_in_rule__MergedField__Group_1__0__Impl3084); 
+             after(grammarAccess.getMergedFieldAccess().getLITERALTABLENAMETerminalRuleCall_1_0()); 
 
             }
 
@@ -3965,16 +4114,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_1__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1554:1: rule__MergedField__Group_1__1 : rule__MergedField__Group_1__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1572:1: rule__MergedField__Group_1__1 : rule__MergedField__Group_1__1__Impl ;
     public final void rule__MergedField__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1558:1: ( rule__MergedField__Group_1__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1559:2: rule__MergedField__Group_1__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1576:1: ( rule__MergedField__Group_1__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1577:2: rule__MergedField__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__1__Impl_in_rule__MergedField__Group_1__13057);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_1__1__Impl_in_rule__MergedField__Group_1__13113);
             rule__MergedField__Group_1__1__Impl();
 
             state._fsp--;
@@ -3998,23 +4147,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_1__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1565:1: rule__MergedField__Group_1__1__Impl : ( ( rule__MergedField__TableNameAssignment_1_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1583:1: rule__MergedField__Group_1__1__Impl : ( ( rule__MergedField__TableNameAssignment_1_1 ) ) ;
     public final void rule__MergedField__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1569:1: ( ( ( rule__MergedField__TableNameAssignment_1_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1570:1: ( ( rule__MergedField__TableNameAssignment_1_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1587:1: ( ( ( rule__MergedField__TableNameAssignment_1_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1588:1: ( ( rule__MergedField__TableNameAssignment_1_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1570:1: ( ( rule__MergedField__TableNameAssignment_1_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1571:1: ( rule__MergedField__TableNameAssignment_1_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1588:1: ( ( rule__MergedField__TableNameAssignment_1_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1589:1: ( rule__MergedField__TableNameAssignment_1_1 )
             {
              before(grammarAccess.getMergedFieldAccess().getTableNameAssignment_1_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1572:1: ( rule__MergedField__TableNameAssignment_1_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1572:2: rule__MergedField__TableNameAssignment_1_1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1590:1: ( rule__MergedField__TableNameAssignment_1_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1590:2: rule__MergedField__TableNameAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__TableNameAssignment_1_1_in_rule__MergedField__Group_1__1__Impl3084);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__TableNameAssignment_1_1_in_rule__MergedField__Group_1__1__Impl3140);
             rule__MergedField__TableNameAssignment_1_1();
 
             state._fsp--;
@@ -4045,21 +4194,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_5__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1586:1: rule__MergedField__Group_5__0 : rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1604:1: rule__MergedField__Group_5__0 : rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1 ;
     public final void rule__MergedField__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1590:1: ( rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1591:2: rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1608:1: ( rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1609:2: rule__MergedField__Group_5__0__Impl rule__MergedField__Group_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__0__Impl_in_rule__MergedField__Group_5__03118);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__0__Impl_in_rule__MergedField__Group_5__03174);
             rule__MergedField__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__1_in_rule__MergedField__Group_5__03121);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__1_in_rule__MergedField__Group_5__03177);
             rule__MergedField__Group_5__1();
 
             state._fsp--;
@@ -4083,21 +4232,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_5__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1598:1: rule__MergedField__Group_5__0__Impl : ( ',' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1616:1: rule__MergedField__Group_5__0__Impl : ( RULE_COMA ) ;
     public final void rule__MergedField__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1602:1: ( ( ',' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1603:1: ( ',' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1620:1: ( ( RULE_COMA ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1621:1: ( RULE_COMA )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1603:1: ( ',' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1604:1: ','
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1621:1: ( RULE_COMA )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1622:1: RULE_COMA
             {
-             before(grammarAccess.getMergedFieldAccess().getCommaKeyword_5_0()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__MergedField__Group_5__0__Impl3149); 
-             after(grammarAccess.getMergedFieldAccess().getCommaKeyword_5_0()); 
+             before(grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_5_0()); 
+            match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_rule__MergedField__Group_5__0__Impl3204); 
+             after(grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_5_0()); 
 
             }
 
@@ -4120,16 +4269,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_5__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1617:1: rule__MergedField__Group_5__1 : rule__MergedField__Group_5__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1633:1: rule__MergedField__Group_5__1 : rule__MergedField__Group_5__1__Impl ;
     public final void rule__MergedField__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1621:1: ( rule__MergedField__Group_5__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1622:2: rule__MergedField__Group_5__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1637:1: ( rule__MergedField__Group_5__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1638:2: rule__MergedField__Group_5__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__1__Impl_in_rule__MergedField__Group_5__13180);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_5__1__Impl_in_rule__MergedField__Group_5__13233);
             rule__MergedField__Group_5__1__Impl();
 
             state._fsp--;
@@ -4153,31 +4302,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_5__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1628:1: rule__MergedField__Group_5__1__Impl : ( ( rule__MergedField__AttributeNamesAssignment_5_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1644:1: rule__MergedField__Group_5__1__Impl : ( ( rule__MergedField__FieldsAssignment_5_1 ) ) ;
     public final void rule__MergedField__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1632:1: ( ( ( rule__MergedField__AttributeNamesAssignment_5_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1633:1: ( ( rule__MergedField__AttributeNamesAssignment_5_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1648:1: ( ( ( rule__MergedField__FieldsAssignment_5_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1649:1: ( ( rule__MergedField__FieldsAssignment_5_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1633:1: ( ( rule__MergedField__AttributeNamesAssignment_5_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1634:1: ( rule__MergedField__AttributeNamesAssignment_5_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1649:1: ( ( rule__MergedField__FieldsAssignment_5_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1650:1: ( rule__MergedField__FieldsAssignment_5_1 )
             {
-             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_5_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1635:1: ( rule__MergedField__AttributeNamesAssignment_5_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1635:2: rule__MergedField__AttributeNamesAssignment_5_1
+             before(grammarAccess.getMergedFieldAccess().getFieldsAssignment_5_1()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1651:1: ( rule__MergedField__FieldsAssignment_5_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1651:2: rule__MergedField__FieldsAssignment_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__AttributeNamesAssignment_5_1_in_rule__MergedField__Group_5__1__Impl3207);
-            rule__MergedField__AttributeNamesAssignment_5_1();
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__FieldsAssignment_5_1_in_rule__MergedField__Group_5__1__Impl3260);
+            rule__MergedField__FieldsAssignment_5_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_5_1()); 
+             after(grammarAccess.getMergedFieldAccess().getFieldsAssignment_5_1()); 
 
             }
 
@@ -4200,21 +4349,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_10__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1649:1: rule__MergedField__Group_10__0 : rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1665:1: rule__MergedField__Group_10__0 : rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1 ;
     public final void rule__MergedField__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1653:1: ( rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1654:2: rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1669:1: ( rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1670:2: rule__MergedField__Group_10__0__Impl rule__MergedField__Group_10__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__0__Impl_in_rule__MergedField__Group_10__03241);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__0__Impl_in_rule__MergedField__Group_10__03294);
             rule__MergedField__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__1_in_rule__MergedField__Group_10__03244);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__1_in_rule__MergedField__Group_10__03297);
             rule__MergedField__Group_10__1();
 
             state._fsp--;
@@ -4238,21 +4387,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_10__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1661:1: rule__MergedField__Group_10__0__Impl : ( ',' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1677:1: rule__MergedField__Group_10__0__Impl : ( RULE_COMA ) ;
     public final void rule__MergedField__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1665:1: ( ( ',' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1666:1: ( ',' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1681:1: ( ( RULE_COMA ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1682:1: ( RULE_COMA )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1666:1: ( ',' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1667:1: ','
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1682:1: ( RULE_COMA )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1683:1: RULE_COMA
             {
-             before(grammarAccess.getMergedFieldAccess().getCommaKeyword_10_0()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__MergedField__Group_10__0__Impl3272); 
-             after(grammarAccess.getMergedFieldAccess().getCommaKeyword_10_0()); 
+             before(grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_10_0()); 
+            match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_rule__MergedField__Group_10__0__Impl3324); 
+             after(grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_10_0()); 
 
             }
 
@@ -4275,16 +4424,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_10__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1680:1: rule__MergedField__Group_10__1 : rule__MergedField__Group_10__1__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1694:1: rule__MergedField__Group_10__1 : rule__MergedField__Group_10__1__Impl ;
     public final void rule__MergedField__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1684:1: ( rule__MergedField__Group_10__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1685:2: rule__MergedField__Group_10__1__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1698:1: ( rule__MergedField__Group_10__1__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1699:2: rule__MergedField__Group_10__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__1__Impl_in_rule__MergedField__Group_10__13303);
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__Group_10__1__Impl_in_rule__MergedField__Group_10__13353);
             rule__MergedField__Group_10__1__Impl();
 
             state._fsp--;
@@ -4308,31 +4457,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__Group_10__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1691:1: rule__MergedField__Group_10__1__Impl : ( ( rule__MergedField__FieldsAssignment_10_1 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1705:1: rule__MergedField__Group_10__1__Impl : ( ( rule__MergedField__AttributeNamesAssignment_10_1 ) ) ;
     public final void rule__MergedField__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1695:1: ( ( ( rule__MergedField__FieldsAssignment_10_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1696:1: ( ( rule__MergedField__FieldsAssignment_10_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1709:1: ( ( ( rule__MergedField__AttributeNamesAssignment_10_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1710:1: ( ( rule__MergedField__AttributeNamesAssignment_10_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1696:1: ( ( rule__MergedField__FieldsAssignment_10_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1697:1: ( rule__MergedField__FieldsAssignment_10_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1710:1: ( ( rule__MergedField__AttributeNamesAssignment_10_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1711:1: ( rule__MergedField__AttributeNamesAssignment_10_1 )
             {
-             before(grammarAccess.getMergedFieldAccess().getFieldsAssignment_10_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1698:1: ( rule__MergedField__FieldsAssignment_10_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1698:2: rule__MergedField__FieldsAssignment_10_1
+             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_10_1()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1712:1: ( rule__MergedField__AttributeNamesAssignment_10_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1712:2: rule__MergedField__AttributeNamesAssignment_10_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MergedField__FieldsAssignment_10_1_in_rule__MergedField__Group_10__1__Impl3330);
-            rule__MergedField__FieldsAssignment_10_1();
+            pushFollow(FollowSets000.FOLLOW_rule__MergedField__AttributeNamesAssignment_10_1_in_rule__MergedField__Group_10__1__Impl3380);
+            rule__MergedField__AttributeNamesAssignment_10_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMergedFieldAccess().getFieldsAssignment_10_1()); 
+             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_10_1()); 
 
             }
 
@@ -4355,21 +4504,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1712:1: rule__AttributeName__Group__0 : rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1726:1: rule__AttributeName__Group__0 : rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1 ;
     public final void rule__AttributeName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1716:1: ( rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1717:2: rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1730:1: ( rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1731:2: rule__AttributeName__Group__0__Impl rule__AttributeName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__0__Impl_in_rule__AttributeName__Group__03364);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__0__Impl_in_rule__AttributeName__Group__03414);
             rule__AttributeName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__1_in_rule__AttributeName__Group__03367);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__1_in_rule__AttributeName__Group__03417);
             rule__AttributeName__Group__1();
 
             state._fsp--;
@@ -4393,21 +4542,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1724:1: rule__AttributeName__Group__0__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1738:1: rule__AttributeName__Group__0__Impl : ( RULE_LEFTPARENTESIS ) ;
     public final void rule__AttributeName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1728:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1729:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1742:1: ( ( RULE_LEFTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1743:1: ( RULE_LEFTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1729:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1730:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1743:1: ( RULE_LEFTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1744:1: RULE_LEFTPARENTESIS
             {
-             before(grammarAccess.getAttributeNameAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__AttributeName__Group__0__Impl3395); 
-             after(grammarAccess.getAttributeNameAccess().getLeftCurlyBracketKeyword_0()); 
+             before(grammarAccess.getAttributeNameAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
+            match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_rule__AttributeName__Group__0__Impl3444); 
+             after(grammarAccess.getAttributeNameAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
 
             }
 
@@ -4430,21 +4579,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1743:1: rule__AttributeName__Group__1 : rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1755:1: rule__AttributeName__Group__1 : rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2 ;
     public final void rule__AttributeName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1747:1: ( rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1748:2: rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1759:1: ( rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1760:2: rule__AttributeName__Group__1__Impl rule__AttributeName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__1__Impl_in_rule__AttributeName__Group__13426);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__1__Impl_in_rule__AttributeName__Group__13473);
             rule__AttributeName__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__2_in_rule__AttributeName__Group__13429);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__2_in_rule__AttributeName__Group__13476);
             rule__AttributeName__Group__2();
 
             state._fsp--;
@@ -4468,32 +4617,32 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1755:1: rule__AttributeName__Group__1__Impl : ( ( rule__AttributeName__Group_1__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1767:1: rule__AttributeName__Group__1__Impl : ( ( rule__AttributeName__OldFieldAssignment_1 )? ) ;
     public final void rule__AttributeName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1759:1: ( ( ( rule__AttributeName__Group_1__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1760:1: ( ( rule__AttributeName__Group_1__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1771:1: ( ( ( rule__AttributeName__OldFieldAssignment_1 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1772:1: ( ( rule__AttributeName__OldFieldAssignment_1 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1760:1: ( ( rule__AttributeName__Group_1__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1761:1: ( rule__AttributeName__Group_1__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1772:1: ( ( rule__AttributeName__OldFieldAssignment_1 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1773:1: ( rule__AttributeName__OldFieldAssignment_1 )?
             {
-             before(grammarAccess.getAttributeNameAccess().getGroup_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1762:1: ( rule__AttributeName__Group_1__0 )?
+             before(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1774:1: ( rule__AttributeName__OldFieldAssignment_1 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==30) ) {
+            if ( ((LA11_0>=RULE_STRING && LA11_0<=RULE_ID)) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1762:2: rule__AttributeName__Group_1__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1774:2: rule__AttributeName__OldFieldAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group_1__0_in_rule__AttributeName__Group__1__Impl3456);
-                    rule__AttributeName__Group_1__0();
+                    pushFollow(FollowSets000.FOLLOW_rule__AttributeName__OldFieldAssignment_1_in_rule__AttributeName__Group__1__Impl3503);
+                    rule__AttributeName__OldFieldAssignment_1();
 
                     state._fsp--;
 
@@ -4503,7 +4652,7 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getAttributeNameAccess().getGroup_1()); 
+             after(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1()); 
 
             }
 
@@ -4526,21 +4675,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1772:1: rule__AttributeName__Group__2 : rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1784:1: rule__AttributeName__Group__2 : rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3 ;
     public final void rule__AttributeName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1776:1: ( rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1777:2: rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1788:1: ( rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1789:2: rule__AttributeName__Group__2__Impl rule__AttributeName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__2__Impl_in_rule__AttributeName__Group__23487);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__2__Impl_in_rule__AttributeName__Group__23534);
             rule__AttributeName__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__3_in_rule__AttributeName__Group__23490);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__3_in_rule__AttributeName__Group__23537);
             rule__AttributeName__Group__3();
 
             state._fsp--;
@@ -4564,21 +4713,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1784:1: rule__AttributeName__Group__2__Impl : ( 'finalField' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1796:1: rule__AttributeName__Group__2__Impl : ( RULE_COMA ) ;
     public final void rule__AttributeName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1788:1: ( ( 'finalField' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1789:1: ( 'finalField' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1800:1: ( ( RULE_COMA ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1801:1: ( RULE_COMA )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1789:1: ( 'finalField' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1790:1: 'finalField'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1801:1: ( RULE_COMA )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1802:1: RULE_COMA
             {
-             before(grammarAccess.getAttributeNameAccess().getFinalFieldKeyword_2()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__AttributeName__Group__2__Impl3518); 
-             after(grammarAccess.getAttributeNameAccess().getFinalFieldKeyword_2()); 
+             before(grammarAccess.getAttributeNameAccess().getCOMATerminalRuleCall_2()); 
+            match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_rule__AttributeName__Group__2__Impl3564); 
+             after(grammarAccess.getAttributeNameAccess().getCOMATerminalRuleCall_2()); 
 
             }
 
@@ -4601,21 +4750,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1803:1: rule__AttributeName__Group__3 : rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1813:1: rule__AttributeName__Group__3 : rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4 ;
     public final void rule__AttributeName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1807:1: ( rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1808:2: rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1817:1: ( rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1818:2: rule__AttributeName__Group__3__Impl rule__AttributeName__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__3__Impl_in_rule__AttributeName__Group__33549);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__3__Impl_in_rule__AttributeName__Group__33593);
             rule__AttributeName__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__4_in_rule__AttributeName__Group__33552);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__4_in_rule__AttributeName__Group__33596);
             rule__AttributeName__Group__4();
 
             state._fsp--;
@@ -4639,23 +4788,23 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1815:1: rule__AttributeName__Group__3__Impl : ( ( rule__AttributeName__FinalFieldAssignment_3 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1825:1: rule__AttributeName__Group__3__Impl : ( ( rule__AttributeName__FinalFieldAssignment_3 ) ) ;
     public final void rule__AttributeName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1819:1: ( ( ( rule__AttributeName__FinalFieldAssignment_3 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1820:1: ( ( rule__AttributeName__FinalFieldAssignment_3 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1829:1: ( ( ( rule__AttributeName__FinalFieldAssignment_3 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1830:1: ( ( rule__AttributeName__FinalFieldAssignment_3 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1820:1: ( ( rule__AttributeName__FinalFieldAssignment_3 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1821:1: ( rule__AttributeName__FinalFieldAssignment_3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1830:1: ( ( rule__AttributeName__FinalFieldAssignment_3 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1831:1: ( rule__AttributeName__FinalFieldAssignment_3 )
             {
              before(grammarAccess.getAttributeNameAccess().getFinalFieldAssignment_3()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1822:1: ( rule__AttributeName__FinalFieldAssignment_3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1822:2: rule__AttributeName__FinalFieldAssignment_3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1832:1: ( rule__AttributeName__FinalFieldAssignment_3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1832:2: rule__AttributeName__FinalFieldAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__FinalFieldAssignment_3_in_rule__AttributeName__Group__3__Impl3579);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__FinalFieldAssignment_3_in_rule__AttributeName__Group__3__Impl3623);
             rule__AttributeName__FinalFieldAssignment_3();
 
             state._fsp--;
@@ -4686,16 +4835,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1832:1: rule__AttributeName__Group__4 : rule__AttributeName__Group__4__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1842:1: rule__AttributeName__Group__4 : rule__AttributeName__Group__4__Impl ;
     public final void rule__AttributeName__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1836:1: ( rule__AttributeName__Group__4__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1837:2: rule__AttributeName__Group__4__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1846:1: ( rule__AttributeName__Group__4__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1847:2: rule__AttributeName__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__4__Impl_in_rule__AttributeName__Group__43609);
+            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group__4__Impl_in_rule__AttributeName__Group__43653);
             rule__AttributeName__Group__4__Impl();
 
             state._fsp--;
@@ -4719,21 +4868,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AttributeName__Group__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1843:1: rule__AttributeName__Group__4__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1853:1: rule__AttributeName__Group__4__Impl : ( RULE_RIGHTPARENTESIS ) ;
     public final void rule__AttributeName__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1847:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1848:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1857:1: ( ( RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1858:1: ( RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1848:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1849:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1858:1: ( RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1859:1: RULE_RIGHTPARENTESIS
             {
-             before(grammarAccess.getAttributeNameAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__AttributeName__Group__4__Impl3637); 
-             after(grammarAccess.getAttributeNameAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getAttributeNameAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
+            match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_rule__AttributeName__Group__4__Impl3680); 
+             after(grammarAccess.getAttributeNameAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
 
             }
 
@@ -4755,177 +4904,22 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__AttributeName__Group__4__Impl"
 
 
-    // $ANTLR start "rule__AttributeName__Group_1__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1872:1: rule__AttributeName__Group_1__0 : rule__AttributeName__Group_1__0__Impl rule__AttributeName__Group_1__1 ;
-    public final void rule__AttributeName__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1876:1: ( rule__AttributeName__Group_1__0__Impl rule__AttributeName__Group_1__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1877:2: rule__AttributeName__Group_1__0__Impl rule__AttributeName__Group_1__1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group_1__0__Impl_in_rule__AttributeName__Group_1__03678);
-            rule__AttributeName__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group_1__1_in_rule__AttributeName__Group_1__03681);
-            rule__AttributeName__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AttributeName__Group_1__0"
-
-
-    // $ANTLR start "rule__AttributeName__Group_1__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1884:1: rule__AttributeName__Group_1__0__Impl : ( 'oldField' ) ;
-    public final void rule__AttributeName__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1888:1: ( ( 'oldField' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1889:1: ( 'oldField' )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1889:1: ( 'oldField' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1890:1: 'oldField'
-            {
-             before(grammarAccess.getAttributeNameAccess().getOldFieldKeyword_1_0()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__AttributeName__Group_1__0__Impl3709); 
-             after(grammarAccess.getAttributeNameAccess().getOldFieldKeyword_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AttributeName__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__AttributeName__Group_1__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1903:1: rule__AttributeName__Group_1__1 : rule__AttributeName__Group_1__1__Impl ;
-    public final void rule__AttributeName__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1907:1: ( rule__AttributeName__Group_1__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1908:2: rule__AttributeName__Group_1__1__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__Group_1__1__Impl_in_rule__AttributeName__Group_1__13740);
-            rule__AttributeName__Group_1__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AttributeName__Group_1__1"
-
-
-    // $ANTLR start "rule__AttributeName__Group_1__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1914:1: rule__AttributeName__Group_1__1__Impl : ( ( rule__AttributeName__OldFieldAssignment_1_1 ) ) ;
-    public final void rule__AttributeName__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1918:1: ( ( ( rule__AttributeName__OldFieldAssignment_1_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1919:1: ( ( rule__AttributeName__OldFieldAssignment_1_1 ) )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1919:1: ( ( rule__AttributeName__OldFieldAssignment_1_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1920:1: ( rule__AttributeName__OldFieldAssignment_1_1 )
-            {
-             before(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1921:1: ( rule__AttributeName__OldFieldAssignment_1_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1921:2: rule__AttributeName__OldFieldAssignment_1_1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__AttributeName__OldFieldAssignment_1_1_in_rule__AttributeName__Group_1__1__Impl3767);
-            rule__AttributeName__OldFieldAssignment_1_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AttributeName__Group_1__1__Impl"
-
-
     // $ANTLR start "rule__Field__Group__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1935:1: rule__Field__Group__0 : rule__Field__Group__0__Impl rule__Field__Group__1 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1880:1: rule__Field__Group__0 : rule__Field__Group__0__Impl rule__Field__Group__1 ;
     public final void rule__Field__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1939:1: ( rule__Field__Group__0__Impl rule__Field__Group__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1940:2: rule__Field__Group__0__Impl rule__Field__Group__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1884:1: ( rule__Field__Group__0__Impl rule__Field__Group__1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1885:2: rule__Field__Group__0__Impl rule__Field__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__03801);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__03719);
             rule__Field__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__1_in_rule__Field__Group__03804);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__1_in_rule__Field__Group__03722);
             rule__Field__Group__1();
 
             state._fsp--;
@@ -4949,31 +4943,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1947:1: rule__Field__Group__0__Impl : ( () ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1892:1: rule__Field__Group__0__Impl : ( RULE_LEFTPARENTESIS ) ;
     public final void rule__Field__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1951:1: ( ( () ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1952:1: ( () )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1896:1: ( ( RULE_LEFTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1897:1: ( RULE_LEFTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1952:1: ( () )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1953:1: ()
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1897:1: ( RULE_LEFTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1898:1: RULE_LEFTPARENTESIS
             {
-             before(grammarAccess.getFieldAccess().getFieldAction_0()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1954:1: ()
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1956:1: 
-            {
-            }
-
-             after(grammarAccess.getFieldAccess().getFieldAction_0()); 
+             before(grammarAccess.getFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
+            match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_rule__Field__Group__0__Impl3749); 
+             after(grammarAccess.getFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
 
             }
 
 
             }
 
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
         }
         finally {
 
@@ -4986,21 +4980,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1966:1: rule__Field__Group__1 : rule__Field__Group__1__Impl rule__Field__Group__2 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1909:1: rule__Field__Group__1 : rule__Field__Group__1__Impl rule__Field__Group__2 ;
     public final void rule__Field__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1970:1: ( rule__Field__Group__1__Impl rule__Field__Group__2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1971:2: rule__Field__Group__1__Impl rule__Field__Group__2
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1913:1: ( rule__Field__Group__1__Impl rule__Field__Group__2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1914:2: rule__Field__Group__1__Impl rule__Field__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__13862);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__13778);
             rule__Field__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__2_in_rule__Field__Group__13865);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__2_in_rule__Field__Group__13781);
             rule__Field__Group__2();
 
             state._fsp--;
@@ -5024,21 +5018,31 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1978:1: rule__Field__Group__1__Impl : ( '{' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1921:1: rule__Field__Group__1__Impl : ( ( rule__Field__NameAssignment_1 ) ) ;
     public final void rule__Field__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1982:1: ( ( '{' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1983:1: ( '{' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1925:1: ( ( ( rule__Field__NameAssignment_1 ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1926:1: ( ( rule__Field__NameAssignment_1 ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1983:1: ( '{' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1984:1: '{'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1926:1: ( ( rule__Field__NameAssignment_1 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1927:1: ( rule__Field__NameAssignment_1 )
             {
-             before(grammarAccess.getFieldAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Field__Group__1__Impl3893); 
-             after(grammarAccess.getFieldAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getFieldAccess().getNameAssignment_1()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1928:1: ( rule__Field__NameAssignment_1 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1928:2: rule__Field__NameAssignment_1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Field__NameAssignment_1_in_rule__Field__Group__1__Impl3808);
+            rule__Field__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFieldAccess().getNameAssignment_1()); 
 
             }
 
@@ -5061,21 +5065,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1997:1: rule__Field__Group__2 : rule__Field__Group__2__Impl rule__Field__Group__3 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1938:1: rule__Field__Group__2 : rule__Field__Group__2__Impl rule__Field__Group__3 ;
     public final void rule__Field__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2001:1: ( rule__Field__Group__2__Impl rule__Field__Group__3 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2002:2: rule__Field__Group__2__Impl rule__Field__Group__3
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1942:1: ( rule__Field__Group__2__Impl rule__Field__Group__3 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1943:2: rule__Field__Group__2__Impl rule__Field__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__23924);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__23838);
             rule__Field__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__3_in_rule__Field__Group__23927);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__3_in_rule__Field__Group__23841);
             rule__Field__Group__3();
 
             state._fsp--;
@@ -5099,31 +5103,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__2__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2009:1: rule__Field__Group__2__Impl : ( ( rule__Field__NameAssignment_2 ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1950:1: rule__Field__Group__2__Impl : ( RULE_COMA ) ;
     public final void rule__Field__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2013:1: ( ( ( rule__Field__NameAssignment_2 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2014:1: ( ( rule__Field__NameAssignment_2 ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1954:1: ( ( RULE_COMA ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1955:1: ( RULE_COMA )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2014:1: ( ( rule__Field__NameAssignment_2 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2015:1: ( rule__Field__NameAssignment_2 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1955:1: ( RULE_COMA )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1956:1: RULE_COMA
             {
-             before(grammarAccess.getFieldAccess().getNameAssignment_2()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2016:1: ( rule__Field__NameAssignment_2 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2016:2: rule__Field__NameAssignment_2
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__NameAssignment_2_in_rule__Field__Group__2__Impl3954);
-            rule__Field__NameAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFieldAccess().getNameAssignment_2()); 
+             before(grammarAccess.getFieldAccess().getCOMATerminalRuleCall_2()); 
+            match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_rule__Field__Group__2__Impl3868); 
+             after(grammarAccess.getFieldAccess().getCOMATerminalRuleCall_2()); 
 
             }
 
@@ -5146,21 +5140,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2026:1: rule__Field__Group__3 : rule__Field__Group__3__Impl rule__Field__Group__4 ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1967:1: rule__Field__Group__3 : rule__Field__Group__3__Impl rule__Field__Group__4 ;
     public final void rule__Field__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2030:1: ( rule__Field__Group__3__Impl rule__Field__Group__4 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2031:2: rule__Field__Group__3__Impl rule__Field__Group__4
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1971:1: ( rule__Field__Group__3__Impl rule__Field__Group__4 )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1972:2: rule__Field__Group__3__Impl rule__Field__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__3__Impl_in_rule__Field__Group__33984);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__3__Impl_in_rule__Field__Group__33897);
             rule__Field__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__4_in_rule__Field__Group__33987);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__4_in_rule__Field__Group__33900);
             rule__Field__Group__4();
 
             state._fsp--;
@@ -5184,32 +5178,32 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__3__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2038:1: rule__Field__Group__3__Impl : ( ( rule__Field__Group_3__0 )? ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1979:1: rule__Field__Group__3__Impl : ( ( rule__Field__TypeAssignment_3 )? ) ;
     public final void rule__Field__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2042:1: ( ( ( rule__Field__Group_3__0 )? ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2043:1: ( ( rule__Field__Group_3__0 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1983:1: ( ( ( rule__Field__TypeAssignment_3 )? ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1984:1: ( ( rule__Field__TypeAssignment_3 )? )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2043:1: ( ( rule__Field__Group_3__0 )? )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2044:1: ( rule__Field__Group_3__0 )?
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1984:1: ( ( rule__Field__TypeAssignment_3 )? )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1985:1: ( rule__Field__TypeAssignment_3 )?
             {
-             before(grammarAccess.getFieldAccess().getGroup_3()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2045:1: ( rule__Field__Group_3__0 )?
+             before(grammarAccess.getFieldAccess().getTypeAssignment_3()); 
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1986:1: ( rule__Field__TypeAssignment_3 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==31) ) {
+            if ( ((LA12_0>=27 && LA12_0<=30)) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2045:2: rule__Field__Group_3__0
+                    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1986:2: rule__Field__TypeAssignment_3
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Field__Group_3__0_in_rule__Field__Group__3__Impl4014);
-                    rule__Field__Group_3__0();
+                    pushFollow(FollowSets000.FOLLOW_rule__Field__TypeAssignment_3_in_rule__Field__Group__3__Impl3927);
+                    rule__Field__TypeAssignment_3();
 
                     state._fsp--;
 
@@ -5219,7 +5213,7 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getFieldAccess().getGroup_3()); 
+             after(grammarAccess.getFieldAccess().getTypeAssignment_3()); 
 
             }
 
@@ -5242,16 +5236,16 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2055:1: rule__Field__Group__4 : rule__Field__Group__4__Impl ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:1996:1: rule__Field__Group__4 : rule__Field__Group__4__Impl ;
     public final void rule__Field__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2059:1: ( rule__Field__Group__4__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2060:2: rule__Field__Group__4__Impl
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2000:1: ( rule__Field__Group__4__Impl )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2001:2: rule__Field__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__4__Impl_in_rule__Field__Group__44045);
+            pushFollow(FollowSets000.FOLLOW_rule__Field__Group__4__Impl_in_rule__Field__Group__43958);
             rule__Field__Group__4__Impl();
 
             state._fsp--;
@@ -5275,21 +5269,21 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Field__Group__4__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2066:1: rule__Field__Group__4__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2007:1: rule__Field__Group__4__Impl : ( RULE_RIGHTPARENTESIS ) ;
     public final void rule__Field__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2070:1: ( ( '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2071:1: ( '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2011:1: ( ( RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2012:1: ( RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2071:1: ( '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2072:1: '}'
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2012:1: ( RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2013:1: RULE_RIGHTPARENTESIS
             {
-             before(grammarAccess.getFieldAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Field__Group__4__Impl4073); 
-             after(grammarAccess.getFieldAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getFieldAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
+            match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Field__Group__4__Impl3985); 
+             after(grammarAccess.getFieldAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
 
             }
 
@@ -5311,181 +5305,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Field__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Field__Group_3__0"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2095:1: rule__Field__Group_3__0 : rule__Field__Group_3__0__Impl rule__Field__Group_3__1 ;
-    public final void rule__Field__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Config__ConecctionAssignment_5"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2035:1: rule__Config__ConecctionAssignment_5 : ( ruleConnection ) ;
+    public final void rule__Config__ConecctionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2099:1: ( rule__Field__Group_3__0__Impl rule__Field__Group_3__1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2100:2: rule__Field__Group_3__0__Impl rule__Field__Group_3__1
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2039:1: ( ( ruleConnection ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2040:1: ( ruleConnection )
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group_3__0__Impl_in_rule__Field__Group_3__04114);
-            rule__Field__Group_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group_3__1_in_rule__Field__Group_3__04117);
-            rule__Field__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Field__Group_3__0"
-
-
-    // $ANTLR start "rule__Field__Group_3__0__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2107:1: rule__Field__Group_3__0__Impl : ( 'type' ) ;
-    public final void rule__Field__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2111:1: ( ( 'type' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2112:1: ( 'type' )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2040:1: ( ruleConnection )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2041:1: ruleConnection
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2112:1: ( 'type' )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2113:1: 'type'
-            {
-             before(grammarAccess.getFieldAccess().getTypeKeyword_3_0()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__Field__Group_3__0__Impl4145); 
-             after(grammarAccess.getFieldAccess().getTypeKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Field__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__Field__Group_3__1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2126:1: rule__Field__Group_3__1 : rule__Field__Group_3__1__Impl ;
-    public final void rule__Field__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2130:1: ( rule__Field__Group_3__1__Impl )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2131:2: rule__Field__Group_3__1__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__Group_3__1__Impl_in_rule__Field__Group_3__14176);
-            rule__Field__Group_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Field__Group_3__1"
-
-
-    // $ANTLR start "rule__Field__Group_3__1__Impl"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2137:1: rule__Field__Group_3__1__Impl : ( ( rule__Field__TypeAssignment_3_1 ) ) ;
-    public final void rule__Field__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2141:1: ( ( ( rule__Field__TypeAssignment_3_1 ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2142:1: ( ( rule__Field__TypeAssignment_3_1 ) )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2142:1: ( ( rule__Field__TypeAssignment_3_1 ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2143:1: ( rule__Field__TypeAssignment_3_1 )
-            {
-             before(grammarAccess.getFieldAccess().getTypeAssignment_3_1()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2144:1: ( rule__Field__TypeAssignment_3_1 )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2144:2: rule__Field__TypeAssignment_3_1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Field__TypeAssignment_3_1_in_rule__Field__Group_3__1__Impl4203);
-            rule__Field__TypeAssignment_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFieldAccess().getTypeAssignment_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Field__Group_3__1__Impl"
-
-
-    // $ANTLR start "rule__Config__ConecctionAssignment_3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2159:1: rule__Config__ConecctionAssignment_3 : ( ruleConnection ) ;
-    public final void rule__Config__ConecctionAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2163:1: ( ( ruleConnection ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2164:1: ( ruleConnection )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2164:1: ( ruleConnection )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2165:1: ruleConnection
-            {
-             before(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_34242);
+             before(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_54029);
             ruleConnection();
 
             state._fsp--;
 
-             after(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_3_0()); 
+             after(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
 
             }
 
@@ -5504,29 +5343,29 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__ConecctionAssignment_3"
+    // $ANTLR end "rule__Config__ConecctionAssignment_5"
 
 
-    // $ANTLR start "rule__Config__MergeFieldsAssignment_4_2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2174:1: rule__Config__MergeFieldsAssignment_4_2 : ( ruleMergedField ) ;
-    public final void rule__Config__MergeFieldsAssignment_4_2() throws RecognitionException {
+    // $ANTLR start "rule__Config__MergeFieldsAssignment_6_2"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2050:1: rule__Config__MergeFieldsAssignment_6_2 : ( ruleMergedField ) ;
+    public final void rule__Config__MergeFieldsAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2178:1: ( ( ruleMergedField ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2179:1: ( ruleMergedField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2054:1: ( ( ruleMergedField ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2055:1: ( ruleMergedField )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2179:1: ( ruleMergedField )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2180:1: ruleMergedField
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2055:1: ( ruleMergedField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2056:1: ruleMergedField
             {
-             before(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_4_24273);
+             before(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_2_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_24060);
             ruleMergedField();
 
             state._fsp--;
 
-             after(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_2_0()); 
+             after(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_2_0()); 
 
             }
 
@@ -5545,29 +5384,29 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__MergeFieldsAssignment_4_2"
+    // $ANTLR end "rule__Config__MergeFieldsAssignment_6_2"
 
 
-    // $ANTLR start "rule__Config__MergeFieldsAssignment_4_3_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2189:1: rule__Config__MergeFieldsAssignment_4_3_1 : ( ruleMergedField ) ;
-    public final void rule__Config__MergeFieldsAssignment_4_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Config__MergeFieldsAssignment_6_3_1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2065:1: rule__Config__MergeFieldsAssignment_6_3_1 : ( ruleMergedField ) ;
+    public final void rule__Config__MergeFieldsAssignment_6_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2193:1: ( ( ruleMergedField ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2194:1: ( ruleMergedField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2069:1: ( ( ruleMergedField ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2070:1: ( ruleMergedField )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2194:1: ( ruleMergedField )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2195:1: ruleMergedField
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2070:1: ( ruleMergedField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2071:1: ruleMergedField
             {
-             before(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_4_3_14304);
+             before(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_3_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_3_14091);
             ruleMergedField();
 
             state._fsp--;
 
-             after(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_3_1_0()); 
+             after(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_3_1_0()); 
 
             }
 
@@ -5586,24 +5425,24 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__MergeFieldsAssignment_4_3_1"
+    // $ANTLR end "rule__Config__MergeFieldsAssignment_6_3_1"
 
 
     // $ANTLR start "rule__Connection__UrlAssignment_2_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2204:1: rule__Connection__UrlAssignment_2_1 : ( ruleEString ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2080:1: rule__Connection__UrlAssignment_2_1 : ( ruleEString ) ;
     public final void rule__Connection__UrlAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2208:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2209:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2084:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2085:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2209:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2210:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2085:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2086:1: ruleEString
             {
              before(grammarAccess.getConnectionAccess().getUrlEStringParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__UrlAssignment_2_14335);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__UrlAssignment_2_14122);
             ruleEString();
 
             state._fsp--;
@@ -5631,20 +5470,20 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__UsernameAssignment_3_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2219:1: rule__Connection__UsernameAssignment_3_1 : ( ruleEString ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2095:1: rule__Connection__UsernameAssignment_3_1 : ( ruleEString ) ;
     public final void rule__Connection__UsernameAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2223:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2224:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2099:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2100:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2224:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2225:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2100:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2101:1: ruleEString
             {
              before(grammarAccess.getConnectionAccess().getUsernameEStringParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__UsernameAssignment_3_14366);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__UsernameAssignment_3_14153);
             ruleEString();
 
             state._fsp--;
@@ -5672,20 +5511,20 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connection__PasswordAssignment_4_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2234:1: rule__Connection__PasswordAssignment_4_1 : ( ruleEString ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2110:1: rule__Connection__PasswordAssignment_4_1 : ( ruleEString ) ;
     public final void rule__Connection__PasswordAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2238:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2239:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2114:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2115:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2239:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2240:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2115:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2116:1: ruleEString
             {
              before(grammarAccess.getConnectionAccess().getPasswordEStringParserRuleCall_4_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__PasswordAssignment_4_14397);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Connection__PasswordAssignment_4_14184);
             ruleEString();
 
             state._fsp--;
@@ -5713,20 +5552,20 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MergedField__TableNameAssignment_1_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2249:1: rule__MergedField__TableNameAssignment_1_1 : ( ruleEString ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2125:1: rule__MergedField__TableNameAssignment_1_1 : ( ruleEString ) ;
     public final void rule__MergedField__TableNameAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2253:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2254:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2129:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2130:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2254:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2255:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2130:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2131:1: ruleEString
             {
              before(grammarAccess.getMergedFieldAccess().getTableNameEStringParserRuleCall_1_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__MergedField__TableNameAssignment_1_14428);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__MergedField__TableNameAssignment_1_14215);
             ruleEString();
 
             state._fsp--;
@@ -5753,108 +5592,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MergedField__TableNameAssignment_1_1"
 
 
-    // $ANTLR start "rule__MergedField__AttributeNamesAssignment_4"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2264:1: rule__MergedField__AttributeNamesAssignment_4 : ( ruleAttributeName ) ;
-    public final void rule__MergedField__AttributeNamesAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__MergedField__FieldsAssignment_4"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2140:1: rule__MergedField__FieldsAssignment_4 : ( ruleField ) ;
+    public final void rule__MergedField__FieldsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2268:1: ( ( ruleAttributeName ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2269:1: ( ruleAttributeName )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2144:1: ( ( ruleField ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2145:1: ( ruleField )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2269:1: ( ruleAttributeName )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2270:1: ruleAttributeName
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2145:1: ( ruleField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2146:1: ruleField
             {
-             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_44459);
-            ruleAttributeName();
-
-            state._fsp--;
-
-             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__MergedField__AttributeNamesAssignment_4"
-
-
-    // $ANTLR start "rule__MergedField__AttributeNamesAssignment_5_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2279:1: rule__MergedField__AttributeNamesAssignment_5_1 : ( ruleAttributeName ) ;
-    public final void rule__MergedField__AttributeNamesAssignment_5_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2283:1: ( ( ruleAttributeName ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2284:1: ( ruleAttributeName )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2284:1: ( ruleAttributeName )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2285:1: ruleAttributeName
-            {
-             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_5_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_5_14490);
-            ruleAttributeName();
-
-            state._fsp--;
-
-             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_5_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__MergedField__AttributeNamesAssignment_5_1"
-
-
-    // $ANTLR start "rule__MergedField__FieldsAssignment_9"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2294:1: rule__MergedField__FieldsAssignment_9 : ( ruleField ) ;
-    public final void rule__MergedField__FieldsAssignment_9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2298:1: ( ( ruleField ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2299:1: ( ruleField )
-            {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2299:1: ( ruleField )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2300:1: ruleField
-            {
-             before(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_9_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_94521);
+             before(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_4_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_44246);
             ruleField();
 
             state._fsp--;
 
-             after(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_9_0()); 
+             after(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_4_0()); 
 
             }
 
@@ -5873,29 +5630,29 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MergedField__FieldsAssignment_9"
+    // $ANTLR end "rule__MergedField__FieldsAssignment_4"
 
 
-    // $ANTLR start "rule__MergedField__FieldsAssignment_10_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2309:1: rule__MergedField__FieldsAssignment_10_1 : ( ruleField ) ;
-    public final void rule__MergedField__FieldsAssignment_10_1() throws RecognitionException {
+    // $ANTLR start "rule__MergedField__FieldsAssignment_5_1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2155:1: rule__MergedField__FieldsAssignment_5_1 : ( ruleField ) ;
+    public final void rule__MergedField__FieldsAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2313:1: ( ( ruleField ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2314:1: ( ruleField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2159:1: ( ( ruleField ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2160:1: ( ruleField )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2314:1: ( ruleField )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2315:1: ruleField
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2160:1: ( ruleField )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2161:1: ruleField
             {
-             before(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_10_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_10_14552);
+             before(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_5_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_5_14277);
             ruleField();
 
             state._fsp--;
 
-             after(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_10_1_0()); 
+             after(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_5_1_0()); 
 
             }
 
@@ -5914,29 +5671,111 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MergedField__FieldsAssignment_10_1"
+    // $ANTLR end "rule__MergedField__FieldsAssignment_5_1"
 
 
-    // $ANTLR start "rule__AttributeName__OldFieldAssignment_1_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2324:1: rule__AttributeName__OldFieldAssignment_1_1 : ( ruleEString ) ;
-    public final void rule__AttributeName__OldFieldAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__MergedField__AttributeNamesAssignment_9"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2170:1: rule__MergedField__AttributeNamesAssignment_9 : ( ruleAttributeName ) ;
+    public final void rule__MergedField__AttributeNamesAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2328:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2329:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2174:1: ( ( ruleAttributeName ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2175:1: ( ruleAttributeName )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2329:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2330:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2175:1: ( ruleAttributeName )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2176:1: ruleAttributeName
             {
-             before(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AttributeName__OldFieldAssignment_1_14583);
+             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_9_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_94308);
+            ruleAttributeName();
+
+            state._fsp--;
+
+             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_9_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MergedField__AttributeNamesAssignment_9"
+
+
+    // $ANTLR start "rule__MergedField__AttributeNamesAssignment_10_1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2185:1: rule__MergedField__AttributeNamesAssignment_10_1 : ( ruleAttributeName ) ;
+    public final void rule__MergedField__AttributeNamesAssignment_10_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2189:1: ( ( ruleAttributeName ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2190:1: ( ruleAttributeName )
+            {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2190:1: ( ruleAttributeName )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2191:1: ruleAttributeName
+            {
+             before(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_10_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_10_14339);
+            ruleAttributeName();
+
+            state._fsp--;
+
+             after(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_10_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MergedField__AttributeNamesAssignment_10_1"
+
+
+    // $ANTLR start "rule__AttributeName__OldFieldAssignment_1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2200:1: rule__AttributeName__OldFieldAssignment_1 : ( ruleEString ) ;
+    public final void rule__AttributeName__OldFieldAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2204:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2205:1: ( ruleEString )
+            {
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2205:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2206:1: ruleEString
+            {
+             before(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AttributeName__OldFieldAssignment_14370);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_1_0()); 
+             after(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_0()); 
 
             }
 
@@ -5955,28 +5794,28 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AttributeName__OldFieldAssignment_1_1"
+    // $ANTLR end "rule__AttributeName__OldFieldAssignment_1"
 
 
     // $ANTLR start "rule__AttributeName__FinalFieldAssignment_3"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2339:1: rule__AttributeName__FinalFieldAssignment_3 : ( ( ruleEString ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2215:1: rule__AttributeName__FinalFieldAssignment_3 : ( ( ruleEString ) ) ;
     public final void rule__AttributeName__FinalFieldAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2343:1: ( ( ( ruleEString ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2344:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2219:1: ( ( ( ruleEString ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2220:1: ( ( ruleEString ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2344:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2345:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2220:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2221:1: ( ruleEString )
             {
              before(grammarAccess.getAttributeNameAccess().getFinalFieldFieldCrossReference_3_0()); 
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2346:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2347:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2222:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2223:1: ruleEString
             {
              before(grammarAccess.getAttributeNameAccess().getFinalFieldFieldEStringParserRuleCall_3_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AttributeName__FinalFieldAssignment_34618);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AttributeName__FinalFieldAssignment_34405);
             ruleEString();
 
             state._fsp--;
@@ -6007,26 +5846,26 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__AttributeName__FinalFieldAssignment_3"
 
 
-    // $ANTLR start "rule__Field__NameAssignment_2"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2358:1: rule__Field__NameAssignment_2 : ( ruleEString ) ;
-    public final void rule__Field__NameAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Field__NameAssignment_1"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2234:1: rule__Field__NameAssignment_1 : ( ruleEString ) ;
+    public final void rule__Field__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2362:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2363:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2238:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2239:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2363:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2364:1: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2239:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2240:1: ruleEString
             {
-             before(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Field__NameAssignment_24653);
+             before(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Field__NameAssignment_14440);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_2_0()); 
+             after(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_1_0()); 
 
             }
 
@@ -6045,29 +5884,29 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Field__NameAssignment_2"
+    // $ANTLR end "rule__Field__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Field__TypeAssignment_3_1"
-    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2373:1: rule__Field__TypeAssignment_3_1 : ( ruleFieldType ) ;
-    public final void rule__Field__TypeAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Field__TypeAssignment_3"
+    // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2249:1: rule__Field__TypeAssignment_3 : ( ruleFieldType ) ;
+    public final void rule__Field__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2377:1: ( ( ruleFieldType ) )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2378:1: ( ruleFieldType )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2253:1: ( ( ruleFieldType ) )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2254:1: ( ruleFieldType )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2378:1: ( ruleFieldType )
-            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2379:1: ruleFieldType
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2254:1: ( ruleFieldType )
+            // ../co.edu.uniandes.jsonToSql.grammar.ui/src-gen/co/edu/uniandes/jsonToSql/ui/contentassist/antlr/internal/InternalGrammar.g:2255:1: ruleFieldType
             {
-             before(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFieldType_in_rule__Field__TypeAssignment_3_14684);
+             before(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleFieldType_in_rule__Field__TypeAssignment_34471);
             ruleFieldType();
 
             state._fsp--;
 
-             after(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_1_0()); 
+             after(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_0()); 
 
             }
 
@@ -6086,7 +5925,7 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Field__TypeAssignment_3_1"
+    // $ANTLR end "rule__Field__TypeAssignment_3"
 
     // Delegated rules
 
@@ -6116,182 +5955,179 @@ public class InternalGrammarParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__FieldType__Alternatives_in_ruleFieldType431 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives466 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives483 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_rule__FieldType__Alternatives516 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__FieldType__Alternatives537 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__FieldType__Alternatives558 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__FieldType__Alternatives579 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__0__Impl_in_rule__Config__Group__0612 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_27_in_rule__FieldType__Alternatives516 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_rule__FieldType__Alternatives537 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_rule__FieldType__Alternatives558 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__FieldType__Alternatives579 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__0__Impl_in_rule__Config__Group__0612 = new BitSet(new long[]{0x0000000000000080L});
         public static final BitSet FOLLOW_rule__Config__Group__1_in_rule__Config__Group__0615 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Config__Group__0__Impl643 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__1__Impl_in_rule__Config__Group__1674 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__Config__Group__2_in_rule__Config__Group__1677 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Config__Group__1__Impl705 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__2__Impl_in_rule__Config__Group__2736 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Config__Group__3_in_rule__Config__Group__2739 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Config__Group__2__Impl767 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__3__Impl_in_rule__Config__Group__3798 = new BitSet(new long[]{0x00000000000C0000L});
-        public static final BitSet FOLLOW_rule__Config__Group__4_in_rule__Config__Group__3801 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__ConecctionAssignment_3_in_rule__Config__Group__3__Impl828 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__4__Impl_in_rule__Config__Group__4858 = new BitSet(new long[]{0x00000000000C0000L});
-        public static final BitSet FOLLOW_rule__Config__Group__5_in_rule__Config__Group__4861 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__0_in_rule__Config__Group__4__Impl888 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group__5__Impl_in_rule__Config__Group__5919 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Config__Group__5__Impl947 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__0__Impl_in_rule__Config__Group_4__0990 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__1_in_rule__Config__Group_4__0993 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Config__Group_4__0__Impl1021 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__1__Impl_in_rule__Config__Group_4__11052 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__2_in_rule__Config__Group_4__11055 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__Config__Group_4__1__Impl1083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__2__Impl_in_rule__Config__Group_4__21114 = new BitSet(new long[]{0x0000000000600000L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__3_in_rule__Config__Group_4__21117 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__MergeFieldsAssignment_4_2_in_rule__Config__Group_4__2__Impl1144 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__3__Impl_in_rule__Config__Group_4__31174 = new BitSet(new long[]{0x0000000000600000L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__4_in_rule__Config__Group_4__31177 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4_3__0_in_rule__Config__Group_4__3__Impl1204 = new BitSet(new long[]{0x0000000000400002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4__4__Impl_in_rule__Config__Group_4__41235 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__Config__Group_4__4__Impl1263 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4_3__0__Impl_in_rule__Config__Group_4_3__01304 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Config__Group_4_3__1_in_rule__Config__Group_4_3__01307 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__Config__Group_4_3__0__Impl1335 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__Group_4_3__1__Impl_in_rule__Config__Group_4_3__11366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Config__MergeFieldsAssignment_4_3_1_in_rule__Config__Group_4_3__1__Impl1393 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__0__Impl_in_rule__Connection__Group__01427 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Connection__Group__1_in_rule__Connection__Group__01430 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__1__Impl_in_rule__Connection__Group__11488 = new BitSet(new long[]{0x0000000003840000L});
-        public static final BitSet FOLLOW_rule__Connection__Group__2_in_rule__Connection__Group__11491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Connection__Group__1__Impl1519 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__2__Impl_in_rule__Connection__Group__21550 = new BitSet(new long[]{0x0000000003840000L});
-        public static final BitSet FOLLOW_rule__Connection__Group__3_in_rule__Connection__Group__21553 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_2__0_in_rule__Connection__Group__2__Impl1580 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__3__Impl_in_rule__Connection__Group__31611 = new BitSet(new long[]{0x0000000003840000L});
-        public static final BitSet FOLLOW_rule__Connection__Group__4_in_rule__Connection__Group__31614 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_3__0_in_rule__Connection__Group__3__Impl1641 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__4__Impl_in_rule__Connection__Group__41672 = new BitSet(new long[]{0x0000000003840000L});
-        public static final BitSet FOLLOW_rule__Connection__Group__5_in_rule__Connection__Group__41675 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_4__0_in_rule__Connection__Group__4__Impl1702 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group__5__Impl_in_rule__Connection__Group__51733 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Connection__Group__5__Impl1761 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_2__0__Impl_in_rule__Connection__Group_2__01804 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Connection__Group_2__1_in_rule__Connection__Group_2__01807 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Connection__Group_2__0__Impl1835 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_2__1__Impl_in_rule__Connection__Group_2__11866 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__UrlAssignment_2_1_in_rule__Connection__Group_2__1__Impl1893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_3__0__Impl_in_rule__Connection__Group_3__01927 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Connection__Group_3__1_in_rule__Connection__Group_3__01930 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__Connection__Group_3__0__Impl1958 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_3__1__Impl_in_rule__Connection__Group_3__11989 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__UsernameAssignment_3_1_in_rule__Connection__Group_3__1__Impl2016 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_4__0__Impl_in_rule__Connection__Group_4__02050 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Connection__Group_4__1_in_rule__Connection__Group_4__02053 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__Connection__Group_4__0__Impl2081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__Group_4__1__Impl_in_rule__Connection__Group_4__12112 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Connection__PasswordAssignment_4_1_in_rule__Connection__Group_4__1__Impl2139 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__0__Impl_in_rule__MergedField__Group__02173 = new BitSet(new long[]{0x0000000014000000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__1_in_rule__MergedField__Group__02176 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__MergedField__Group__0__Impl2204 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__1__Impl_in_rule__MergedField__Group__12235 = new BitSet(new long[]{0x0000000014000000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__2_in_rule__MergedField__Group__12238 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_1__0_in_rule__MergedField__Group__1__Impl2265 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__2__Impl_in_rule__MergedField__Group__22296 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__3_in_rule__MergedField__Group__22299 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__MergedField__Group__2__Impl2327 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__3__Impl_in_rule__MergedField__Group__32358 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__4_in_rule__MergedField__Group__32361 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__MergedField__Group__3__Impl2389 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__4__Impl_in_rule__MergedField__Group__42420 = new BitSet(new long[]{0x0000000000440000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__5_in_rule__MergedField__Group__42423 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__AttributeNamesAssignment_4_in_rule__MergedField__Group__4__Impl2450 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__5__Impl_in_rule__MergedField__Group__52480 = new BitSet(new long[]{0x0000000000440000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__6_in_rule__MergedField__Group__52483 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_5__0_in_rule__MergedField__Group__5__Impl2510 = new BitSet(new long[]{0x0000000000400002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__6__Impl_in_rule__MergedField__Group__62541 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__7_in_rule__MergedField__Group__62544 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__MergedField__Group__6__Impl2572 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__7__Impl_in_rule__MergedField__Group__72603 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__8_in_rule__MergedField__Group__72606 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__MergedField__Group__7__Impl2634 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__8__Impl_in_rule__MergedField__Group__82665 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__9_in_rule__MergedField__Group__82668 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__MergedField__Group__8__Impl2696 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__9__Impl_in_rule__MergedField__Group__92727 = new BitSet(new long[]{0x0000000000440000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__10_in_rule__MergedField__Group__92730 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__FieldsAssignment_9_in_rule__MergedField__Group__9__Impl2757 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__10__Impl_in_rule__MergedField__Group__102787 = new BitSet(new long[]{0x0000000000440000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__11_in_rule__MergedField__Group__102790 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_10__0_in_rule__MergedField__Group__10__Impl2817 = new BitSet(new long[]{0x0000000000400002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__11__Impl_in_rule__MergedField__Group__112848 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__12_in_rule__MergedField__Group__112851 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__MergedField__Group__11__Impl2879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group__12__Impl_in_rule__MergedField__Group__122910 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__MergedField__Group__12__Impl2938 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_1__0__Impl_in_rule__MergedField__Group_1__02995 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_1__1_in_rule__MergedField__Group_1__02998 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__MergedField__Group_1__0__Impl3026 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_1__1__Impl_in_rule__MergedField__Group_1__13057 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__TableNameAssignment_1_1_in_rule__MergedField__Group_1__1__Impl3084 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_5__0__Impl_in_rule__MergedField__Group_5__03118 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_5__1_in_rule__MergedField__Group_5__03121 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__MergedField__Group_5__0__Impl3149 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_5__1__Impl_in_rule__MergedField__Group_5__13180 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__AttributeNamesAssignment_5_1_in_rule__MergedField__Group_5__1__Impl3207 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_10__0__Impl_in_rule__MergedField__Group_10__03241 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_10__1_in_rule__MergedField__Group_10__03244 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__MergedField__Group_10__0__Impl3272 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__Group_10__1__Impl_in_rule__MergedField__Group_10__13303 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MergedField__FieldsAssignment_10_1_in_rule__MergedField__Group_10__1__Impl3330 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__0__Impl_in_rule__AttributeName__Group__03364 = new BitSet(new long[]{0x0000000060000000L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__1_in_rule__AttributeName__Group__03367 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__AttributeName__Group__0__Impl3395 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__1__Impl_in_rule__AttributeName__Group__13426 = new BitSet(new long[]{0x0000000060000000L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__2_in_rule__AttributeName__Group__13429 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group_1__0_in_rule__AttributeName__Group__1__Impl3456 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__2__Impl_in_rule__AttributeName__Group__23487 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__3_in_rule__AttributeName__Group__23490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__AttributeName__Group__2__Impl3518 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__3__Impl_in_rule__AttributeName__Group__33549 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__4_in_rule__AttributeName__Group__33552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__FinalFieldAssignment_3_in_rule__AttributeName__Group__3__Impl3579 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group__4__Impl_in_rule__AttributeName__Group__43609 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__AttributeName__Group__4__Impl3637 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group_1__0__Impl_in_rule__AttributeName__Group_1__03678 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group_1__1_in_rule__AttributeName__Group_1__03681 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__AttributeName__Group_1__0__Impl3709 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__Group_1__1__Impl_in_rule__AttributeName__Group_1__13740 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AttributeName__OldFieldAssignment_1_1_in_rule__AttributeName__Group_1__1__Impl3767 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__03801 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Field__Group__1_in_rule__Field__Group__03804 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__13862 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Field__Group__2_in_rule__Field__Group__13865 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Field__Group__1__Impl3893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__23924 = new BitSet(new long[]{0x0000000080040000L});
-        public static final BitSet FOLLOW_rule__Field__Group__3_in_rule__Field__Group__23927 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__NameAssignment_2_in_rule__Field__Group__2__Impl3954 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group__3__Impl_in_rule__Field__Group__33984 = new BitSet(new long[]{0x0000000080040000L});
-        public static final BitSet FOLLOW_rule__Field__Group__4_in_rule__Field__Group__33987 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group_3__0_in_rule__Field__Group__3__Impl4014 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group__4__Impl_in_rule__Field__Group__44045 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Field__Group__4__Impl4073 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group_3__0__Impl_in_rule__Field__Group_3__04114 = new BitSet(new long[]{0x0000000000007800L});
-        public static final BitSet FOLLOW_rule__Field__Group_3__1_in_rule__Field__Group_3__04117 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Field__Group_3__0__Impl4145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__Group_3__1__Impl_in_rule__Field__Group_3__14176 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Field__TypeAssignment_3_1_in_rule__Field__Group_3__1__Impl4203 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_34242 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_4_24273 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_4_3_14304 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__UrlAssignment_2_14335 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__UsernameAssignment_3_14366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__PasswordAssignment_4_14397 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__MergedField__TableNameAssignment_1_14428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_44459 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_5_14490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_94521 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_10_14552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AttributeName__OldFieldAssignment_1_14583 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AttributeName__FinalFieldAssignment_34618 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Field__NameAssignment_24653 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFieldType_in_rule__Field__TypeAssignment_3_14684 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERACONFIG_in_rule__Config__Group__0__Impl642 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__1__Impl_in_rule__Config__Group__1671 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__Config__Group__2_in_rule__Config__Group__1674 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COLON_in_rule__Config__Group__1__Impl701 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__2__Impl_in_rule__Config__Group__2730 = new BitSet(new long[]{0x0000000000000200L});
+        public static final BitSet FOLLOW_rule__Config__Group__3_in_rule__Config__Group__2733 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_rule__Config__Group__2__Impl760 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__3__Impl_in_rule__Config__Group__3789 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Config__Group__4_in_rule__Config__Group__3792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERACONNECTION_in_rule__Config__Group__3__Impl819 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__4__Impl_in_rule__Config__Group__4848 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__Config__Group__5_in_rule__Config__Group__4851 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COLON_in_rule__Config__Group__4__Impl878 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__5__Impl_in_rule__Config__Group__5907 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_rule__Config__Group__6_in_rule__Config__Group__5910 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__ConecctionAssignment_5_in_rule__Config__Group__5__Impl937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__6__Impl_in_rule__Config__Group__6967 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_rule__Config__Group__7_in_rule__Config__Group__6970 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__0_in_rule__Config__Group__6__Impl997 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group__7__Impl_in_rule__Config__Group__71028 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Config__Group__7__Impl1055 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__0__Impl_in_rule__Config__Group_6__01100 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__1_in_rule__Config__Group_6__01103 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALMERGEDFIELDS_in_rule__Config__Group_6__0__Impl1130 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__1__Impl_in_rule__Config__Group_6__11159 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__2_in_rule__Config__Group_6__11162 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_rule__Config__Group_6__1__Impl1189 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__2__Impl_in_rule__Config__Group_6__21218 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__3_in_rule__Config__Group_6__21221 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__MergeFieldsAssignment_6_2_in_rule__Config__Group_6__2__Impl1248 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__3__Impl_in_rule__Config__Group_6__31278 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__4_in_rule__Config__Group_6__31281 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6_3__0_in_rule__Config__Group_6__3__Impl1308 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6__4__Impl_in_rule__Config__Group_6__41339 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_rule__Config__Group_6__4__Impl1366 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6_3__0__Impl_in_rule__Config__Group_6_3__01405 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__Config__Group_6_3__1_in_rule__Config__Group_6_3__01408 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COMA_in_rule__Config__Group_6_3__0__Impl1435 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__Group_6_3__1__Impl_in_rule__Config__Group_6_3__11464 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Config__MergeFieldsAssignment_6_3_1_in_rule__Config__Group_6_3__1__Impl1491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__0__Impl_in_rule__Connection__Group__01525 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__Connection__Group__1_in_rule__Connection__Group__01528 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__1__Impl_in_rule__Connection__Group__11586 = new BitSet(new long[]{0x0000000000038400L});
+        public static final BitSet FOLLOW_rule__Connection__Group__2_in_rule__Connection__Group__11589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_rule__Connection__Group__1__Impl1616 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__2__Impl_in_rule__Connection__Group__21645 = new BitSet(new long[]{0x0000000000038400L});
+        public static final BitSet FOLLOW_rule__Connection__Group__3_in_rule__Connection__Group__21648 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_2__0_in_rule__Connection__Group__2__Impl1675 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__3__Impl_in_rule__Connection__Group__31706 = new BitSet(new long[]{0x0000000000038400L});
+        public static final BitSet FOLLOW_rule__Connection__Group__4_in_rule__Connection__Group__31709 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_3__0_in_rule__Connection__Group__3__Impl1736 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__4__Impl_in_rule__Connection__Group__41767 = new BitSet(new long[]{0x0000000000038400L});
+        public static final BitSet FOLLOW_rule__Connection__Group__5_in_rule__Connection__Group__41770 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_4__0_in_rule__Connection__Group__4__Impl1797 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group__5__Impl_in_rule__Connection__Group__51828 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Connection__Group__5__Impl1855 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_2__0__Impl_in_rule__Connection__Group_2__01896 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__Connection__Group_2__1_in_rule__Connection__Group_2__01899 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALURL_in_rule__Connection__Group_2__0__Impl1926 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_2__1__Impl_in_rule__Connection__Group_2__11955 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__UrlAssignment_2_1_in_rule__Connection__Group_2__1__Impl1982 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_3__0__Impl_in_rule__Connection__Group_3__02016 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__Connection__Group_3__1_in_rule__Connection__Group_3__02019 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALUSERNAME_in_rule__Connection__Group_3__0__Impl2046 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_3__1__Impl_in_rule__Connection__Group_3__12075 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__UsernameAssignment_3_1_in_rule__Connection__Group_3__1__Impl2102 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_4__0__Impl_in_rule__Connection__Group_4__02136 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__Connection__Group_4__1_in_rule__Connection__Group_4__02139 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALPASSWORD_in_rule__Connection__Group_4__0__Impl2166 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__Group_4__1__Impl_in_rule__Connection__Group_4__12195 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Connection__PasswordAssignment_4_1_in_rule__Connection__Group_4__1__Impl2222 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__0__Impl_in_rule__MergedField__Group__02256 = new BitSet(new long[]{0x0000000000140000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__1_in_rule__MergedField__Group__02259 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_rule__MergedField__Group__0__Impl2286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__1__Impl_in_rule__MergedField__Group__12315 = new BitSet(new long[]{0x0000000000140000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__2_in_rule__MergedField__Group__12318 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_1__0_in_rule__MergedField__Group__1__Impl2345 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__2__Impl_in_rule__MergedField__Group__22376 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__3_in_rule__MergedField__Group__22379 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALFIELDS_in_rule__MergedField__Group__2__Impl2406 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__3__Impl_in_rule__MergedField__Group__32435 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__4_in_rule__MergedField__Group__32438 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_rule__MergedField__Group__3__Impl2465 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__4__Impl_in_rule__MergedField__Group__42494 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__5_in_rule__MergedField__Group__42497 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__FieldsAssignment_4_in_rule__MergedField__Group__4__Impl2524 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__5__Impl_in_rule__MergedField__Group__52554 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__6_in_rule__MergedField__Group__52557 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_5__0_in_rule__MergedField__Group__5__Impl2584 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__6__Impl_in_rule__MergedField__Group__62615 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__7_in_rule__MergedField__Group__62618 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_rule__MergedField__Group__6__Impl2645 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__7__Impl_in_rule__MergedField__Group__72674 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__8_in_rule__MergedField__Group__72677 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALATTRIBUTENAMES_in_rule__MergedField__Group__7__Impl2704 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__8__Impl_in_rule__MergedField__Group__82733 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__9_in_rule__MergedField__Group__82736 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_rule__MergedField__Group__8__Impl2763 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__9__Impl_in_rule__MergedField__Group__92792 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__10_in_rule__MergedField__Group__92795 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__AttributeNamesAssignment_9_in_rule__MergedField__Group__9__Impl2822 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__10__Impl_in_rule__MergedField__Group__102852 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__11_in_rule__MergedField__Group__102855 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_10__0_in_rule__MergedField__Group__10__Impl2882 = new BitSet(new long[]{0x0000000000004002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__11__Impl_in_rule__MergedField__Group__112913 = new BitSet(new long[]{0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__12_in_rule__MergedField__Group__112916 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_rule__MergedField__Group__11__Impl2943 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group__12__Impl_in_rule__MergedField__Group__122972 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__MergedField__Group__12__Impl2999 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_1__0__Impl_in_rule__MergedField__Group_1__03054 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_1__1_in_rule__MergedField__Group_1__03057 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERALTABLENAME_in_rule__MergedField__Group_1__0__Impl3084 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_1__1__Impl_in_rule__MergedField__Group_1__13113 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__TableNameAssignment_1_1_in_rule__MergedField__Group_1__1__Impl3140 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_5__0__Impl_in_rule__MergedField__Group_5__03174 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_5__1_in_rule__MergedField__Group_5__03177 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COMA_in_rule__MergedField__Group_5__0__Impl3204 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_5__1__Impl_in_rule__MergedField__Group_5__13233 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__FieldsAssignment_5_1_in_rule__MergedField__Group_5__1__Impl3260 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_10__0__Impl_in_rule__MergedField__Group_10__03294 = new BitSet(new long[]{0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_10__1_in_rule__MergedField__Group_10__03297 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COMA_in_rule__MergedField__Group_10__0__Impl3324 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__Group_10__1__Impl_in_rule__MergedField__Group_10__13353 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MergedField__AttributeNamesAssignment_10_1_in_rule__MergedField__Group_10__1__Impl3380 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__0__Impl_in_rule__AttributeName__Group__03414 = new BitSet(new long[]{0x0000000000004030L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__1_in_rule__AttributeName__Group__03417 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_rule__AttributeName__Group__0__Impl3444 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__1__Impl_in_rule__AttributeName__Group__13473 = new BitSet(new long[]{0x0000000000004030L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__2_in_rule__AttributeName__Group__13476 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__OldFieldAssignment_1_in_rule__AttributeName__Group__1__Impl3503 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__2__Impl_in_rule__AttributeName__Group__23534 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__3_in_rule__AttributeName__Group__23537 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COMA_in_rule__AttributeName__Group__2__Impl3564 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__3__Impl_in_rule__AttributeName__Group__33593 = new BitSet(new long[]{0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__4_in_rule__AttributeName__Group__33596 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__FinalFieldAssignment_3_in_rule__AttributeName__Group__3__Impl3623 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AttributeName__Group__4__Impl_in_rule__AttributeName__Group__43653 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__AttributeName__Group__4__Impl3680 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__03719 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__Field__Group__1_in_rule__Field__Group__03722 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_rule__Field__Group__0__Impl3749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__13778 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__Field__Group__2_in_rule__Field__Group__13781 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__NameAssignment_1_in_rule__Field__Group__1__Impl3808 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__23838 = new BitSet(new long[]{0x0000000078000400L});
+        public static final BitSet FOLLOW_rule__Field__Group__3_in_rule__Field__Group__23841 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_COMA_in_rule__Field__Group__2__Impl3868 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__Group__3__Impl_in_rule__Field__Group__33897 = new BitSet(new long[]{0x0000000078000400L});
+        public static final BitSet FOLLOW_rule__Field__Group__4_in_rule__Field__Group__33900 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__TypeAssignment_3_in_rule__Field__Group__3__Impl3927 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Field__Group__4__Impl_in_rule__Field__Group__43958 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Field__Group__4__Impl3985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_54029 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_24060 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_3_14091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__UrlAssignment_2_14122 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__UsernameAssignment_3_14153 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Connection__PasswordAssignment_4_14184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__MergedField__TableNameAssignment_1_14215 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_44246 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleField_in_rule__MergedField__FieldsAssignment_5_14277 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_94308 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAttributeName_in_rule__MergedField__AttributeNamesAssignment_10_14339 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AttributeName__OldFieldAssignment_14370 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AttributeName__FinalFieldAssignment_34405 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Field__NameAssignment_14440 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFieldType_in_rule__Field__TypeAssignment_34471 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

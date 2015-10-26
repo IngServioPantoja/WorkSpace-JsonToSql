@@ -22,34 +22,36 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGrammarParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\'config\\':'", "'{'", "'\\'conecction:\\''", "'\\'mergeFields\\':'", "'['", "','", "']'", "'}'", "'\\'url\\':'", "'\\'username\\':'", "'\\'password\\':'", "'\\'tableName\\':'", "'\\'fields\\':'", "'\\'attributeNames\\':'", "'String'", "'Integer'", "'Float'", "'Boolean'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LITERACONFIG", "RULE_COLON", "RULE_LEFTPARENTESIS", "RULE_LITERACONNECTION", "RULE_LITERALMERGEDFIELDS", "RULE_LEFTBRACKET", "RULE_COMA", "RULE_RIGHTBRACKET", "RULE_RIGHTPARENTESIS", "RULE_LITERALURL", "RULE_LITERALUSERNAME", "RULE_LITERALPASSWORD", "RULE_LITERALTABLENAME", "RULE_LITERALFIELDS", "RULE_LITERALATTRIBUTENAMES", "RULE_STRING", "RULE_ID", "RULE_SINGLEQUOTE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\'String\\''", "'\\'Integer\\''", "'\\'Float\\''", "'\\'Boolean\\''"
     };
-    public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__11=11;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
+    public static final int RULE_LITERALMERGEDFIELDS=8;
+    public static final int RULE_COMA=10;
+    public static final int RULE_LITERALUSERNAME=14;
+    public static final int RULE_STRING=19;
+    public static final int RULE_LITERACONFIG=4;
+    public static final int RULE_LITERALFIELDS=17;
+    public static final int RULE_SL_COMMENT=24;
+    public static final int RULE_RIGHTBRACKET=11;
+    public static final int RULE_SINGLEQUOTE=21;
+    public static final int RULE_LITERACONNECTION=7;
+    public static final int RULE_LITERALATTRIBUTENAMES=18;
     public static final int EOF=-1;
-    public static final int RULE_ID=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__26=26;
+    public static final int T__30=30;
+    public static final int RULE_ID=20;
+    public static final int RULE_WS=25;
+    public static final int RULE_RIGHTPARENTESIS=12;
+    public static final int RULE_LITERALTABLENAME=16;
+    public static final int RULE_COLON=5;
+    public static final int RULE_ANY_OTHER=26;
+    public static final int RULE_LITERALPASSWORD=15;
+    public static final int RULE_LEFTBRACKET=9;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
-    public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=7;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
+    public static final int RULE_INT=22;
+    public static final int T__29=29;
+    public static final int RULE_ML_COMMENT=23;
+    public static final int RULE_LITERALURL=13;
+    public static final int RULE_LEFTPARENTESIS=6;
 
     // delegates
     // delegators
@@ -126,57 +128,67 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConfig"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:77:1: ruleConfig returns [EObject current=null] : (otherlv_0= '\\'config\\':' otherlv_1= '{' otherlv_2= '\\'conecction:\\'' ( (lv_conecction_3_0= ruleConnection ) ) (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )? otherlv_10= '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:77:1: ruleConfig returns [EObject current=null] : (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleConfig() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_9=null;
-        Token otherlv_10=null;
-        EObject lv_conecction_3_0 = null;
-
-        EObject lv_mergeFields_6_0 = null;
+        Token this_LITERACONFIG_0=null;
+        Token this_COLON_1=null;
+        Token this_LEFTPARENTESIS_2=null;
+        Token this_LITERACONNECTION_3=null;
+        Token this_COLON_4=null;
+        Token this_LITERALMERGEDFIELDS_6=null;
+        Token this_LEFTBRACKET_7=null;
+        Token this_COMA_9=null;
+        Token this_RIGHTBRACKET_11=null;
+        Token this_RIGHTPARENTESIS_12=null;
+        EObject lv_conecction_5_0 = null;
 
         EObject lv_mergeFields_8_0 = null;
+
+        EObject lv_mergeFields_10_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:80:28: ( (otherlv_0= '\\'config\\':' otherlv_1= '{' otherlv_2= '\\'conecction:\\'' ( (lv_conecction_3_0= ruleConnection ) ) (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )? otherlv_10= '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:1: (otherlv_0= '\\'config\\':' otherlv_1= '{' otherlv_2= '\\'conecction:\\'' ( (lv_conecction_3_0= ruleConnection ) ) (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )? otherlv_10= '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:80:28: ( (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:1: (otherlv_0= '\\'config\\':' otherlv_1= '{' otherlv_2= '\\'conecction:\\'' ( (lv_conecction_3_0= ruleConnection ) ) (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )? otherlv_10= '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:3: otherlv_0= '\\'config\\':' otherlv_1= '{' otherlv_2= '\\'conecction:\\'' ( (lv_conecction_3_0= ruleConnection ) ) (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )? otherlv_10= '}'
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:81:2: this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS
             {
-            otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleConfig122); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getConfigAccess().getConfigKeyword_0());
+            this_LITERACONFIG_0=(Token)match(input,RULE_LITERACONFIG,FollowSets000.FOLLOW_RULE_LITERACONFIG_in_ruleConfig121); 
+             
+                newLeafNode(this_LITERACONFIG_0, grammarAccess.getConfigAccess().getLITERACONFIGTerminalRuleCall_0()); 
                 
-            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleConfig134); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getConfigAccess().getLeftCurlyBracketKeyword_1());
+            this_COLON_1=(Token)match(input,RULE_COLON,FollowSets000.FOLLOW_RULE_COLON_in_ruleConfig131); 
+             
+                newLeafNode(this_COLON_1, grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_1()); 
                 
-            otherlv_2=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleConfig146); 
-
-                	newLeafNode(otherlv_2, grammarAccess.getConfigAccess().getConecctionKeyword_2());
+            this_LEFTPARENTESIS_2=(Token)match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_ruleConfig141); 
+             
+                newLeafNode(this_LEFTPARENTESIS_2, grammarAccess.getConfigAccess().getLEFTPARENTESISTerminalRuleCall_2()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:93:1: ( (lv_conecction_3_0= ruleConnection ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:94:1: (lv_conecction_3_0= ruleConnection )
+            this_LITERACONNECTION_3=(Token)match(input,RULE_LITERACONNECTION,FollowSets000.FOLLOW_RULE_LITERACONNECTION_in_ruleConfig151); 
+             
+                newLeafNode(this_LITERACONNECTION_3, grammarAccess.getConfigAccess().getLITERACONNECTIONTerminalRuleCall_3()); 
+                
+            this_COLON_4=(Token)match(input,RULE_COLON,FollowSets000.FOLLOW_RULE_COLON_in_ruleConfig161); 
+             
+                newLeafNode(this_COLON_4, grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_4()); 
+                
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:101:1: ( (lv_conecction_5_0= ruleConnection ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:102:1: (lv_conecction_5_0= ruleConnection )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:94:1: (lv_conecction_3_0= ruleConnection )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:95:3: lv_conecction_3_0= ruleConnection
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:102:1: (lv_conecction_5_0= ruleConnection )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:103:3: lv_conecction_5_0= ruleConnection
             {
              
-            	        newCompositeNode(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_3_0()); 
+            	        newCompositeNode(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_ruleConfig167);
-            lv_conecction_3_0=ruleConnection();
+            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_ruleConfig181);
+            lv_conecction_5_0=ruleConnection();
 
             state._fsp--;
 
@@ -187,7 +199,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                    		set(
                    			current, 
                    			"conecction",
-                    		lv_conecction_3_0, 
+                    		lv_conecction_5_0, 
                     		"Connection");
             	        afterParserOrEnumRuleCall();
             	    
@@ -197,36 +209,36 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:111:2: (otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']' )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:119:2: (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==14) ) {
+            if ( (LA2_0==RULE_LITERALMERGEDFIELDS) ) {
                 alt2=1;
             }
             switch (alt2) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:111:4: otherlv_4= '\\'mergeFields\\':' otherlv_5= '[' ( (lv_mergeFields_6_0= ruleMergedField ) ) (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )* otherlv_9= ']'
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:119:3: this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET
                     {
-                    otherlv_4=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleConfig180); 
-
-                        	newLeafNode(otherlv_4, grammarAccess.getConfigAccess().getMergeFieldsKeyword_4_0());
+                    this_LITERALMERGEDFIELDS_6=(Token)match(input,RULE_LITERALMERGEDFIELDS,FollowSets000.FOLLOW_RULE_LITERALMERGEDFIELDS_in_ruleConfig193); 
+                     
+                        newLeafNode(this_LITERALMERGEDFIELDS_6, grammarAccess.getConfigAccess().getLITERALMERGEDFIELDSTerminalRuleCall_6_0()); 
                         
-                    otherlv_5=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleConfig192); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getConfigAccess().getLeftSquareBracketKeyword_4_1());
+                    this_LEFTBRACKET_7=(Token)match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_ruleConfig203); 
+                     
+                        newLeafNode(this_LEFTBRACKET_7, grammarAccess.getConfigAccess().getLEFTBRACKETTerminalRuleCall_6_1()); 
                         
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:119:1: ( (lv_mergeFields_6_0= ruleMergedField ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:120:1: (lv_mergeFields_6_0= ruleMergedField )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:127:1: ( (lv_mergeFields_8_0= ruleMergedField ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:128:1: (lv_mergeFields_8_0= ruleMergedField )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:120:1: (lv_mergeFields_6_0= ruleMergedField )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:121:3: lv_mergeFields_6_0= ruleMergedField
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:128:1: (lv_mergeFields_8_0= ruleMergedField )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:129:3: lv_mergeFields_8_0= ruleMergedField
                     {
                      
-                    	        newCompositeNode(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_2_0()); 
+                    	        newCompositeNode(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_ruleConfig213);
-                    lv_mergeFields_6_0=ruleMergedField();
+                    pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_ruleConfig223);
+                    lv_mergeFields_8_0=ruleMergedField();
 
                     state._fsp--;
 
@@ -237,7 +249,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                            		add(
                            			current, 
                            			"mergeFields",
-                            		lv_mergeFields_6_0, 
+                            		lv_mergeFields_8_0, 
                             		"MergedField");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -247,36 +259,36 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:137:2: (otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) ) )*
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:145:2: (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )*
                     loop1:
                     do {
                         int alt1=2;
                         int LA1_0 = input.LA(1);
 
-                        if ( (LA1_0==16) ) {
+                        if ( (LA1_0==RULE_COMA) ) {
                             alt1=1;
                         }
 
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:137:4: otherlv_7= ',' ( (lv_mergeFields_8_0= ruleMergedField ) )
+                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:145:3: this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleConfig226); 
-
-                    	        	newLeafNode(otherlv_7, grammarAccess.getConfigAccess().getCommaKeyword_4_3_0());
+                    	    this_COMA_9=(Token)match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_ruleConfig235); 
+                    	     
+                    	        newLeafNode(this_COMA_9, grammarAccess.getConfigAccess().getCOMATerminalRuleCall_6_3_0()); 
                     	        
-                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:141:1: ( (lv_mergeFields_8_0= ruleMergedField ) )
-                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:142:1: (lv_mergeFields_8_0= ruleMergedField )
+                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:149:1: ( (lv_mergeFields_10_0= ruleMergedField ) )
+                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:150:1: (lv_mergeFields_10_0= ruleMergedField )
                     	    {
-                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:142:1: (lv_mergeFields_8_0= ruleMergedField )
-                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:143:3: lv_mergeFields_8_0= ruleMergedField
+                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:150:1: (lv_mergeFields_10_0= ruleMergedField )
+                    	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:151:3: lv_mergeFields_10_0= ruleMergedField
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_4_3_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getConfigAccess().getMergeFieldsMergedFieldParserRuleCall_6_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_ruleConfig247);
-                    	    lv_mergeFields_8_0=ruleMergedField();
+                    	    pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_ruleConfig255);
+                    	    lv_mergeFields_10_0=ruleMergedField();
 
                     	    state._fsp--;
 
@@ -287,7 +299,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                     	           		add(
                     	           			current, 
                     	           			"mergeFields",
-                    	            		lv_mergeFields_8_0, 
+                    	            		lv_mergeFields_10_0, 
                     	            		"MergedField");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -306,9 +318,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_9=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleConfig261); 
-
-                        	newLeafNode(otherlv_9, grammarAccess.getConfigAccess().getRightSquareBracketKeyword_4_4());
+                    this_RIGHTBRACKET_11=(Token)match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_ruleConfig268); 
+                     
+                        newLeafNode(this_RIGHTBRACKET_11, grammarAccess.getConfigAccess().getRIGHTBRACKETTerminalRuleCall_6_4()); 
                         
 
                     }
@@ -316,9 +328,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleConfig275); 
-
-                	newLeafNode(otherlv_10, grammarAccess.getConfigAccess().getRightCurlyBracketKeyword_5());
+            this_RIGHTPARENTESIS_12=(Token)match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_ruleConfig280); 
+             
+                newLeafNode(this_RIGHTPARENTESIS_12, grammarAccess.getConfigAccess().getRIGHTPARENTESISTerminalRuleCall_7()); 
                 
 
             }
@@ -341,7 +353,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConnection"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:175:1: entryRuleConnection returns [EObject current=null] : iv_ruleConnection= ruleConnection EOF ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:183:1: entryRuleConnection returns [EObject current=null] : iv_ruleConnection= ruleConnection EOF ;
     public final EObject entryRuleConnection() throws RecognitionException {
         EObject current = null;
 
@@ -349,17 +361,17 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:176:2: (iv_ruleConnection= ruleConnection EOF )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:177:2: iv_ruleConnection= ruleConnection EOF
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:184:2: (iv_ruleConnection= ruleConnection EOF )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:185:2: iv_ruleConnection= ruleConnection EOF
             {
              newCompositeNode(grammarAccess.getConnectionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_entryRuleConnection311);
+            pushFollow(FollowSets000.FOLLOW_ruleConnection_in_entryRuleConnection315);
             iv_ruleConnection=ruleConnection();
 
             state._fsp--;
 
              current =iv_ruleConnection; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleConnection321); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleConnection325); 
 
             }
 
@@ -377,15 +389,15 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnection"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:184:1: ruleConnection returns [EObject current=null] : ( () otherlv_1= '{' (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )? (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )? (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )? otherlv_8= '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:192:1: ruleConnection returns [EObject current=null] : ( () this_LEFTPARENTESIS_1= RULE_LEFTPARENTESIS (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )? (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )? (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )? this_RIGHTPARENTESIS_8= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleConnection() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token otherlv_6=null;
-        Token otherlv_8=null;
+        Token this_LEFTPARENTESIS_1=null;
+        Token this_LITERALURL_2=null;
+        Token this_LITERALUSERNAME_4=null;
+        Token this_LITERALPASSWORD_6=null;
+        Token this_RIGHTPARENTESIS_8=null;
         AntlrDatatypeRuleToken lv_url_3_0 = null;
 
         AntlrDatatypeRuleToken lv_username_5_0 = null;
@@ -396,14 +408,14 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:187:28: ( ( () otherlv_1= '{' (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )? (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )? (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )? otherlv_8= '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:188:1: ( () otherlv_1= '{' (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )? (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )? (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )? otherlv_8= '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:195:28: ( ( () this_LEFTPARENTESIS_1= RULE_LEFTPARENTESIS (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )? (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )? (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )? this_RIGHTPARENTESIS_8= RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:196:1: ( () this_LEFTPARENTESIS_1= RULE_LEFTPARENTESIS (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )? (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )? (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )? this_RIGHTPARENTESIS_8= RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:188:1: ( () otherlv_1= '{' (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )? (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )? (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )? otherlv_8= '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:188:2: () otherlv_1= '{' (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )? (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )? (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )? otherlv_8= '}'
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:196:1: ( () this_LEFTPARENTESIS_1= RULE_LEFTPARENTESIS (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )? (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )? (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )? this_RIGHTPARENTESIS_8= RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:196:2: () this_LEFTPARENTESIS_1= RULE_LEFTPARENTESIS (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )? (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )? (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )? this_RIGHTPARENTESIS_8= RULE_RIGHTPARENTESIS
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:188:2: ()
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:189:5: 
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:196:2: ()
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:197:5: 
             {
 
                     current = forceCreateModelElement(
@@ -413,30 +425,30 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleConnection367); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getConnectionAccess().getLeftCurlyBracketKeyword_1());
+            this_LEFTPARENTESIS_1=(Token)match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_ruleConnection370); 
+             
+                newLeafNode(this_LEFTPARENTESIS_1, grammarAccess.getConnectionAccess().getLEFTPARENTESISTerminalRuleCall_1()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:198:1: (otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) ) )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:206:1: (this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==19) ) {
+            if ( (LA3_0==RULE_LITERALURL) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:198:3: otherlv_2= '\\'url\\':' ( (lv_url_3_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:206:2: this_LITERALURL_2= RULE_LITERALURL ( (lv_url_3_0= ruleEString ) )
                     {
-                    otherlv_2=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleConnection380); 
-
-                        	newLeafNode(otherlv_2, grammarAccess.getConnectionAccess().getUrlKeyword_2_0());
+                    this_LITERALURL_2=(Token)match(input,RULE_LITERALURL,FollowSets000.FOLLOW_RULE_LITERALURL_in_ruleConnection381); 
+                     
+                        newLeafNode(this_LITERALURL_2, grammarAccess.getConnectionAccess().getLITERALURLTerminalRuleCall_2_0()); 
                         
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:202:1: ( (lv_url_3_0= ruleEString ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:203:1: (lv_url_3_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:210:1: ( (lv_url_3_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:211:1: (lv_url_3_0= ruleEString )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:203:1: (lv_url_3_0= ruleEString )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:204:3: lv_url_3_0= ruleEString
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:211:1: (lv_url_3_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:212:3: lv_url_3_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getConnectionAccess().getUrlEStringParserRuleCall_2_1_0()); 
@@ -469,31 +481,31 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:220:4: (otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) ) )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:228:4: (this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==20) ) {
+            if ( (LA4_0==RULE_LITERALUSERNAME) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:220:6: otherlv_4= '\\'username\\':' ( (lv_username_5_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:228:5: this_LITERALUSERNAME_4= RULE_LITERALUSERNAME ( (lv_username_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleConnection416); 
-
-                        	newLeafNode(otherlv_4, grammarAccess.getConnectionAccess().getUsernameKeyword_3_0());
+                    this_LITERALUSERNAME_4=(Token)match(input,RULE_LITERALUSERNAME,FollowSets000.FOLLOW_RULE_LITERALUSERNAME_in_ruleConnection415); 
+                     
+                        newLeafNode(this_LITERALUSERNAME_4, grammarAccess.getConnectionAccess().getLITERALUSERNAMETerminalRuleCall_3_0()); 
                         
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:224:1: ( (lv_username_5_0= ruleEString ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:225:1: (lv_username_5_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:232:1: ( (lv_username_5_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:233:1: (lv_username_5_0= ruleEString )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:225:1: (lv_username_5_0= ruleEString )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:226:3: lv_username_5_0= ruleEString
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:233:1: (lv_username_5_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:234:3: lv_username_5_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getConnectionAccess().getUsernameEStringParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleConnection437);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleConnection435);
                     lv_username_5_0=ruleEString();
 
                     state._fsp--;
@@ -521,31 +533,31 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:242:4: (otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) ) )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:250:4: (this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==21) ) {
+            if ( (LA5_0==RULE_LITERALPASSWORD) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:242:6: otherlv_6= '\\'password\\':' ( (lv_password_7_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:250:5: this_LITERALPASSWORD_6= RULE_LITERALPASSWORD ( (lv_password_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleConnection452); 
-
-                        	newLeafNode(otherlv_6, grammarAccess.getConnectionAccess().getPasswordKeyword_4_0());
+                    this_LITERALPASSWORD_6=(Token)match(input,RULE_LITERALPASSWORD,FollowSets000.FOLLOW_RULE_LITERALPASSWORD_in_ruleConnection449); 
+                     
+                        newLeafNode(this_LITERALPASSWORD_6, grammarAccess.getConnectionAccess().getLITERALPASSWORDTerminalRuleCall_4_0()); 
                         
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:246:1: ( (lv_password_7_0= ruleEString ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:247:1: (lv_password_7_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:254:1: ( (lv_password_7_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:255:1: (lv_password_7_0= ruleEString )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:247:1: (lv_password_7_0= ruleEString )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:248:3: lv_password_7_0= ruleEString
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:255:1: (lv_password_7_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:256:3: lv_password_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getConnectionAccess().getPasswordEStringParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleConnection473);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleConnection469);
                     lv_password_7_0=ruleEString();
 
                     state._fsp--;
@@ -573,9 +585,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleConnection487); 
-
-                	newLeafNode(otherlv_8, grammarAccess.getConnectionAccess().getRightCurlyBracketKeyword_5());
+            this_RIGHTPARENTESIS_8=(Token)match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_ruleConnection482); 
+             
+                newLeafNode(this_RIGHTPARENTESIS_8, grammarAccess.getConnectionAccess().getRIGHTPARENTESISTerminalRuleCall_5()); 
                 
 
             }
@@ -598,7 +610,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMergedField"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:276:1: entryRuleMergedField returns [EObject current=null] : iv_ruleMergedField= ruleMergedField EOF ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:284:1: entryRuleMergedField returns [EObject current=null] : iv_ruleMergedField= ruleMergedField EOF ;
     public final EObject entryRuleMergedField() throws RecognitionException {
         EObject current = null;
 
@@ -606,17 +618,17 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:277:2: (iv_ruleMergedField= ruleMergedField EOF )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:278:2: iv_ruleMergedField= ruleMergedField EOF
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:285:2: (iv_ruleMergedField= ruleMergedField EOF )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:286:2: iv_ruleMergedField= ruleMergedField EOF
             {
              newCompositeNode(grammarAccess.getMergedFieldRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_entryRuleMergedField523);
+            pushFollow(FollowSets000.FOLLOW_ruleMergedField_in_entryRuleMergedField517);
             iv_ruleMergedField=ruleMergedField();
 
             state._fsp--;
 
              current =iv_ruleMergedField; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMergedField533); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMergedField527); 
 
             }
 
@@ -634,21 +646,21 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMergedField"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:285:1: ruleMergedField returns [EObject current=null] : (otherlv_0= '{' (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )? otherlv_3= '\\'fields\\':' otherlv_4= '[' ( (lv_fields_5_0= ruleField ) ) (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )* otherlv_8= ']' otherlv_9= '\\'attributeNames\\':' otherlv_10= '[' ( (lv_attributeNames_11_0= ruleAttributeName ) ) (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* otherlv_14= ']' otherlv_15= '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:293:1: ruleMergedField returns [EObject current=null] : (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )? this_LITERALFIELDS_3= RULE_LITERALFIELDS this_LEFTBRACKET_4= RULE_LEFTBRACKET ( (lv_fields_5_0= ruleField ) ) (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )* this_RIGHTBRACKET_8= RULE_RIGHTBRACKET this_LITERALATTRIBUTENAMES_9= RULE_LITERALATTRIBUTENAMES this_LEFTBRACKET_10= RULE_LEFTBRACKET ( (lv_attributeNames_11_0= ruleAttributeName ) ) (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* this_RIGHTBRACKET_14= RULE_RIGHTBRACKET this_RIGHTPARENTESIS_15= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleMergedField() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        Token otherlv_4=null;
-        Token otherlv_6=null;
-        Token otherlv_8=null;
-        Token otherlv_9=null;
-        Token otherlv_10=null;
-        Token otherlv_12=null;
-        Token otherlv_14=null;
-        Token otherlv_15=null;
+        Token this_LEFTPARENTESIS_0=null;
+        Token this_LITERALTABLENAME_1=null;
+        Token this_LITERALFIELDS_3=null;
+        Token this_LEFTBRACKET_4=null;
+        Token this_COMA_6=null;
+        Token this_RIGHTBRACKET_8=null;
+        Token this_LITERALATTRIBUTENAMES_9=null;
+        Token this_LEFTBRACKET_10=null;
+        Token this_COMA_12=null;
+        Token this_RIGHTBRACKET_14=null;
+        Token this_RIGHTPARENTESIS_15=null;
         AntlrDatatypeRuleToken lv_tableName_2_0 = null;
 
         EObject lv_fields_5_0 = null;
@@ -663,41 +675,41 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:288:28: ( (otherlv_0= '{' (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )? otherlv_3= '\\'fields\\':' otherlv_4= '[' ( (lv_fields_5_0= ruleField ) ) (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )* otherlv_8= ']' otherlv_9= '\\'attributeNames\\':' otherlv_10= '[' ( (lv_attributeNames_11_0= ruleAttributeName ) ) (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* otherlv_14= ']' otherlv_15= '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:289:1: (otherlv_0= '{' (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )? otherlv_3= '\\'fields\\':' otherlv_4= '[' ( (lv_fields_5_0= ruleField ) ) (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )* otherlv_8= ']' otherlv_9= '\\'attributeNames\\':' otherlv_10= '[' ( (lv_attributeNames_11_0= ruleAttributeName ) ) (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* otherlv_14= ']' otherlv_15= '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:296:28: ( (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )? this_LITERALFIELDS_3= RULE_LITERALFIELDS this_LEFTBRACKET_4= RULE_LEFTBRACKET ( (lv_fields_5_0= ruleField ) ) (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )* this_RIGHTBRACKET_8= RULE_RIGHTBRACKET this_LITERALATTRIBUTENAMES_9= RULE_LITERALATTRIBUTENAMES this_LEFTBRACKET_10= RULE_LEFTBRACKET ( (lv_attributeNames_11_0= ruleAttributeName ) ) (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* this_RIGHTBRACKET_14= RULE_RIGHTBRACKET this_RIGHTPARENTESIS_15= RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:297:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )? this_LITERALFIELDS_3= RULE_LITERALFIELDS this_LEFTBRACKET_4= RULE_LEFTBRACKET ( (lv_fields_5_0= ruleField ) ) (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )* this_RIGHTBRACKET_8= RULE_RIGHTBRACKET this_LITERALATTRIBUTENAMES_9= RULE_LITERALATTRIBUTENAMES this_LEFTBRACKET_10= RULE_LEFTBRACKET ( (lv_attributeNames_11_0= ruleAttributeName ) ) (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* this_RIGHTBRACKET_14= RULE_RIGHTBRACKET this_RIGHTPARENTESIS_15= RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:289:1: (otherlv_0= '{' (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )? otherlv_3= '\\'fields\\':' otherlv_4= '[' ( (lv_fields_5_0= ruleField ) ) (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )* otherlv_8= ']' otherlv_9= '\\'attributeNames\\':' otherlv_10= '[' ( (lv_attributeNames_11_0= ruleAttributeName ) ) (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* otherlv_14= ']' otherlv_15= '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:289:3: otherlv_0= '{' (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )? otherlv_3= '\\'fields\\':' otherlv_4= '[' ( (lv_fields_5_0= ruleField ) ) (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )* otherlv_8= ']' otherlv_9= '\\'attributeNames\\':' otherlv_10= '[' ( (lv_attributeNames_11_0= ruleAttributeName ) ) (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* otherlv_14= ']' otherlv_15= '}'
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:297:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )? this_LITERALFIELDS_3= RULE_LITERALFIELDS this_LEFTBRACKET_4= RULE_LEFTBRACKET ( (lv_fields_5_0= ruleField ) ) (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )* this_RIGHTBRACKET_8= RULE_RIGHTBRACKET this_LITERALATTRIBUTENAMES_9= RULE_LITERALATTRIBUTENAMES this_LEFTBRACKET_10= RULE_LEFTBRACKET ( (lv_attributeNames_11_0= ruleAttributeName ) ) (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* this_RIGHTBRACKET_14= RULE_RIGHTBRACKET this_RIGHTPARENTESIS_15= RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:297:2: this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )? this_LITERALFIELDS_3= RULE_LITERALFIELDS this_LEFTBRACKET_4= RULE_LEFTBRACKET ( (lv_fields_5_0= ruleField ) ) (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )* this_RIGHTBRACKET_8= RULE_RIGHTBRACKET this_LITERALATTRIBUTENAMES_9= RULE_LITERALATTRIBUTENAMES this_LEFTBRACKET_10= RULE_LEFTBRACKET ( (lv_attributeNames_11_0= ruleAttributeName ) ) (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )* this_RIGHTBRACKET_14= RULE_RIGHTBRACKET this_RIGHTPARENTESIS_15= RULE_RIGHTPARENTESIS
             {
-            otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMergedField570); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getMergedFieldAccess().getLeftCurlyBracketKeyword_0());
+            this_LEFTPARENTESIS_0=(Token)match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_ruleMergedField563); 
+             
+                newLeafNode(this_LEFTPARENTESIS_0, grammarAccess.getMergedFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:293:1: (otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) ) )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:301:1: (this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) ) )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==22) ) {
+            if ( (LA6_0==RULE_LITERALTABLENAME) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:293:3: otherlv_1= '\\'tableName\\':' ( (lv_tableName_2_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:301:2: this_LITERALTABLENAME_1= RULE_LITERALTABLENAME ( (lv_tableName_2_0= ruleEString ) )
                     {
-                    otherlv_1=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMergedField583); 
-
-                        	newLeafNode(otherlv_1, grammarAccess.getMergedFieldAccess().getTableNameKeyword_1_0());
+                    this_LITERALTABLENAME_1=(Token)match(input,RULE_LITERALTABLENAME,FollowSets000.FOLLOW_RULE_LITERALTABLENAME_in_ruleMergedField574); 
+                     
+                        newLeafNode(this_LITERALTABLENAME_1, grammarAccess.getMergedFieldAccess().getLITERALTABLENAMETerminalRuleCall_1_0()); 
                         
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:297:1: ( (lv_tableName_2_0= ruleEString ) )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:298:1: (lv_tableName_2_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:305:1: ( (lv_tableName_2_0= ruleEString ) )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:306:1: (lv_tableName_2_0= ruleEString )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:298:1: (lv_tableName_2_0= ruleEString )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:299:3: lv_tableName_2_0= ruleEString
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:306:1: (lv_tableName_2_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:307:3: lv_tableName_2_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMergedFieldAccess().getTableNameEStringParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMergedField604);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMergedField594);
                     lv_tableName_2_0=ruleEString();
 
                     state._fsp--;
@@ -725,24 +737,24 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMergedField618); 
-
-                	newLeafNode(otherlv_3, grammarAccess.getMergedFieldAccess().getFieldsKeyword_2());
+            this_LITERALFIELDS_3=(Token)match(input,RULE_LITERALFIELDS,FollowSets000.FOLLOW_RULE_LITERALFIELDS_in_ruleMergedField607); 
+             
+                newLeafNode(this_LITERALFIELDS_3, grammarAccess.getMergedFieldAccess().getLITERALFIELDSTerminalRuleCall_2()); 
                 
-            otherlv_4=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleMergedField630); 
-
-                	newLeafNode(otherlv_4, grammarAccess.getMergedFieldAccess().getLeftSquareBracketKeyword_3());
+            this_LEFTBRACKET_4=(Token)match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_ruleMergedField617); 
+             
+                newLeafNode(this_LEFTBRACKET_4, grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_3()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:323:1: ( (lv_fields_5_0= ruleField ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:324:1: (lv_fields_5_0= ruleField )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:331:1: ( (lv_fields_5_0= ruleField ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:332:1: (lv_fields_5_0= ruleField )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:324:1: (lv_fields_5_0= ruleField )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:325:3: lv_fields_5_0= ruleField
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:332:1: (lv_fields_5_0= ruleField )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:333:3: lv_fields_5_0= ruleField
             {
              
             	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_4_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleField_in_ruleMergedField651);
+            pushFollow(FollowSets000.FOLLOW_ruleField_in_ruleMergedField637);
             lv_fields_5_0=ruleField();
 
             state._fsp--;
@@ -764,35 +776,35 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:341:2: (otherlv_6= ',' ( (lv_fields_7_0= ruleField ) ) )*
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:349:2: (this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) ) )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==16) ) {
+                if ( (LA7_0==RULE_COMA) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:341:4: otherlv_6= ',' ( (lv_fields_7_0= ruleField ) )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:349:3: this_COMA_6= RULE_COMA ( (lv_fields_7_0= ruleField ) )
             	    {
-            	    otherlv_6=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleMergedField664); 
-
-            	        	newLeafNode(otherlv_6, grammarAccess.getMergedFieldAccess().getCommaKeyword_5_0());
+            	    this_COMA_6=(Token)match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_ruleMergedField649); 
+            	     
+            	        newLeafNode(this_COMA_6, grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_5_0()); 
             	        
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:345:1: ( (lv_fields_7_0= ruleField ) )
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:346:1: (lv_fields_7_0= ruleField )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:353:1: ( (lv_fields_7_0= ruleField ) )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:354:1: (lv_fields_7_0= ruleField )
             	    {
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:346:1: (lv_fields_7_0= ruleField )
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:347:3: lv_fields_7_0= ruleField
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:354:1: (lv_fields_7_0= ruleField )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:355:3: lv_fields_7_0= ruleField
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getMergedFieldAccess().getFieldsFieldParserRuleCall_5_1_0()); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleField_in_ruleMergedField685);
+            	    pushFollow(FollowSets000.FOLLOW_ruleField_in_ruleMergedField669);
             	    lv_fields_7_0=ruleField();
 
             	    state._fsp--;
@@ -823,28 +835,28 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_8=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMergedField699); 
-
-                	newLeafNode(otherlv_8, grammarAccess.getMergedFieldAccess().getRightSquareBracketKeyword_6());
+            this_RIGHTBRACKET_8=(Token)match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_ruleMergedField682); 
+             
+                newLeafNode(this_RIGHTBRACKET_8, grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_6()); 
                 
-            otherlv_9=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleMergedField711); 
-
-                	newLeafNode(otherlv_9, grammarAccess.getMergedFieldAccess().getAttributeNamesKeyword_7());
+            this_LITERALATTRIBUTENAMES_9=(Token)match(input,RULE_LITERALATTRIBUTENAMES,FollowSets000.FOLLOW_RULE_LITERALATTRIBUTENAMES_in_ruleMergedField692); 
+             
+                newLeafNode(this_LITERALATTRIBUTENAMES_9, grammarAccess.getMergedFieldAccess().getLITERALATTRIBUTENAMESTerminalRuleCall_7()); 
                 
-            otherlv_10=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleMergedField723); 
-
-                	newLeafNode(otherlv_10, grammarAccess.getMergedFieldAccess().getLeftSquareBracketKeyword_8());
+            this_LEFTBRACKET_10=(Token)match(input,RULE_LEFTBRACKET,FollowSets000.FOLLOW_RULE_LEFTBRACKET_in_ruleMergedField702); 
+             
+                newLeafNode(this_LEFTBRACKET_10, grammarAccess.getMergedFieldAccess().getLEFTBRACKETTerminalRuleCall_8()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:375:1: ( (lv_attributeNames_11_0= ruleAttributeName ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:376:1: (lv_attributeNames_11_0= ruleAttributeName )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:383:1: ( (lv_attributeNames_11_0= ruleAttributeName ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:384:1: (lv_attributeNames_11_0= ruleAttributeName )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:376:1: (lv_attributeNames_11_0= ruleAttributeName )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:377:3: lv_attributeNames_11_0= ruleAttributeName
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:384:1: (lv_attributeNames_11_0= ruleAttributeName )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:385:3: lv_attributeNames_11_0= ruleAttributeName
             {
              
             	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_9_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_ruleMergedField744);
+            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_ruleMergedField722);
             lv_attributeNames_11_0=ruleAttributeName();
 
             state._fsp--;
@@ -866,35 +878,35 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:393:2: (otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) ) )*
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:401:2: (this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) ) )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==16) ) {
+                if ( (LA8_0==RULE_COMA) ) {
                     alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:393:4: otherlv_12= ',' ( (lv_attributeNames_13_0= ruleAttributeName ) )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:401:3: this_COMA_12= RULE_COMA ( (lv_attributeNames_13_0= ruleAttributeName ) )
             	    {
-            	    otherlv_12=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleMergedField757); 
-
-            	        	newLeafNode(otherlv_12, grammarAccess.getMergedFieldAccess().getCommaKeyword_10_0());
+            	    this_COMA_12=(Token)match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_ruleMergedField734); 
+            	     
+            	        newLeafNode(this_COMA_12, grammarAccess.getMergedFieldAccess().getCOMATerminalRuleCall_10_0()); 
             	        
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:397:1: ( (lv_attributeNames_13_0= ruleAttributeName ) )
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:398:1: (lv_attributeNames_13_0= ruleAttributeName )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:405:1: ( (lv_attributeNames_13_0= ruleAttributeName ) )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:406:1: (lv_attributeNames_13_0= ruleAttributeName )
             	    {
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:398:1: (lv_attributeNames_13_0= ruleAttributeName )
-            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:399:3: lv_attributeNames_13_0= ruleAttributeName
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:406:1: (lv_attributeNames_13_0= ruleAttributeName )
+            	    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:407:3: lv_attributeNames_13_0= ruleAttributeName
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getMergedFieldAccess().getAttributeNamesAttributeNameParserRuleCall_10_1_0()); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_ruleMergedField778);
+            	    pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_ruleMergedField754);
             	    lv_attributeNames_13_0=ruleAttributeName();
 
             	    state._fsp--;
@@ -925,13 +937,13 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_14=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMergedField792); 
-
-                	newLeafNode(otherlv_14, grammarAccess.getMergedFieldAccess().getRightSquareBracketKeyword_11());
+            this_RIGHTBRACKET_14=(Token)match(input,RULE_RIGHTBRACKET,FollowSets000.FOLLOW_RULE_RIGHTBRACKET_in_ruleMergedField767); 
+             
+                newLeafNode(this_RIGHTBRACKET_14, grammarAccess.getMergedFieldAccess().getRIGHTBRACKETTerminalRuleCall_11()); 
                 
-            otherlv_15=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleMergedField804); 
-
-                	newLeafNode(otherlv_15, grammarAccess.getMergedFieldAccess().getRightCurlyBracketKeyword_12());
+            this_RIGHTPARENTESIS_15=(Token)match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_ruleMergedField777); 
+             
+                newLeafNode(this_RIGHTPARENTESIS_15, grammarAccess.getMergedFieldAccess().getRIGHTPARENTESISTerminalRuleCall_12()); 
                 
 
             }
@@ -954,7 +966,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:431:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:439:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -962,17 +974,17 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:432:2: (iv_ruleEString= ruleEString EOF )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:433:2: iv_ruleEString= ruleEString EOF
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:440:2: (iv_ruleEString= ruleEString EOF )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:441:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString841);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString813);
             iv_ruleEString=ruleEString();
 
             state._fsp--;
 
              current =iv_ruleEString.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString852); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString824); 
 
             }
 
@@ -990,7 +1002,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:440:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:448:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1000,10 +1012,10 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:443:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:444:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:451:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:452:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:444:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:452:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1021,9 +1033,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:444:6: this_STRING_0= RULE_STRING
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:452:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString892); 
+                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString864); 
 
                     		current.merge(this_STRING_0);
                         
@@ -1034,9 +1046,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:452:10: this_ID_1= RULE_ID
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:460:10: this_ID_1= RULE_ID
                     {
-                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString918); 
+                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString890); 
 
                     		current.merge(this_ID_1);
                         
@@ -1067,7 +1079,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAttributeName"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:467:1: entryRuleAttributeName returns [EObject current=null] : iv_ruleAttributeName= ruleAttributeName EOF ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:475:1: entryRuleAttributeName returns [EObject current=null] : iv_ruleAttributeName= ruleAttributeName EOF ;
     public final EObject entryRuleAttributeName() throws RecognitionException {
         EObject current = null;
 
@@ -1075,17 +1087,17 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:468:2: (iv_ruleAttributeName= ruleAttributeName EOF )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:469:2: iv_ruleAttributeName= ruleAttributeName EOF
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:476:2: (iv_ruleAttributeName= ruleAttributeName EOF )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:477:2: iv_ruleAttributeName= ruleAttributeName EOF
             {
              newCompositeNode(grammarAccess.getAttributeNameRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_entryRuleAttributeName963);
+            pushFollow(FollowSets000.FOLLOW_ruleAttributeName_in_entryRuleAttributeName935);
             iv_ruleAttributeName=ruleAttributeName();
 
             state._fsp--;
 
              current =iv_ruleAttributeName; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAttributeName973); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAttributeName945); 
 
             }
 
@@ -1103,30 +1115,30 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttributeName"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:476:1: ruleAttributeName returns [EObject current=null] : (otherlv_0= '{' ( (lv_oldField_1_0= ruleEString ) )? otherlv_2= ',' ( ( ruleEString ) ) otherlv_4= '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:484:1: ruleAttributeName returns [EObject current=null] : (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_oldField_1_0= ruleEString ) )? this_COMA_2= RULE_COMA ( ( ruleEString ) ) this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleAttributeName() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
+        Token this_LEFTPARENTESIS_0=null;
+        Token this_COMA_2=null;
+        Token this_RIGHTPARENTESIS_4=null;
         AntlrDatatypeRuleToken lv_oldField_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:479:28: ( (otherlv_0= '{' ( (lv_oldField_1_0= ruleEString ) )? otherlv_2= ',' ( ( ruleEString ) ) otherlv_4= '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:480:1: (otherlv_0= '{' ( (lv_oldField_1_0= ruleEString ) )? otherlv_2= ',' ( ( ruleEString ) ) otherlv_4= '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:487:28: ( (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_oldField_1_0= ruleEString ) )? this_COMA_2= RULE_COMA ( ( ruleEString ) ) this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:488:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_oldField_1_0= ruleEString ) )? this_COMA_2= RULE_COMA ( ( ruleEString ) ) this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:480:1: (otherlv_0= '{' ( (lv_oldField_1_0= ruleEString ) )? otherlv_2= ',' ( ( ruleEString ) ) otherlv_4= '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:480:3: otherlv_0= '{' ( (lv_oldField_1_0= ruleEString ) )? otherlv_2= ',' ( ( ruleEString ) ) otherlv_4= '}'
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:488:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_oldField_1_0= ruleEString ) )? this_COMA_2= RULE_COMA ( ( ruleEString ) ) this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:488:2: this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_oldField_1_0= ruleEString ) )? this_COMA_2= RULE_COMA ( ( ruleEString ) ) this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS
             {
-            otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleAttributeName1010); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getAttributeNameAccess().getLeftCurlyBracketKeyword_0());
+            this_LEFTPARENTESIS_0=(Token)match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_ruleAttributeName981); 
+             
+                newLeafNode(this_LEFTPARENTESIS_0, grammarAccess.getAttributeNameAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:484:1: ( (lv_oldField_1_0= ruleEString ) )?
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:492:1: ( (lv_oldField_1_0= ruleEString ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1135,15 +1147,15 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:485:1: (lv_oldField_1_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:493:1: (lv_oldField_1_0= ruleEString )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:485:1: (lv_oldField_1_0= ruleEString )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:486:3: lv_oldField_1_0= ruleEString
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:493:1: (lv_oldField_1_0= ruleEString )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:494:3: lv_oldField_1_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAttributeNameAccess().getOldFieldEStringParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAttributeName1031);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAttributeName1001);
                     lv_oldField_1_0=ruleEString();
 
                     state._fsp--;
@@ -1168,15 +1180,15 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleAttributeName1044); 
-
-                	newLeafNode(otherlv_2, grammarAccess.getAttributeNameAccess().getCommaKeyword_2());
+            this_COMA_2=(Token)match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_ruleAttributeName1013); 
+             
+                newLeafNode(this_COMA_2, grammarAccess.getAttributeNameAccess().getCOMATerminalRuleCall_2()); 
                 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:506:1: ( ( ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:507:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:514:1: ( ( ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:515:1: ( ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:507:1: ( ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:508:3: ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:515:1: ( ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:516:3: ruleEString
             {
 
             			if (current==null) {
@@ -1186,7 +1198,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAttributeNameAccess().getFinalFieldFieldCrossReference_3_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAttributeName1067);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAttributeName1035);
             ruleEString();
 
             state._fsp--;
@@ -1200,9 +1212,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleAttributeName1079); 
-
-                	newLeafNode(otherlv_4, grammarAccess.getAttributeNameAccess().getRightCurlyBracketKeyword_4());
+            this_RIGHTPARENTESIS_4=(Token)match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_ruleAttributeName1046); 
+             
+                newLeafNode(this_RIGHTPARENTESIS_4, grammarAccess.getAttributeNameAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
                 
 
             }
@@ -1225,7 +1237,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleField"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:533:1: entryRuleField returns [EObject current=null] : iv_ruleField= ruleField EOF ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:541:1: entryRuleField returns [EObject current=null] : iv_ruleField= ruleField EOF ;
     public final EObject entryRuleField() throws RecognitionException {
         EObject current = null;
 
@@ -1233,17 +1245,17 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:534:2: (iv_ruleField= ruleField EOF )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:535:2: iv_ruleField= ruleField EOF
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:542:2: (iv_ruleField= ruleField EOF )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:543:2: iv_ruleField= ruleField EOF
             {
              newCompositeNode(grammarAccess.getFieldRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleField_in_entryRuleField1115);
+            pushFollow(FollowSets000.FOLLOW_ruleField_in_entryRuleField1081);
             iv_ruleField=ruleField();
 
             state._fsp--;
 
              current =iv_ruleField; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleField1125); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleField1091); 
 
             }
 
@@ -1261,13 +1273,14 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleField"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:542:1: ruleField returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_name_2_0= ruleEString ) ) ( (lv_type_3_0= ruleFieldType ) )? otherlv_4= '}' ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:550:1: ruleField returns [EObject current=null] : (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_name_1_0= ruleEString ) ) this_COMA_2= RULE_COMA ( (lv_type_3_0= ruleFieldType ) )? this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleField() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        Token otherlv_4=null;
-        AntlrDatatypeRuleToken lv_name_2_0 = null;
+        Token this_LEFTPARENTESIS_0=null;
+        Token this_COMA_2=null;
+        Token this_RIGHTPARENTESIS_4=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
 
         Enumerator lv_type_3_0 = null;
 
@@ -1275,38 +1288,27 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:545:28: ( ( () otherlv_1= '{' ( (lv_name_2_0= ruleEString ) ) ( (lv_type_3_0= ruleFieldType ) )? otherlv_4= '}' ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:546:1: ( () otherlv_1= '{' ( (lv_name_2_0= ruleEString ) ) ( (lv_type_3_0= ruleFieldType ) )? otherlv_4= '}' )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:553:28: ( (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_name_1_0= ruleEString ) ) this_COMA_2= RULE_COMA ( (lv_type_3_0= ruleFieldType ) )? this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:554:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_name_1_0= ruleEString ) ) this_COMA_2= RULE_COMA ( (lv_type_3_0= ruleFieldType ) )? this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:546:1: ( () otherlv_1= '{' ( (lv_name_2_0= ruleEString ) ) ( (lv_type_3_0= ruleFieldType ) )? otherlv_4= '}' )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:546:2: () otherlv_1= '{' ( (lv_name_2_0= ruleEString ) ) ( (lv_type_3_0= ruleFieldType ) )? otherlv_4= '}'
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:554:1: (this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_name_1_0= ruleEString ) ) this_COMA_2= RULE_COMA ( (lv_type_3_0= ruleFieldType ) )? this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:554:2: this_LEFTPARENTESIS_0= RULE_LEFTPARENTESIS ( (lv_name_1_0= ruleEString ) ) this_COMA_2= RULE_COMA ( (lv_type_3_0= ruleFieldType ) )? this_RIGHTPARENTESIS_4= RULE_RIGHTPARENTESIS
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:546:2: ()
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:547:5: 
-            {
-
-                    current = forceCreateModelElement(
-                        grammarAccess.getFieldAccess().getFieldAction_0(),
-                        current);
+            this_LEFTPARENTESIS_0=(Token)match(input,RULE_LEFTPARENTESIS,FollowSets000.FOLLOW_RULE_LEFTPARENTESIS_in_ruleField1127); 
+             
+                newLeafNode(this_LEFTPARENTESIS_0, grammarAccess.getFieldAccess().getLEFTPARENTESISTerminalRuleCall_0()); 
                 
-
-            }
-
-            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleField1171); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getFieldAccess().getLeftCurlyBracketKeyword_1());
-                
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:556:1: ( (lv_name_2_0= ruleEString ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:557:1: (lv_name_2_0= ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:558:1: ( (lv_name_1_0= ruleEString ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:559:1: (lv_name_1_0= ruleEString )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:557:1: (lv_name_2_0= ruleEString )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:558:3: lv_name_2_0= ruleEString
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:559:1: (lv_name_1_0= ruleEString )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:560:3: lv_name_1_0= ruleEString
             {
              
-            	        newCompositeNode(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_2_0()); 
+            	        newCompositeNode(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_1_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleField1192);
-            lv_name_2_0=ruleEString();
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleField1147);
+            lv_name_1_0=ruleEString();
 
             state._fsp--;
 
@@ -1317,7 +1319,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                    		set(
                    			current, 
                    			"name",
-                    		lv_name_2_0, 
+                    		lv_name_1_0, 
                     		"EString");
             	        afterParserOrEnumRuleCall();
             	    
@@ -1327,24 +1329,28 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:574:2: ( (lv_type_3_0= ruleFieldType ) )?
+            this_COMA_2=(Token)match(input,RULE_COMA,FollowSets000.FOLLOW_RULE_COMA_in_ruleField1158); 
+             
+                newLeafNode(this_COMA_2, grammarAccess.getFieldAccess().getCOMATerminalRuleCall_2()); 
+                
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:580:1: ( (lv_type_3_0= ruleFieldType ) )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( ((LA11_0>=25 && LA11_0<=28)) ) {
+            if ( ((LA11_0>=27 && LA11_0<=30)) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:575:1: (lv_type_3_0= ruleFieldType )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:581:1: (lv_type_3_0= ruleFieldType )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:575:1: (lv_type_3_0= ruleFieldType )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:576:3: lv_type_3_0= ruleFieldType
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:581:1: (lv_type_3_0= ruleFieldType )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:582:3: lv_type_3_0= ruleFieldType
                     {
                      
                     	        newCompositeNode(grammarAccess.getFieldAccess().getTypeFieldTypeEnumRuleCall_3_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleFieldType_in_ruleField1213);
+                    pushFollow(FollowSets000.FOLLOW_ruleFieldType_in_ruleField1178);
                     lv_type_3_0=ruleFieldType();
 
                     state._fsp--;
@@ -1369,9 +1375,9 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleField1226); 
-
-                	newLeafNode(otherlv_4, grammarAccess.getFieldAccess().getRightCurlyBracketKeyword_4());
+            this_RIGHTPARENTESIS_4=(Token)match(input,RULE_RIGHTPARENTESIS,FollowSets000.FOLLOW_RULE_RIGHTPARENTESIS_in_ruleField1190); 
+             
+                newLeafNode(this_RIGHTPARENTESIS_4, grammarAccess.getFieldAccess().getRIGHTPARENTESISTerminalRuleCall_4()); 
                 
 
             }
@@ -1394,7 +1400,7 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldType"
-    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:604:1: ruleFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) ) ;
+    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:610:1: ruleFieldType returns [Enumerator current=null] : ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) ) ;
     public final Enumerator ruleFieldType() throws RecognitionException {
         Enumerator current = null;
 
@@ -1405,28 +1411,28 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:606:28: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) ) )
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:607:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:612:28: ( ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) )
             {
-            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:607:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Float' ) | (enumLiteral_3= 'Boolean' ) )
+            // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) )
             int alt12=4;
             switch ( input.LA(1) ) {
-            case 25:
+            case 27:
                 {
                 alt12=1;
                 }
                 break;
-            case 26:
+            case 28:
                 {
                 alt12=2;
                 }
                 break;
-            case 27:
+            case 29:
                 {
                 alt12=3;
                 }
                 break;
-            case 28:
+            case 30:
                 {
                 alt12=4;
                 }
@@ -1440,12 +1446,12 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
 
             switch (alt12) {
                 case 1 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:607:2: (enumLiteral_0= 'String' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:2: (enumLiteral_0= '\\'String\\'' )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:607:2: (enumLiteral_0= 'String' )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:607:4: enumLiteral_0= 'String'
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:2: (enumLiteral_0= '\\'String\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:4: enumLiteral_0= '\\'String\\''
                     {
-                    enumLiteral_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleFieldType1276); 
+                    enumLiteral_0=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleFieldType1239); 
 
                             current = grammarAccess.getFieldTypeAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFieldTypeAccess().getStringEnumLiteralDeclaration_0()); 
@@ -1457,12 +1463,12 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:6: (enumLiteral_1= 'Integer' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:6: (enumLiteral_1= '\\'Integer\\'' )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:6: (enumLiteral_1= 'Integer' )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:613:8: enumLiteral_1= 'Integer'
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:6: (enumLiteral_1= '\\'Integer\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:8: enumLiteral_1= '\\'Integer\\''
                     {
-                    enumLiteral_1=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleFieldType1293); 
+                    enumLiteral_1=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleFieldType1256); 
 
                             current = grammarAccess.getFieldTypeAccess().getIntegerEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFieldTypeAccess().getIntegerEnumLiteralDeclaration_1()); 
@@ -1474,12 +1480,12 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:6: (enumLiteral_2= 'Float' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:6: (enumLiteral_2= '\\'Float\\'' )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:6: (enumLiteral_2= 'Float' )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:619:8: enumLiteral_2= 'Float'
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:6: (enumLiteral_2= '\\'Float\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:8: enumLiteral_2= '\\'Float\\''
                     {
-                    enumLiteral_2=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleFieldType1310); 
+                    enumLiteral_2=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleFieldType1273); 
 
                             current = grammarAccess.getFieldTypeAccess().getFloatEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFieldTypeAccess().getFloatEnumLiteralDeclaration_2()); 
@@ -1491,12 +1497,12 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:6: (enumLiteral_3= 'Boolean' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:631:6: (enumLiteral_3= '\\'Boolean\\'' )
                     {
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:6: (enumLiteral_3= 'Boolean' )
-                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:625:8: enumLiteral_3= 'Boolean'
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:631:6: (enumLiteral_3= '\\'Boolean\\'' )
+                    // ../co.edu.uniandes.jsonToSql.grammar/src-gen/co/edu/uniandes/jsonToSql/parser/antlr/internal/InternalGrammar.g:631:8: enumLiteral_3= '\\'Boolean\\''
                     {
-                    enumLiteral_3=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleFieldType1327); 
+                    enumLiteral_3=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleFieldType1290); 
 
                             current = grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); 
@@ -1535,66 +1541,69 @@ public class InternalGrammarParser extends AbstractInternalAntlrParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_ruleConfig_in_entryRuleConfig75 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleConfig85 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_ruleConfig122 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleConfig134 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_13_in_ruleConfig146 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleConnection_in_ruleConfig167 = new BitSet(new long[]{0x0000000000044000L});
-        public static final BitSet FOLLOW_14_in_ruleConfig180 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleConfig192 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleMergedField_in_ruleConfig213 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_16_in_ruleConfig226 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleMergedField_in_ruleConfig247 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_17_in_ruleConfig261 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleConfig275 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConnection_in_entryRuleConnection311 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleConnection321 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleConnection367 = new BitSet(new long[]{0x00000000003C0000L});
-        public static final BitSet FOLLOW_19_in_ruleConnection380 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleConnection401 = new BitSet(new long[]{0x0000000000340000L});
-        public static final BitSet FOLLOW_20_in_ruleConnection416 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleConnection437 = new BitSet(new long[]{0x0000000000240000L});
-        public static final BitSet FOLLOW_21_in_ruleConnection452 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleConnection473 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleConnection487 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMergedField_in_entryRuleMergedField523 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMergedField533 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleMergedField570 = new BitSet(new long[]{0x0000000000C00000L});
-        public static final BitSet FOLLOW_22_in_ruleMergedField583 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMergedField604 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_23_in_ruleMergedField618 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleMergedField630 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleField_in_ruleMergedField651 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_16_in_ruleMergedField664 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleField_in_ruleMergedField685 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_17_in_ruleMergedField699 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_ruleMergedField711 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleMergedField723 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleAttributeName_in_ruleMergedField744 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_16_in_ruleMergedField757 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_ruleAttributeName_in_ruleMergedField778 = new BitSet(new long[]{0x0000000000030000L});
-        public static final BitSet FOLLOW_17_in_ruleMergedField792 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleMergedField804 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString841 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEString852 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString892 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleEString918 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAttributeName_in_entryRuleAttributeName963 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAttributeName973 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleAttributeName1010 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAttributeName1031 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_16_in_ruleAttributeName1044 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAttributeName1067 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleAttributeName1079 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleField_in_entryRuleField1115 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleField1125 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleField1171 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleField1192 = new BitSet(new long[]{0x000000001E040000L});
-        public static final BitSet FOLLOW_ruleFieldType_in_ruleField1213 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleField1226 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_ruleFieldType1276 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_ruleFieldType1293 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_ruleFieldType1310 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_ruleFieldType1327 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LITERACONFIG_in_ruleConfig121 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_COLON_in_ruleConfig131 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleConfig141 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_RULE_LITERACONNECTION_in_ruleConfig151 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_COLON_in_ruleConfig161 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleConnection_in_ruleConfig181 = new BitSet(new long[]{0x0000000000001100L});
+        public static final BitSet FOLLOW_RULE_LITERALMERGEDFIELDS_in_ruleConfig193 = new BitSet(new long[]{0x0000000000000200L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_ruleConfig203 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleMergedField_in_ruleConfig223 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_COMA_in_ruleConfig235 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleMergedField_in_ruleConfig255 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_ruleConfig268 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleConfig280 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConnection_in_entryRuleConnection315 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleConnection325 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleConnection370 = new BitSet(new long[]{0x000000000000F000L});
+        public static final BitSet FOLLOW_RULE_LITERALURL_in_ruleConnection381 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleConnection401 = new BitSet(new long[]{0x000000000000D000L});
+        public static final BitSet FOLLOW_RULE_LITERALUSERNAME_in_ruleConnection415 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleConnection435 = new BitSet(new long[]{0x0000000000009000L});
+        public static final BitSet FOLLOW_RULE_LITERALPASSWORD_in_ruleConnection449 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleConnection469 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleConnection482 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMergedField_in_entryRuleMergedField517 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMergedField527 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleMergedField563 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_RULE_LITERALTABLENAME_in_ruleMergedField574 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMergedField594 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_RULE_LITERALFIELDS_in_ruleMergedField607 = new BitSet(new long[]{0x0000000000000200L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_ruleMergedField617 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleField_in_ruleMergedField637 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_COMA_in_ruleMergedField649 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleField_in_ruleMergedField669 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_ruleMergedField682 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_RULE_LITERALATTRIBUTENAMES_in_ruleMergedField692 = new BitSet(new long[]{0x0000000000000200L});
+        public static final BitSet FOLLOW_RULE_LEFTBRACKET_in_ruleMergedField702 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleAttributeName_in_ruleMergedField722 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_COMA_in_ruleMergedField734 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_ruleAttributeName_in_ruleMergedField754 = new BitSet(new long[]{0x0000000000000C00L});
+        public static final BitSet FOLLOW_RULE_RIGHTBRACKET_in_ruleMergedField767 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleMergedField777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString813 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEString824 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString864 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleEString890 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAttributeName_in_entryRuleAttributeName935 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAttributeName945 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleAttributeName981 = new BitSet(new long[]{0x0000000000180400L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAttributeName1001 = new BitSet(new long[]{0x0000000000000400L});
+        public static final BitSet FOLLOW_RULE_COMA_in_ruleAttributeName1013 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAttributeName1035 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleAttributeName1046 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleField_in_entryRuleField1081 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleField1091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleField1127 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleField1147 = new BitSet(new long[]{0x0000000000000400L});
+        public static final BitSet FOLLOW_RULE_COMA_in_ruleField1158 = new BitSet(new long[]{0x0000000078001000L});
+        public static final BitSet FOLLOW_ruleFieldType_in_ruleField1178 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleField1190 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_ruleFieldType1239 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_ruleFieldType1256 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_ruleFieldType1273 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_ruleFieldType1290 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

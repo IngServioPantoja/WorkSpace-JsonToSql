@@ -40,8 +40,8 @@ public class GrammarParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getFieldTypeAccess().getAlternatives(), "rule__FieldType__Alternatives");
 					put(grammarAccess.getConfigAccess().getGroup(), "rule__Config__Group__0");
-					put(grammarAccess.getConfigAccess().getGroup_4(), "rule__Config__Group_4__0");
-					put(grammarAccess.getConfigAccess().getGroup_4_3(), "rule__Config__Group_4_3__0");
+					put(grammarAccess.getConfigAccess().getGroup_6(), "rule__Config__Group_6__0");
+					put(grammarAccess.getConfigAccess().getGroup_6_3(), "rule__Config__Group_6_3__0");
 					put(grammarAccess.getConnectionAccess().getGroup(), "rule__Connection__Group__0");
 					put(grammarAccess.getConnectionAccess().getGroup_2(), "rule__Connection__Group_2__0");
 					put(grammarAccess.getConnectionAccess().getGroup_3(), "rule__Connection__Group_3__0");
@@ -51,24 +51,22 @@ public class GrammarParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMergedFieldAccess().getGroup_5(), "rule__MergedField__Group_5__0");
 					put(grammarAccess.getMergedFieldAccess().getGroup_10(), "rule__MergedField__Group_10__0");
 					put(grammarAccess.getAttributeNameAccess().getGroup(), "rule__AttributeName__Group__0");
-					put(grammarAccess.getAttributeNameAccess().getGroup_1(), "rule__AttributeName__Group_1__0");
 					put(grammarAccess.getFieldAccess().getGroup(), "rule__Field__Group__0");
-					put(grammarAccess.getFieldAccess().getGroup_3(), "rule__Field__Group_3__0");
-					put(grammarAccess.getConfigAccess().getConecctionAssignment_3(), "rule__Config__ConecctionAssignment_3");
-					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_2(), "rule__Config__MergeFieldsAssignment_4_2");
-					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_4_3_1(), "rule__Config__MergeFieldsAssignment_4_3_1");
+					put(grammarAccess.getConfigAccess().getConecctionAssignment_5(), "rule__Config__ConecctionAssignment_5");
+					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_2(), "rule__Config__MergeFieldsAssignment_6_2");
+					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_3_1(), "rule__Config__MergeFieldsAssignment_6_3_1");
 					put(grammarAccess.getConnectionAccess().getUrlAssignment_2_1(), "rule__Connection__UrlAssignment_2_1");
 					put(grammarAccess.getConnectionAccess().getUsernameAssignment_3_1(), "rule__Connection__UsernameAssignment_3_1");
 					put(grammarAccess.getConnectionAccess().getPasswordAssignment_4_1(), "rule__Connection__PasswordAssignment_4_1");
 					put(grammarAccess.getMergedFieldAccess().getTableNameAssignment_1_1(), "rule__MergedField__TableNameAssignment_1_1");
-					put(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_4(), "rule__MergedField__AttributeNamesAssignment_4");
-					put(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_5_1(), "rule__MergedField__AttributeNamesAssignment_5_1");
-					put(grammarAccess.getMergedFieldAccess().getFieldsAssignment_9(), "rule__MergedField__FieldsAssignment_9");
-					put(grammarAccess.getMergedFieldAccess().getFieldsAssignment_10_1(), "rule__MergedField__FieldsAssignment_10_1");
-					put(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1_1(), "rule__AttributeName__OldFieldAssignment_1_1");
+					put(grammarAccess.getMergedFieldAccess().getFieldsAssignment_4(), "rule__MergedField__FieldsAssignment_4");
+					put(grammarAccess.getMergedFieldAccess().getFieldsAssignment_5_1(), "rule__MergedField__FieldsAssignment_5_1");
+					put(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_9(), "rule__MergedField__AttributeNamesAssignment_9");
+					put(grammarAccess.getMergedFieldAccess().getAttributeNamesAssignment_10_1(), "rule__MergedField__AttributeNamesAssignment_10_1");
+					put(grammarAccess.getAttributeNameAccess().getOldFieldAssignment_1(), "rule__AttributeName__OldFieldAssignment_1");
 					put(grammarAccess.getAttributeNameAccess().getFinalFieldAssignment_3(), "rule__AttributeName__FinalFieldAssignment_3");
-					put(grammarAccess.getFieldAccess().getNameAssignment_2(), "rule__Field__NameAssignment_2");
-					put(grammarAccess.getFieldAccess().getTypeAssignment_3_1(), "rule__Field__TypeAssignment_3_1");
+					put(grammarAccess.getFieldAccess().getNameAssignment_1(), "rule__Field__NameAssignment_1");
+					put(grammarAccess.getFieldAccess().getTypeAssignment_3(), "rule__Field__TypeAssignment_3");
 				}
 			};
 		}
